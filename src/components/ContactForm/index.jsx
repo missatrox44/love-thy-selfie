@@ -1,6 +1,5 @@
 import React from "react";
-
-
+import "./style.css";
 
 
 export default function ContactForm () {
@@ -9,6 +8,7 @@ export default function ContactForm () {
     <form>
       <input
         required
+        className="input-field"
         name="name"
         placeholder="Name*"
         // value={name}
@@ -16,6 +16,7 @@ export default function ContactForm () {
       />
       <input
         required
+        className="input-field"
         name="email"
         placeholder="Email*"
         // value={name}
@@ -23,6 +24,7 @@ export default function ContactForm () {
       />
       <input
         required
+        className="input-field"
         name="phone"
         placeholder="Phone*"
         // value={name}
@@ -30,6 +32,7 @@ export default function ContactForm () {
       />
       <input
         required
+        className="input-field"
         name="city"
         placeholder="City*"
         // value={name}
@@ -37,14 +40,15 @@ export default function ContactForm () {
       />
       <input
         required
+        className="input-field"
         name="date"
         placeholder="Date*"
         // value={name}
         //onChange={}
       />
       <input
-        name="date"
-        placeholder="Date*"
+        name="message"
+        placeholder="Message (Optional)"
         // value={name}
         //onChange={}
       />
