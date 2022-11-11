@@ -1,9 +1,14 @@
-import './App.css'
+import './App.css';
+import ContactForm from './components/ContactForm';
+
 
 function App() {
 
   return (
-    <p>Hey</p>
+    <div>
+      <ContactForm/>
+    </div>
+
   )
 }
 
