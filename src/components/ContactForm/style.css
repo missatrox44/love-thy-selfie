@@ -1,6 +1,27 @@
+::placeholder {
+  color: black;
+  font-size: 1rem;
+}
+
 .input-field {
   left: 0;
   display: flex;
   flex-wrap: wrap;
-  width: 100%;
+  width: calc(100% - 50px);
+  margin: 10px 20px;
+  padding: 15px 0 15px 10px;
+  border-radius: 20px;
+  border: none;
+  color: black;
+  background-color: lightgray;
+}
+
+#message-input {
+  height: 100px;
+  align-content: start;
+}
+
+#contact-send {
+  justify-content: center;
+  font-size: 1.5rem;
 }

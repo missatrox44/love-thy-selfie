@@ -17,6 +17,10 @@
   -webkit-text-size-adjust: 100%;
 }
 
+body {
+  margin: 0;
+}
+
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;

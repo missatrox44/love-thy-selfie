@@ -48,11 +48,14 @@ export default function ContactForm () {
       />
       <input
         name="message"
+        className="input-field"
+        id="message-input"
         placeholder="Message (Optional)"
         // value={name}
         //onChange={}
       />
-      <input type="submit" value="SEND"/>
+      <input type="submit" value="SEND" className="input-field" id="contact-send"
+/>
     </form>
 
   )
