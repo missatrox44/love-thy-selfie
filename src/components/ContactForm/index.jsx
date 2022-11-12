@@ -1,58 +1,98 @@
-import React from "react";
+import React, { useRef, useState } from "react";
 import "./style.css";
 
 
 export default function ContactForm () {
 
+  const [formState, setFormState] = useState({
+    name:"",
+    email:"",
+    phone:"",
+    city:"",
+    date:"",
+    message:"",
+  })
+
+  const form = useRef();
+
+  const { name, email, phone, city, date, message } = formState;
+
+  function handleChange(e) {
+    setFormState({...formState, [e.target.name]: e.target.value });
+  }
+
+  function sendEmail(e) {
+    e.preventDefault();
+
+    //emailjs goes here
+
+    console.log("sent email theoretically!")
+
+    setFormState({
+      name:"",
+      email:"",
+      phone:"",
+      city:"",
+      date:"",
+      message:"",
+    })
+  }
+
   return (
-    <form>
+    <form ref={form} onSubmit={sendEmail} className="contact=form">
       <input
         required
+        type="text"
         className="input-field"
         name="name"
         placeholder="Name*"
-        // value={name}
-        //onChange={}
+        value={name}
+        onChange={handleChange}
       />
       <input
         required
+        type="email"
         className="input-field"
         name="email"
         placeholder="Email*"
-        // value={name}
-        //onChange={}
+        value={email}
+        onChange={handleChange}
       />
       <input
         required
+        type="tel"
         className="input-field"
         name="phone"
         placeholder="Phone*"
-        // value={name}
-        //onChange={}
+        value={phone}
+        onChange={handleChange}
       />
       <input
         required
+        type="text"
         className="input-field"
         name="city"
         placeholder="City*"
-        // value={name}
-        //onChange={}
+        value={city}
+        onChange={handleChange}
       />
       <input
         required
+        type="date"
         className="input-field"
         name="date"
         placeholder="Date*"
-        // value={name}
-        //onChange={}
+        value={date}
+        onChange={handleChange}
       />
       <input
         name="message"
+        type="text"
         className="input-field"
         id="message-input"
         placeholder="Message (Optional)"
-        // value={name}
-        //onChange={}
+        value={message}
+        onChange={handleChange}
       />
       <input type="submit" value="SEND" className="input-field" id="contact-send"
 />
