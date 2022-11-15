@@ -1,0 +1,37 @@
+footer {
+ position: relative;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+ list-style: none;
+}
+
+.footer-grid {
+  padding-top: 1.5rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  line-height: 1.4;
+}
+
+.text-align-right {
+  text-align: right;
+}
+
+.text-align-center {
+  text-align: center;
+}
+
+.custom-footer-title {
+  font-weight: bold;
+  font-size: larger;
+}
+
+.copyright {
+  text-align: center;
+}
+
