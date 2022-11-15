@@ -13,6 +13,7 @@ export default function ContactForm () {
     message:"",
   })
 
+
   const form = useRef();
 
   const { name, email, phone, city, date, message } = formState;
@@ -97,7 +98,6 @@ export default function ContactForm () {
       <input type="submit" value="SEND" className="input-field" id="contact-send"
 />
     </form>
-
   )
 
 }
