@@ -27,7 +27,7 @@ export default function ContactForm () {
 
     //emailjs goes here
 
-    console.log("sent email theoretically!")
+    console.log("sent email theoretically!");
 
     setFormState({
       name:"",

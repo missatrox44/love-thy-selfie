@@ -14,7 +14,7 @@
   border: none;
   color: black;
   background-color: lightgray;
-  transition: background-color .5s ease;
+  transition: background-color .6s ease;
 }
 
 .input-field:focus {
