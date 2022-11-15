@@ -1,17 +1,17 @@
-import React from 'react';
-import './App.css'
-
+import './App.css';
+import ContactForm from './components/ContactForm';
 import Footer from './components/Footer/Footer'
+
+
 
 function App() {
 
   return (
-    <div className='app-container'>
-      <p>Hey</p>
-
+    <div>
+      <ContactForm/>
       <Footer />
-    </div>
 
+    </div>
 
   )
 }

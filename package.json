@@ -9,13 +9,18 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "jb-date-input": "^3.4.2",
+    "moment-range": "^4.0.2",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-calendar-datetime-picker": "^1.6.3",
+    "react-dom": "^18.2.0",
+    "react-input-calendar": "^0.5.4"
   },
   "devDependencies": {
     "@types/react": "^18.0.24",
     "@types/react-dom": "^18.0.8",
     "@vitejs/plugin-react": "^2.2.0",
+    "sass": "^1.56.1",
     "vite": "^3.2.3"
   }
 }
