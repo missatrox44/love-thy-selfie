@@ -1,13 +1,13 @@
 import './App.css';
 import ContactForm from './components/ContactForm';
-import Footer from './components/Footer/Footer'
+import Footer from './components/Footer'
 
 
 
 function App() {
 
   return (
-    <div>
+    <div className='app-container'>
       <ContactForm/>
       <Footer />
 
