@@ -8,9 +8,8 @@ function App() {
 
   return (
     <div>
-      <ContactForm/>
-      <Footer />
-
+      <ContactForm />
+      {/* <Footer /> */}
     </div>
 
   )
