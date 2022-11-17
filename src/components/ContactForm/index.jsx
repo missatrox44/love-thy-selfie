@@ -20,6 +20,7 @@ export default function ContactForm () {
 
   function handleChange(e) {
     setFormState({...formState, [e.target.name]: e.target.value });
+    console.log(formState);
   }
 
   function sendEmail(e) {
@@ -40,6 +41,7 @@ export default function ContactForm () {
   }
 
   return (
+  
     <form ref={form} onSubmit={sendEmail} className="contact=form">
       <input
         required
@@ -81,12 +83,13 @@ export default function ContactForm () {
         required
         type="date"
         className="input-field"
+        id="date-input"
         name="date"
         placeholder="Date*"
         value={date}
         onChange={handleChange}
       />
-      <input
+      <textarea
         name="message"
         type="text"
         className="input-field"
