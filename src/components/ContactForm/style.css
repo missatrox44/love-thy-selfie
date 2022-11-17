@@ -38,6 +38,11 @@
   cursor: pointer;
 }
 
-/* #date-input {
-  font-size: 16px;
-} */
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+  opacity: 1;
+  display: block;
+  width: 25px;
+  height: 15px;
+  border-width: thin;
+}
