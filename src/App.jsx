@@ -1,9 +1,17 @@
-import './App.css'
+import './App.css';
+import ContactForm from './components/ContactForm';
+import Footer from './components/Footer'
+
+
 
 function App() {
 
   return (
-    <p>Hey</p>
+    <div className='app-container'>
+      <ContactForm/>
+      <Footer />
+    </div>
+
   )
 }
 
