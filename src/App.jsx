@@ -8,8 +8,11 @@ function App() {
 
   return (
     <div className='app-container'>
-      <ContactForm/>
-      <Footer />
+      {/* <ContactForm/>
+      <Footer /> */}
+
+      <ReviewCard />
+      <ReviewCarousel />
     </div>
 
   )
