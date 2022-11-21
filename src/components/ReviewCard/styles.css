@@ -1,6 +1,7 @@
 .temp-card{
   background: lightgray;
-  width: 300px;
+  transform-origin:top left;
+  width: 1600px;
   height: 300px;
   margin: 2px auto;
 }
