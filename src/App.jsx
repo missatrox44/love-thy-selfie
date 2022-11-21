@@ -1,7 +1,7 @@
 import './App.css';
 import ContactForm from './components/ContactForm';
 import Footer from './components/Footer'
-import ReviewCarousel from './components/ReviewCarousel';
+import Reviews from './components/Reviews';
 
 function App() {
 
@@ -10,7 +10,7 @@ function App() {
       {/* <ContactForm/>
       <Footer /> */}
 
-      <ReviewCarousel />
+     <Reviews />
     </div>
 
   )

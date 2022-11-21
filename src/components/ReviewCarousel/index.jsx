@@ -4,13 +4,14 @@ import "./styles.css";
 
 export default function ReviewCarousel() {
 
+
   return (
     <div className="carousel-container">
       <button className="left-arrow">
         &lt;
       </button>
       <div className="carousel-content-container">
-        <ReviewCard/>
+        <ReviewCard />   
       </div>
       <button className="right-arrow">
         &gt;

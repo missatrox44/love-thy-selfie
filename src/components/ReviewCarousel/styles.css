@@ -1,8 +1,9 @@
 .carousel-container {
-  width: 100vw;
+  /* width: 100vw; */
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
   position: relative;
+  justify-content: center;
 }
 
 .left-arrow, .right-arrow {
