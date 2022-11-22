@@ -1,6 +1,7 @@
 import React from "react";
 import Carousel from "../Carousel";
-import ReviewCard from '../ReviewCard'
+import ReviewCard from '../ReviewCard';
+import ReviewCarousel from '../ReviewCarousel';
 
 export default function Reviews() {
 

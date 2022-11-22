@@ -3,7 +3,7 @@ import './styles.css';
 
 export default function ReviewCard ({number}) {
 
-  console.log(number);
+  // console.log(number);
 
   return (
     <div className="temp-card">
