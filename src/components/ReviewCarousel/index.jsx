@@ -1,6 +1,6 @@
 import React from 'react'
 import { useEffect, useState } from 'react';
-import './styles.css' //will be added later
+import './styles.css' 
 
 const ReviewCarousel = (props) => {
     const {children} = props;
@@ -36,13 +36,14 @@ const ReviewCarousel = (props) => {
             }
             <div className="carousel-content-wrapper">
               <div className="carousel-content"
-              style={{ transform: `translateX(-${currentIndex * 100}%)`}}
+              //the transform below controls how much the carousel moves
+              style={{ transform: `translateX(-${currentIndex * 310}%)`}}
               >
                 {children}
               </div>
             </div>
           {
-            currentIndex < length-1 &&
+            currentIndex < ((length-1)/4) &&
             <button onClick={next} className="right-arrow">
               &gt;
             </button>
