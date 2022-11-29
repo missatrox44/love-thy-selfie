@@ -11,15 +11,11 @@ export default function Reviews() {
     <div>
       {/* <ReviewCarousel style={{ maxWidth: 1200, marginLeft:'auto', marginRight:'auto', marginTop: 64 }}> */}
       <ReviewCarousel style={{ marginLeft:'auto', marginRight:'auto', marginTop: 64 }}>
-        <ReviewCard number={reviewContent[0]}/>
-        <ReviewCard number={reviewContent[1]}/>
-        <ReviewCard number={reviewContent[2]}/>
-        <ReviewCard number={reviewContent[3]}/>
-        <ReviewCard number={reviewContent[4]}/>
-        <ReviewCard number={reviewContent[5]}/>
-        <ReviewCard number={reviewContent[6]}/>
-        <ReviewCard number={reviewContent[7]}/>
-        <ReviewCard number={reviewContent[8]}/>
+        {reviewContent.map((i) => {
+          return (
+            <ReviewCard number={i}/>
+          )
+        })}
       </ReviewCarousel>
     </div>
   )
