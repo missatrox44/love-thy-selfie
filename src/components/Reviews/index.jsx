@@ -13,7 +13,7 @@ export default function Reviews() {
       <ReviewCarousel style={{ marginLeft:'auto', marginRight:'auto', marginTop: 64 }}>
         {reviewContent.map((i) => {
           return (
-            <ReviewCard number={i}/>
+            <ReviewCard key={i} number={i}/>
           )
         })}
       </ReviewCarousel>

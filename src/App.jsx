@@ -11,8 +11,8 @@ function App() {
   return (
     <div className='app-container'>
 
-     <Reviews />
-
+      <Reviews />
+      {/* <Footer /> */}
     </div>
 
   )

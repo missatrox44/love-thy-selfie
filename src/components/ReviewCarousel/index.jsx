@@ -15,12 +15,14 @@ const ReviewCarousel = (props) => {
 
   const next = () => {
     if (currentIndex < (length - 1)) {
+      console.log("currentIndex", currentIndex)
         setCurrentIndex(prevState => prevState + 1)
     }
   }
 
   const prev = () => {
     if (currentIndex > 0) {
+      console.log("currentIndex", currentIndex)
         setCurrentIndex(prevState => prevState - 1)
     }
   }
@@ -36,14 +38,15 @@ const ReviewCarousel = (props) => {
             }
             <div className="carousel-content-wrapper">
               <div className="carousel-content"
+        
               //the transform below controls how much the carousel moves
-              style={{ transform: `translateX(-${currentIndex * 300}%)`}}
+              style={{ transform: `translateX(-${currentIndex * 305}%)`}}
               >
                 {children}
               </div>
             </div>
           {
-            currentIndex < ((length-1)/4) &&
+            currentIndex < length-1 &&
             <button onClick={next} className="right-arrow">
               &gt;
             </button>
