@@ -1,11 +1,11 @@
 import React from 'react';
-import BsStarFill from '../../assets/Star'
+import BsStarFill from '../../assets/Star';
 
 function ReviewCard() {
   return (
-    <div className='rounded-lg bg-gray-100 p-5'>
+    <div className='rounded-lg bg-gray-100 p-5 drop-shadow-lg md:w-1/2 lg:w-1/3 hover:drop-shadow-xl'>
 
-      <div className='p-4 sm:px-6 lg:px-8 flex'>
+      <div className='p-4 sm:px-6 lg:px-8 flex place-content-center'>
         <BsStarFill />
         <BsStarFill />
         <BsStarFill />
@@ -13,7 +13,10 @@ function ReviewCard() {
         <BsStarFill />
       </div>
 
-      <p className='ml-5'>11/21/22</p>
+      <div className='flex place-content-start'>
+        <p className='ml-5'>11/21/22</p>
+      </div>
+
 
       <p className='m-4'>Cras malesuada maximus felis. In tempus efficitur dapibus. Curabitur eu sapien nisi. Cras dignissim orci elit. Cras ut elit elit. Nulla tincidunt mi elementum, luctus lorem id, placerat tortor. Proin tincidunt odio sem, eleifend rhoncus ipsum pretium ut. Duis ornare at nisi ut pharetra.</p>
 
