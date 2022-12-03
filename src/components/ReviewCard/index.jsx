@@ -1,7 +1,9 @@
 import React from 'react';
 import BsStarFill from '../../assets/Star';
+import './styles.css';
 
-function ReviewCard() {
+
+function ReviewCard({number}) {
   return (
     <div className='rounded-lg bg-gray-100 p-5 drop-shadow-lg hover:drop-shadow-xl'>
 
@@ -14,7 +16,7 @@ function ReviewCard() {
       </div>
 
       <div className='flex place-content-start'>
-        <p className='ml-5'>11/21/22</p>
+        <p className='ml-5'>11/21/22 - {number}</p>
       </div>
 
 

@@ -1,0 +1,10 @@
+.temp-card{
+  background: lightgray;
+  transform-origin:top left;
+  width: 3%;
+  height: 300px;
+  /* margin: 10px 5px; */
+  text-align: center;
+  align-self: center;
+  font-size: 80px;
+}
