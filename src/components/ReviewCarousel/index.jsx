@@ -1,13 +1,18 @@
 import React from 'react'
 import { useEffect, useState } from 'react';
+import { useMediaQuery } from '@mui/material';
 import './styles.css' 
 
 const ReviewCarousel = (props) => {
-    const {children} = props;
+  
+  const {children} = props;
+
+  const matches = useMediaQuery('(min-width:640px)');
 
   const [currentIndex, setCurrentIndex] = useState(0)
   const [length, setLength] = useState(children.length)
-
+  
+  
 // Set the length to match current children from props
   useEffect(() => {
     setLength(children.length)
@@ -16,6 +21,9 @@ const ReviewCarousel = (props) => {
   const next = () => {
     if (currentIndex < (length - 1)) {
         setCurrentIndex(prevState => prevState + 1)
+    }
+    if (children[currentIndex]) {
+      console.log(children[currentIndex])
     }
   }
 
@@ -27,6 +35,7 @@ const ReviewCarousel = (props) => {
 
     return (
         <div className="carousel-container">
+          <span>{`(min-width:600px) matches: ${matches}`}</span>;
           <div className="carousel-wrapper">
             {
               currentIndex > 0 &&
@@ -46,11 +55,14 @@ const ReviewCarousel = (props) => {
               </div>
             </div>
           {
+            (currentIndex + 1) ? 
             // currentIndex < ((length/3)-1) &&
             currentIndex < length-1 &&
             <button onClick={next} className="right-arrow">
               &gt;
             </button>
+            :
+            <div></div>
           }
           </div>
         </div>
@@ -58,3 +70,4 @@ const ReviewCarousel = (props) => {
 }
 
 export default ReviewCarousel
+

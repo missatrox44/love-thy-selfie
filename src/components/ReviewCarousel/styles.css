@@ -58,7 +58,11 @@
   right: -15px;
 }
 
-@media only screen and (min-width: 600px) {
+.invisible {
+  display: none;
+}
+
+@media only screen and (min-width: 640px) {
   .carousel-content > * {
     width: calc(33% - 16px);
     /* font-size: 13px; */
