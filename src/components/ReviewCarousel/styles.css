@@ -17,7 +17,7 @@
 }
 
 .carousel-content {
-  width: 33%;
+  width: 100%;
   display: flex;
   transition: all 500ms linear;
   -ms-overflow-style: none;  /* hide scrollbar in IE and Edge */
@@ -31,9 +31,10 @@
 }
 
 .carousel-content > * {
-  width: 100%;
+  width: calc(100% - 20px);
   flex-shrink: 0;
   flex-grow: 1;
+  font-size: inherit;
 }
 
 
@@ -56,3 +57,12 @@
 .right-arrow {
   right: -15px;
 }
+
+@media only screen and (min-width: 600px) {
+  .carousel-content > * {
+    width: calc(33% - 16px);
+    /* font-size: 13px; */
+    /* line-height: 15px; */
+  }
+}
+  
