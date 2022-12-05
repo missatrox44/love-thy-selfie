@@ -16,6 +16,7 @@ const ReviewCarousel = (props) => {
   const next = () => {
     if (currentIndex < (length - 1)) {
       console.log("currentIndex", currentIndex)
+      console.log("length", length/3)
         setCurrentIndex(prevState => prevState + 1)
     }
   }
@@ -23,6 +24,7 @@ const ReviewCarousel = (props) => {
   const prev = () => {
     if (currentIndex > 0) {
       console.log("currentIndex", currentIndex)
+      console.log("length", length/3)
         setCurrentIndex(prevState => prevState - 1)
     }
   }
@@ -46,7 +48,7 @@ const ReviewCarousel = (props) => {
               </div>
             </div>
           {
-            currentIndex < length-1 &&
+            currentIndex < ((length/3)-1) &&
             <button onClick={next} className="right-arrow">
               &gt;
             </button>

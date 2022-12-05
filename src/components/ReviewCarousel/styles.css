@@ -19,7 +19,7 @@
 .carousel-content {
   width: 33%;
   display: flex;
-  transition: all 250ms linear;
+  transition: all 500ms linear;
   -ms-overflow-style: none;  /* hide scrollbar in IE and Edge */
   scrollbar-width: none;  /* hide scrollbar in Firefox */
   
