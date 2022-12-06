@@ -5,7 +5,7 @@ import './styles.css';
 
 function ReviewCard({number}) {
   return (
-    <div className='rounded-lg bg-gray-100 p-5 drop-shadow-lg hover:drop-shadow-xl'>
+    <div className='rounded-lg bg-gray-100 p-5 drop-shadow-lg hover:drop-shadow-xl custom-card'>
 
       <div className='p-4 sm:px-6 lg:px-8 flex place-content-center'>
         <BsStarFill />
