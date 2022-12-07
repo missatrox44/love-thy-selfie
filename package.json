@@ -11,7 +11,11 @@
   "dependencies": {
     "@emotion/react": "^11.10.5",
     "@emotion/styled": "^11.10.5",
+<<<<<<< HEAD
     "@mui/material": "^5.10.17",
+=======
+    "@mui/material": "^5.10.16",
+>>>>>>> 39e374810677f9573adfffdf2b4219b8330b11af
     "jb-date-input": "^3.4.2",
     "moment-range": "^4.0.2",
     "react": "^18.2.0",
