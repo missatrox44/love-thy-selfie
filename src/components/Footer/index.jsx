@@ -1,13 +1,14 @@
 import React from 'react';
 // import './style.css';
 import logo2 from '../../assets/logos/logo-text-2.svg';
+import logo3 from '../../assets/logos/logo-2.svg'
 
 
 function Footer() {
   return (
 
 <footer className='text-center lg:text-left bg-gray-100 text-gray-600'>
-  <div className='mx-6 py-10 text-center md:text-left'>
+  <div className='mx-6 pt-5 text-center md:text-left'>
     <div className='grid grid-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
 
     <div className=''>
@@ -70,7 +71,7 @@ function Footer() {
 
       <div className=''>
         {/* <p className='text-4xl'>Picture or Love Thy Selfie Photo Booth in some fancy text</p> */}
-        <img className='text-logo' alt='logo' src={logo2} />
+        <img className='text-logo' alt='logo' src={logo3} />
       </div>
       
      
