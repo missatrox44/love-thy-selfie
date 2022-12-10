@@ -111,14 +111,14 @@ export const reviews = [
     stars: 5,
     link: '',
   },
-  {
-    date: '3/08/17',
-    review: 'We had a blast with this when my Dad and stepmom got married last year, so i decided to book them for my neices sweet 16. We had so much fun with it. Noemi was wonderful during the booking process and worked with us. And the gentleman who worked the booth was awesome, had us all laughing everytime we went up there! I\'d definitely recommend them for any future party or wedding. They were great!!',
-    picture: 'https://scontent-dfw5-2.xx.fbcdn.net/v/t39.30808-1/217703022_10226060186076252_1379414751476720313_n.jpg?stp=c0.23.40.40a_cp0_dst-jpg_p40x40&_nc_cat=104&ccb=1-7&_nc_sid=7206a8&_nc_ohc=FgjUX6M2dEoAX-JS3lT&_nc_ht=scontent-dfw5-2.xx&oh=00_AfCoCHv9itrGNBO9cxw-7Ln-ePRx35OUPFHALYUF2ILa_g&oe=63955263',
-    name: 'Chelo Abalos',
-    stars: 5,
-    link: '',
-  },
+  // {
+  //   date: '3/08/17',
+  //   review: 'We had a blast with this when my Dad and stepmom got married last year, so i decided to book them for my neices sweet 16. We had so much fun with it. Noemi was wonderful during the booking process and worked with us. And the gentleman who worked the booth was awesome, had us all laughing everytime we went up there! I\'d definitely recommend them for any future party or wedding. They were great!!',
+  //   picture: 'https://scontent-dfw5-2.xx.fbcdn.net/v/t39.30808-1/217703022_10226060186076252_1379414751476720313_n.jpg?stp=c0.23.40.40a_cp0_dst-jpg_p40x40&_nc_cat=104&ccb=1-7&_nc_sid=7206a8&_nc_ohc=FgjUX6M2dEoAX-JS3lT&_nc_ht=scontent-dfw5-2.xx&oh=00_AfCoCHv9itrGNBO9cxw-7Ln-ePRx35OUPFHALYUF2ILa_g&oe=63955263',
+  //   name: 'Chelo Abalos',
+  //   stars: 5,
+  //   link: '',
+  // },
   {
     date: '12/29/16',
     review: 'The station is a must have for any event! Customer service is also exceptional!',

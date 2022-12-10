@@ -12,7 +12,7 @@ function App() {
     <div className='app-container'>
 
       <Reviews />
-      {/* <Footer /> */}
+      <Footer />
     </div>
 
   )
