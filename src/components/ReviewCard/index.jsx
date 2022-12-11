@@ -21,7 +21,7 @@ function ReviewCard({ date, review, picture, name }) {
       </div>
 
       <div className='flex place-content-start'>
-        {/* <ImQuotesLeft /> */}
+        <ImQuotesLeft />
         <p className='m-4'>{review}</p>
       </div>
 <hr />

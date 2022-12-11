@@ -60,7 +60,7 @@ const ReviewCarousel = (props) => {
         <div className="carousel-content-wrapper">
           <div className="carousel-content"
 
-            //the transform below controls how much the carousel moves
+            // controls how much the carousel moves
             style={{ transform: `translateX(-${currentIndex * 100}%)` }}
           >
             {children}
