@@ -1,9 +1,4 @@
 .custom-card {
-  transform-origin: top left;
   margin: 20px 10px;
   width: 100%;
-}
-
-.custom-card:first-child {
-  margin-left: 10px;
 }
