@@ -1,4 +1,47 @@
+
+.reviews-container {
+  box-shadow: 0 12px 31px 0 rgb(82 97 116 / 10%);
+  background-color: #fff;
+  border-radius: 20px;
+  margin-bottom: 30px;
+  position: relative;
+}
+
+.reviews-text {
+  height: auto;
+  font-size: 1.25rem;
+  position: relative;
+  overflow: visible;
+  padding: 0;
+  padding-bottom: 60px;
+  opacity: 1;
+  line-height: 1.82;
+}
+
+.author-box {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+
+}
+
+.author-star-box {
+
+}
+
+.name {
+  font-size: 1.25rem;
+  margin: 0;
+}
+
+.verified-box {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
 .custom-card {
   margin: 20px 10px;
   width: 100%;
 }
+
