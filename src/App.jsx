@@ -6,11 +6,11 @@ import ReviewCard from './components/ReviewCard'
 
 
 
+
 function App() {
 
   return (
     <div className='app-container'>
-
       <Reviews />
       <Footer />
     </div>

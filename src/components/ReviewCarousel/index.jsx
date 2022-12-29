@@ -38,17 +38,7 @@ const ReviewCarousel = (props) => {
       {/* <span>{`big screen (min-width:640px): ${bigScreen}`}</span> */}
       <p className='text-center text-gray-800 text-6xl lg:text-5xl leading-tight'>Reviews:</p>
       <div className='text-center text-gray-700 font-light m-4'>Here are what some of our amazing customers are
-          saying!</div>
-      <div className='flex place-content-center'>
-        <p className='font-bold mr-3'>Overall Rating:</p>
-
-        <BsStarFill />
-        <BsStarFill />
-        <BsStarFill />
-        <BsStarFill />
-        <BsStarFill />
-        <p className='text-xs ml-3'>5.0/5.0</p>
-      </div>
+        saying!</div>
 
       <div className="carousel-wrapper">
         {

@@ -1,7 +1,6 @@
 import React from 'react';
 // import './style.css';
-import logo2 from '../../assets/logos/logo-text-2.svg';
-import logo3 from '../../assets/logos/logo-2.svg'
+import logo3 from '../../assets/logos/selfie-logo.svg'
 
 
 function Footer() {
@@ -24,7 +23,7 @@ function Footer() {
         <p className='mb-4'>
           <a href='#!' className='text-gray-600'>Reviews</a>
         </p>
-        <p>
+        <p className='mb-5'>
           <a href='#!' className='text-gray-600'>Gallery</a>
         </p>
       </div>
@@ -70,7 +69,6 @@ function Footer() {
       </div>
 
       <div className=''>
-        {/* <p className='text-4xl'>Picture or Love Thy Selfie Photo Booth in some fancy text</p> */}
         <img className='text-logo' alt='logo' src={logo3} />
       </div>
       
