@@ -1,3 +1,4 @@
+
 .reviews-container {
   box-shadow: 0 12px 31px 0 rgb(82 97 116 / 10%);
   background-color: #fff;
@@ -38,3 +39,9 @@
   justify-content: center;
   flex-direction: column;
 }
+
+.custom-card {
+  margin: 20px 10px;
+  width: 100%;
+}
+
