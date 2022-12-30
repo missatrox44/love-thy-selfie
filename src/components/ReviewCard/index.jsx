@@ -29,7 +29,8 @@ function ReviewCard({ date, review, picture, name }) {
 
         <div className='border-t-2'>
           <footer className='mt-8 text-sm text-gray-500 '>
-            &mdash; {name} 
+            {/* &mdash; {name}  */}
+            <div className='font-extrabold'>{name}</div>
             <div className='flex my-2'>
               <img className='h-4 w-4 ml-1' src='https://upload.wikimedia.org/wikipedia/commons/1/10/Blue_Badge.png' />
               <p className='text-xs text-slate-400'>Verified</p>
