@@ -1,17 +1,17 @@
 import './App.css';
-import ContactForm from './components/ContactForm';
-import Footer from './components/Footer'
-import Reviews from './components/Reviews';
-import ReviewCard from './components/ReviewCard'
 import Header from './components/Header';
-
+import Features from './components/Features';
+import Reviews from './components/Reviews';
+import Footer from './components/Footer';
+import ContactForm from './components/ContactForm';
 
 
 function App() {
 
   return (
     <div className='app-container'>
-      {/* <Header /> */}
+      <Header />
+      <Features />
       <Reviews />
       <Footer />
     </div>
