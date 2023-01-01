@@ -68,15 +68,15 @@ function Footer() {
 
           </div>
 
-          <div className=' md:hidden lg:block'>
+          <div className=' md:hidden lg:block '>
             <img className='' alt='logo' src={logo3} />
           </div>
 
 
         </div>
       </div>
-      <div className='hidden md:block lg:hidden'>
-        <img className='h-48 ml-[30%]' alt='logo' src={logo3} />
+      <div className='hidden lg:hidden md:flex md:place-content-center'>
+        <img className='h-48' alt='logo' src={logo3} />
       </div>
       <div className='text-center p-6 bg-gray-200'>
         <span>© 2022 Copyright </span>
