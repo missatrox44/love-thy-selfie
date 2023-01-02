@@ -1,7 +1,6 @@
 
 .app-container {
-  width: 90%;
-  margin-left: 5%;
+  margin: 0 auto;
 }
 
 /* #root {

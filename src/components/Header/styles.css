@@ -1,0 +1,10 @@
+.title {
+  font-size: 7vw;
+  color: white;
+  font-weight: bolder;
+}
+
+
+@media only screen and (max-width: 640px) {
+
+}
