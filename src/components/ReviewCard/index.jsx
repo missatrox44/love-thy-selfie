@@ -1,45 +1,33 @@
 import React from 'react';
-import BsStarFill from '../../assets/Star';
+// import BsStarFill from '../../assets/Star';
 import './styles.css';
-import ImQuotesLeft from '../../assets/LeftQuote';
-import ImQuotesRight from '../../assets/RightQuote';
+// import ImQuotesLeft from '../../assets/LeftQuote';
+// import ImQuotesRight from '../../assets/RightQuote';
 
 
 function ReviewCard({ date, review, picture, name }) {
   return (
-    <div className='mr-1 min-w-full md:min-w-[50%] lg:min-w-[33%]'>
+    <div className='border-2 mr-1 min-w-full md:min-w-[50%] lg:min-w-[33%] flex'>
       <blockquote
-        className='flex h-full flex-col justify-between bg-white p-6 drop-shadow-lg px-5 rounded-lg'
+        className='flex h-full flex-col justify-between bg-white p-6 shadow px-5 rounded'
       >
         <div>
           <div className='mt-4'>
-            {/* <p className='text-2xl font-bold text-pink-600 sm:text-3xl'>
-          {date}
-        </p> */}
-
-            <p className='mt-4 leading-relaxed text-gray-500'>
-              <span class='text-xl'>&ldquo;</span>
-
+            <p className='mt-0 leading-relaxed text-gray-500'>
+              <span class='text-4xl text-pink-600'>&ldquo;</span>
               {review}
-
-              <span class='text-xl'>&rdquo;</span>
             </p>
           </div>
         </div>
 
         <div className='border-t-2'>
-          <footer className='mt-8 text-sm text-gray-500 '>
-            {/* &mdash; {name}  */}
+          
+          <footer className='mt-8 mb-2 text-sm text-gray-500 place-content-end flex'>
             <div className='font-extrabold'>{name}</div>
-            <div className='flex my-2'>
-              <img className='h-4 w-4 ml-1' src='https://upload.wikimedia.org/wikipedia/commons/1/10/Blue_Badge.png' />
-              <p className='text-xs text-slate-400'>Verified</p>
-            </div>
-
-
-            {/* <svg class='w-5 h-5' fill='#1877F2' viewBox='0 0 24 24' aria-hidden='true'><path fill-rule='evenodd' d='M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z' clip-rule='evenodd' /></svg> */}
           </footer>
-          <div className='flex gap-0.5 text-yellow-500'>
+
+
+          <div className='flex gap-0.5 text-yellow-500 mb-4 place-content-end'>
             <svg
               className='h-5 w-5'
               fill='currentColor'
@@ -96,9 +84,17 @@ function ReviewCard({ date, review, picture, name }) {
               />
             </svg>
           </div>
+
+          <div className='flex-col absolute bottom-7'>
+            <svg class='w-14 h-14' fill='#1877F2' viewBox='0 0 24 24' aria-hidden='true'><path fill-rule='evenodd' d='M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z' clip-rule='evenodd' /></svg>
+            <p className='text-xs text-slate-400 ml-1'>Verified</p>
+          </div>
+
         </div>
+
       </blockquote>
     </div>
+
   )
 }
 
