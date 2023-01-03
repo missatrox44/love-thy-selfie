@@ -42,7 +42,7 @@ export default function ContactForm () {
 
   return (
   
-    <form ref={form} onSubmit={sendEmail} className="contact=form">
+    <form ref={form} onSubmit={sendEmail} className="contact-form">
       <input
         required
         type="text"

@@ -13,6 +13,7 @@ function App() {
       <Header />
       <Features />
       <Reviews />
+      <ContactForm />
       <Footer />
     </div>
 
