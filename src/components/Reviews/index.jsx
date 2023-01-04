@@ -24,6 +24,7 @@ export default function Reviews() {
               <BsStarFill />
               <BsStarFill />
             <p className='text-xs ml-3'>5.0/5.0</p>
+            <p className="ml-3">117 Reviews</p>
           </div>
       <ReviewCarousel style={{ marginLeft:'auto', marginRight:'auto', marginTop: 64 }}>
 
