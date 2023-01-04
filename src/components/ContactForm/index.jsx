@@ -1,8 +1,11 @@
 import React, { useRef, useState } from "react";
+import { useMediaQuery } from '@mui/material';
 import "./style.css";
 
 
 export default function ContactForm () {
+
+  const bigScreen = useMediaQuery('(min-width: 1024px)');
 
   const [formState, setFormState] = useState({
     name:"",
@@ -13,6 +16,13 @@ export default function ContactForm () {
     message:"",
   })
 
+  function handleStyling () {
+    if (!bigScreen) {
+      return;
+    } else {
+      return '0px 300px';
+    }
+  }
 
   const form = useRef();
 
@@ -42,7 +52,12 @@ export default function ContactForm () {
 
   return (
   
-    <form ref={form} onSubmit={sendEmail} className="contact-form">
+    <form 
+      ref={form} 
+      onSubmit={sendEmail} 
+      className="contact-form"
+      style={{margin: handleStyling()}} 
+    >
       <input
         required
         type="text"

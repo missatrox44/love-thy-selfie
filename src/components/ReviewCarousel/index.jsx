@@ -48,6 +48,7 @@ const ReviewCarousel = (props) => {
             {children}
           </div>
         </div>
+    
         {
           //if it's a big screen 
           bigScreen && (currentIndex < ((length / 3) - 1)) &&
