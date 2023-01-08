@@ -1,19 +1,36 @@
 import React from "react";
 import ReviewCard from '../ReviewCard';
 import ReviewCarousel from '../ReviewCarousel';
+import { reviews } from "../../assets/reviews";
+import BsStarFill from '../../assets/Star';
+
+import './styles.css';
 
 export default function Reviews() {
 
-  const reviewContent = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30]
-
 
   return (
-    <div>
-      {/* <ReviewCarousel style={{ maxWidth: 1200, marginLeft:'auto', marginRight:'auto', marginTop: 64 }}> */}
+    <div class ="reviews-container">
+      <p className='text-center text-gray-800 text-3xl lg:text-5xl leading-tight pt-10'>Reviews:</p>
+        <div className='text-center text-gray-700 font-light m-4'>
+          Here are what some of our amazing customers are
+            saying!
+        </div>
+          <div className='flex place-content-center'>
+            <p className='font-bold mr-3'>Overall Rating:</p>
+              <BsStarFill />
+              <BsStarFill />
+              <BsStarFill />
+              <BsStarFill />
+              <BsStarFill />
+            <p className='text-xs ml-3'>5.0/5.0</p>
+            <p className="ml-3">117 Reviews</p>
+          </div>
       <ReviewCarousel style={{ marginLeft:'auto', marginRight:'auto', marginTop: 64 }}>
-        {reviewContent.map((i) => {
+
+        {reviews.map((review, i) => {
           return (
-            <ReviewCard key={i} number={i}/>
+            <ReviewCard key={i} name={review.name} review={review.review} date={review.date} picture={review.picture}/>
           )
         })}
       </ReviewCarousel>
