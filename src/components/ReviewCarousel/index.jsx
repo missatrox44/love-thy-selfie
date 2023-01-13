@@ -12,7 +12,7 @@ const ReviewCarousel = (props) => {
 
   const [touchStart, setTouchStart] = useState(null);
   const [touchEnd, setTouchEnd] = useState(null);
-  const minSwipeDistance = 50 
+  const minSwipeDistance = 25; 
 
   const [currentIndex, setCurrentIndex] = useState(0)
   const [length, setLength] = useState(children.length)
@@ -32,18 +32,11 @@ const ReviewCarousel = (props) => {
     const isRightSwipe = distance < -minSwipeDistance;
     if (isLeftSwipe || isRightSwipe) {
       console.log('swipe', isLeftSwipe ? 'left' : 'right')
-      isLeftSwipe ? setCurrentIndex(prevState => prevState + 1) : setCurrentIndex(prevState => prevState - 1)
+      isLeftSwipe ? 
+        setCurrentIndex(prevState => prevState + 1) 
+      : 
+        setCurrentIndex(prevState => prevState - 1)
     }
-    // console.log('swipe', isLeftSwipe ? 'left' : 'right')
-    // add your conditional logic here
-    // if (isLeftSwipe && currentIndex < (currentIndex.length - 1)) {
-    //   setCurrentIndex(prevState => prevState + 1);
-    //   console.log(currentIndex)
-    // };
-    // if (isRightSwipe && currentIndex > 0) {
-    //   setCurrentIndex(prevState => prevState - 1);
-    //   console.log(currentIndex)
-    // }
   }
 
   // Set the length to match current children from props
