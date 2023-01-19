@@ -7,20 +7,21 @@ import './styles.css';
 
 function ReviewCard({ date, review, picture, name }) {
   return (
-    <div className='border-2 mr-1 min-w-full md:min-w-[50%] lg:min-w-[33%] flex'>
+    // <div className='border-2 mr-1 min-w-full md:min-w-[50%] lg:min-w-[33%] flex custom-card'>
+    <div className='border-2 min-w-full md:min-w-[50%] lg:min-w-[33%] flex custom-card'>
       <blockquote
-        className='flex h-full flex-col justify-between bg-white p-6 shadow px-5 rounded'
+        className='flex h-full flex-col justify-between bg-white p-5 rounded'
       >
         <div>
           <div className='mt-4'>
-            <p className='mt-0 leading-relaxed text-gray-500'>
+            <p className='leading-relaxed text-gray-500'>
               <span class='text-4xl text-pink-600'>&ldquo;</span>
               {review}
             </p>
           </div>
         </div>
 
-        <div className='border-t-2 flex justify-between'>
+        <div className='mt-5 border-t-2 flex justify-between'>
 
           <div>
             <div className='font-extrabold mt-8 mb-2 text-sm text-gray-500 place-content-start'>{name}</div>

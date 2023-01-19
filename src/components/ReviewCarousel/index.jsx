@@ -31,7 +31,7 @@ const ReviewCarousel = (props) => {
     const isLeftSwipe = distance > minSwipeDistance;
     const isRightSwipe = distance < -minSwipeDistance;
     if (isLeftSwipe || isRightSwipe) {
-      console.log('swipe', isLeftSwipe ? 'left' : 'right')
+      // console.log('swipe', isLeftSwipe ? 'left' : 'right')
       isLeftSwipe ? 
         setCurrentIndex(prevState => prevState + 1) 
       : 

@@ -64,15 +64,17 @@
   }
 }
 
+
+/* @media only screen and (min-width: 820px) {
+  .carousel-content > * {
+    width: calc(50% - 32px);
+  }
+} */
+
+
 @media only screen and (min-width: 1800px) {
   .carousel-content > * {
     width: calc(33% - 14.5px);
   }
 }
   
-/* 
-@media only screen and (min-width: 820px) {
-  .carousel-content > * {
-    width: calc(50% - 32px);
-  }
-} */
