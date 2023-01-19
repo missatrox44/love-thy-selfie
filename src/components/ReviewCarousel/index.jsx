@@ -8,7 +8,7 @@ const ReviewCarousel = (props) => {
 
   const { children } = props;
 
-  const bigScreen = useMediaQuery('(min-width:640px)');
+  const bigScreen = useMediaQuery('(min-width:1024px)');
 
   const [touchStart, setTouchStart] = useState(null);
   const [touchEnd, setTouchEnd] = useState(null);

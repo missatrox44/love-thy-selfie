@@ -21,7 +21,7 @@ function ReviewCard({ date, review, picture, name }) {
           </div>
         </div>
 
-        <div className='mt-5 border-t-2 flex justify-between'>
+        <div className='mt-4 border-t-2 flex justify-between'>
 
           <div>
             <div className='font-extrabold mt-8 mb-2 text-sm text-gray-500 place-content-start'>{name}</div>
