@@ -25,10 +25,6 @@
 
 }
 
-.author-star-box {
-
-}
-
 .name {
   font-size: 1.25rem;
   margin: 0;
@@ -38,4 +34,21 @@
   display: flex;
   justify-content: center;
   flex-direction: column;
+}
+
+.custom-card {
+  margin-right: 0vw;
+}
+
+
+@media only screen and (min-width: 820px) {
+  .custom-card {
+    margin-right: 0vw;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .custom-card {
+    margin-right: .3vw;
+  }
 }

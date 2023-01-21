@@ -1,7 +1,16 @@
 import * as React from "react";
 
-function BsStarFill(props) {
-  return <svg className='m-0.5' stroke="black" fill="#FFFF00" strokeWidth={1} viewBox="0 0 16 16" height="1.75em" width="2em" {...props}><path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" /></svg>;
+function Star (props) {
+  return <svg
+  // className= "h-5 w-5"
+  fill='currentColor'
+  viewBox='0 0 20 20'
+  xmlns='http://www.w3.org/2000/svg'
+>
+  <path
+    d='M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z'
+  />
+</svg>
 }
 
-export default BsStarFill;
+export default Star;
