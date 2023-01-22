@@ -10,15 +10,15 @@ export default function Reviews() {
 
 
   return (
-    <div class ="reviews-container">
-      <p className='text-center text-gray-800 text-3xl lg:text-5xl leading-tight pt-10'>Reviews:</p>
-        <div className='text-center text-gray-700 font-light m-4'>
-          Here are what some of our amazing customers are
+    <div className ="bg-gray-200">
+      {/* <p className='text-center text-gray-800 text-5xl leading-tight pt-10 font-semibold'>Reviews</p> */}
+        <p className='text-center text-gray-700 text-2xl py-6 px-2 font-semibold'>
+          Check out what some of our amazing customers are
             saying!
-        </div>
+        </p>
           <div className='flex place-content-center'>
-            <p className='font-bold mr-1'>Overall Rating:</p>
-            <div className="flex gap-0.5 text-yellow-500 mb-4 place-content-start h-5 w-5">
+            <p className='mt-3 text-sm'>Overall Rating:</p>
+            <div className="flex text-yellow-500 mb-4 place-content-start h-10">
               <Star />
               <Star />
               <Star />
@@ -26,8 +26,7 @@ export default function Reviews() {
               <Star />
             </div>
 
-            <p className='text-xs ml-3'>5.0/5.0</p>
-            <p className="ml-3">117 Reviews</p>
+            <p className='mt-3 text-sm'>5.0 / 5.0</p>
             </div>
       <ReviewCarousel style={{ marginLeft:'auto', marginRight:'auto', marginTop: 64 }}>
 

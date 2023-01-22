@@ -6,6 +6,7 @@
 
 .carousel-wrapper {
   display: flex;
+  padding-right: 0;
   width: 100%;
   position: relative;
 }
