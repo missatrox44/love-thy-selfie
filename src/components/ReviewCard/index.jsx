@@ -27,7 +27,7 @@ function ReviewCard({ date, review, picture, name }) {
             <div className='font-extrabold mt-8 mb-2 text-sm text-gray-500 place-content-start'>{name}</div>
 
             {/* stars */}
-            <div className='flex gap-0.5 text-yellow-500 mb-4 place-content-start'>
+            <div className='flex text-yellow-500 mb-4 place-content-start'>
               <Star/>
               <Star/>
               <Star/>
