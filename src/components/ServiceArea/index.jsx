@@ -3,7 +3,7 @@ import medal from '../../assets/medal.png';
 import serviceMap from '../../assets/serviceMap.png'
 import { useMediaQuery } from '@mui/material';
 
-import styles from './styles.css'
+import './styles.css'
 
 export default function Features() {
 

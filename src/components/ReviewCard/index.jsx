@@ -1,9 +1,6 @@
 import React from 'react';
 import Star from '../../assets/Star';
 import './styles.css';
-// import ImQuotesLeft from '../../assets/LeftQuote';
-// import ImQuotesRight from '../../assets/RightQuote';
-
 
 function ReviewCard({ date, review, picture, name }) {
   return (
