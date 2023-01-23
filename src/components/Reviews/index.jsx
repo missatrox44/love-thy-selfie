@@ -11,7 +11,6 @@ export default function Reviews() {
 
   return (
     <div className ="bg-gray-200">
-      {/* <p className='text-center text-gray-800 text-5xl leading-tight pt-10 font-semibold'>Reviews</p> */}
         <p className='text-center text-gray-700 text-2xl py-6 px-2 font-semibold'>
           Check out what some of our amazing customers are
             saying!
