@@ -4,7 +4,7 @@ import longlogo from '../../assets/logos/white-long-logo.svg';
 
 export default function Header() {
   return (
-    <nav className='bg-slate-700 px-2 sm:px-4 py-2.5 rounded'>
+    <nav className='bg-slate-700 px-2 sm:px-4 py-2.5'>
       <div className='container flex flex-wrap items-center justify-between mx-auto'>
         <a href='/' className='flex items-center'>
           <img src={longlogo} className='h-11 md:h-10 lg:h-14' alt='Text Logo' />
