@@ -8,7 +8,6 @@ export default function Features() {
     <div className='text-center bg-gray-50 text-gray-800'>
       
       <LandingScreen />
-
       <ServiceArea />
     </div>
   )
