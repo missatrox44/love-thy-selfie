@@ -18,13 +18,13 @@ const [newImage, setNewImage] = useState(true);
   const randomImagePicker = () => {
     setTimeout(() => {
       setNewImage(!newImage);
-    }, 5000)
+    }, 2000)
     setImage(photos[randomNumber()].source);
   }
 
 
   useEffect(() =>{
-    setInterval(randomImagePicker(), 10000)
+    randomImagePicker()
   }, [newImage])
 
 
