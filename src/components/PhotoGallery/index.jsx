@@ -3,6 +3,9 @@ import Photos from '../Photos';
 
 export default function PhotoGallery() {
 
+
+//photo.event
+
   return (
     <div>
       <Photos />

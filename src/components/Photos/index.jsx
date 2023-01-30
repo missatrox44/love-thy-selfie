@@ -6,8 +6,10 @@ import { useEffect } from "react";
 
 export default function Photos() {
 
-const [image, setImage] = useState(photos[0].source);
-const [newImage, setNewImage] = useState(true);
+
+  const [image, setImage] = useState(photos[0].source);
+  const [newIndex, setNewIndex] = useState(0);
+  const [event, setEvent] = useState("Weddings")
 
   const randomNumber = () => {
     let length = photos.length;
@@ -17,20 +19,22 @@ const [newImage, setNewImage] = useState(true);
 
   const randomImagePicker = () => {
     setTimeout(() => {
-      setNewImage(!newImage);
-    }, 2000)
-    setImage(photos[randomNumber()].source);
+      setNewIndex(randomNumber());
+      setEvent(photos[newIndex].event);
+      setImage(photos[newIndex].source);
+    }, 3000)
   }
-
 
   useEffect(() =>{
     randomImagePicker()
-  }, [newImage])
+  }, [newIndex]);
 
-
+  
   return (
     <div>
-        <img src={image} />
+      {/* <h3>{event}</h3> */}
+      <p className="text-center text-2xl font-semibold py-5">{event}</p>
+      <img src={image}/>
     </div>
   )
 }
