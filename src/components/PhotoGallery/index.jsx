@@ -7,7 +7,7 @@ export default function PhotoGallery() {
 //photo.event
 
   return (
-    <div>
+    <div className = "flex justify-center py-10">
       <Photos />
     </div>
   )

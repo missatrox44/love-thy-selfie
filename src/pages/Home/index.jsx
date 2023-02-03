@@ -10,8 +10,8 @@ export default function Home() {
 
   return (
     <div>
-      {/* <Features />
-      <Reviews /> */}
+      <Features />
+      <Reviews />
       <PhotoGallery />
       <Footer />
     </div>

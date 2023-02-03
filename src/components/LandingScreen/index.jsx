@@ -17,17 +17,17 @@ export default function LandingScreen() {
 
       {bigScreen && <div className="flex justify-center">
         <img src={LargeLanding} className="w-[100vw]"/>
-        <div className="absolute bg-gradient-to-t from-gray-800 h-[40%] bottom-[30%] w-full"></div>
+        <div className="absolute bg-gradient-to-t from-gray-800 h-[40%] bottom-[40%] w-full"></div>
       </div>}
       
       {!bigScreen && <div className="flex justify-center">
         <img src={PhoneLanding} className="w-[100vw]"/>
-        <div className="absolute bg-gradient-to-t from-gray-800 h-[40%] bottom-[30%] w-full"></div>
+        <div className="absolute bg-gradient-to-t from-gray-800 h-[40%] bottom-[40%] w-full"></div>
       </div>}
 
 
-      <div className="bg-gray-800 h-[30%] w-full absolute bottom-0">
-        <h3 className='text-white text-3xl font-semibold mb-8 px-5 pt-5'>Do your 'selfie' a favor and book us!</h3>
+      <div className="bg-gray-800 h-[40%] w-full absolute bottom-0">
+        <h3 className='text-white text-3xl font-semibold mb-8 px-5 pb-8 pt-5'>Do your 'selfie' a favor and book us!</h3>
         <BookButton className="absolute"/>
       </div>
 

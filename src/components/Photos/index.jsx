@@ -1,4 +1,8 @@
 import React from "react";
+
+import Slider from "react-slick";
+
+
 import { photos } from "../../assets/photoGallery";
 import { useState } from "react";
 import { useEffect } from "react";
@@ -31,9 +35,9 @@ export default function Photos() {
 
   
   return (
-    <div>
+    <div className="max-w-full lg:max-w-[95%]">
       {/* <h3>{event}</h3> */}
-      <p className="text-center text-2xl font-semibold py-5">{event}</p>
+      {/* <p className="text-center text-2xl font-semibold py-5">{event}</p> */}
       <img src={image}/>
     </div>
   )
