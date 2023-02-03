@@ -1,8 +1,5 @@
 import React from "react";
 
-import Slider from "react-slick";
-
-
 import { photos } from "../../assets/photoGallery";
 import { useState } from "react";
 import { useEffect } from "react";
