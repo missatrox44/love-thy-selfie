@@ -2,6 +2,10 @@ import React from 'react';
 import LandingScreen from '../LandingScreen';
 import BookButton from '../BookButton';
 import ServiceArea from '../ServiceArea';
+import Customize from '../Customize';
+import HighTech from '../HighTech/HighTech';
+import Props from '../Props/Props';
+import Events from '../Events/Events';
 
 export default function Features() {
   return (
@@ -9,6 +13,12 @@ export default function Features() {
       
       <LandingScreen />
       <ServiceArea />
+      <Customize />
+      <HighTech />
+      <Props/>
+      <Events/>
+      <BookButton />
+
     </div>
   )
 }

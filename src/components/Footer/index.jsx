@@ -15,7 +15,7 @@ function Footer() {
               Quick Links
             </h6>
             <p className='mb-4'>
-              <a href='#!' className='text-gray-600'>Book Now</a>
+              <a href='/contact' className='text-gray-600'>Book Now</a>
             </p>
             <p className='mb-4'>
               <a href='#!' className='text-gray-600'>Features</a>
