@@ -6,6 +6,7 @@ import Customize from '../Customize';
 import HighTech from '../HighTech/HighTech';
 import Props from '../Props/Props';
 import Events from '../Events/Events';
+import PhotoGallery from '../PhotoGallery';
 
 export default function Features() {
   return (
@@ -16,8 +17,12 @@ export default function Features() {
       <Customize />
       <HighTech />
       <Props/>
-      <Events/>
-      <BookButton />
+      {/* <Events/> */}
+      <div className='mx-5'>
+      <h2 className='text-center text-gray-700 text-2xl font-semibold mt-5'>Events</h2>
+      <PhotoGallery />
+      </div>
+      
 
     </div>
   )
