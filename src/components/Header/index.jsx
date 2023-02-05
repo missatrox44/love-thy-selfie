@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import longlogo from '../../assets/logos/white-long-logo.svg';
+import longlogo from '../../assets/logos/light-gray-long.svg';
 import './styles.css'
 
 
