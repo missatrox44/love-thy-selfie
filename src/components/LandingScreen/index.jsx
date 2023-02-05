@@ -16,12 +16,12 @@ export default function LandingScreen() {
       <Header />
 
       {bigScreen && <div className="flex justify-center">
-        <img src={LargeLanding} className="w-[100vw]"/>
+        <img src={LargeLanding} className="h-[92vh]"/>
         <div className="absolute bg-gradient-to-t from-gray-800 h-[40%] bottom-[40%] w-full"></div>
       </div>}
       
       {!bigScreen && <div className="flex justify-center">
-        <img src={PhoneLanding} className="w-[100vw]"/>
+        <img src={PhoneLanding} className="h-[90vh]"/>
         <div className="absolute bg-gradient-to-t from-gray-800 h-[40%] bottom-[40%] w-full"></div>
       </div>}
 

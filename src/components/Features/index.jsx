@@ -6,6 +6,7 @@ import Customize from '../Customize';
 import HighTech from '../HighTech/HighTech';
 import Props from '../Props/Props';
 import Events from '../Events/Events';
+import PhotoGallery from '../PhotoGallery';
 
 export default function Features() {
   return (
@@ -16,7 +17,7 @@ export default function Features() {
       <Customize />
       <HighTech />
       <Props/>
-      <Events/>
+      <PhotoGallery/>
       <BookButton />
 
     </div>
