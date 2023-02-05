@@ -7,9 +7,13 @@ import Footer from "../../components/Footer";
 export default function Home() {
 
   return (
-    <div>
+    <div className='text-center'>
       <Features />
       <Reviews />
+      {/* <PhotoGallery /> */}
+      <div className='my-7'>
+        <BookButton />
+      </div>
       <Footer />
     </div>
 
