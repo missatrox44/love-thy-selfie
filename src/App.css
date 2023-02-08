@@ -1,3 +1,13 @@
+:root {
+  --black: #210C00;
+  --white: #FFF9F4;
+  --purple: #7643E5;
+  --gold: #FFCE3A;
+  --pink: #D705F2;
+  --green: #0091AD;
+}
+
+
 .app-container {
   margin: 0 auto;
   overflow-x: hidden;

@@ -16,7 +16,7 @@ function App() {
 
   return (
     <Router>
-      <div className='app-container'>
+      <div className='app-container lg:max-w-[90%]'>
         <Routes>
           <Route 
             path ="/"
