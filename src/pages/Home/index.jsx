@@ -12,7 +12,7 @@ export default function Home() {
       <Features />
       <Reviews />
       {/* <PhotoGallery /> */}
-      <div className='my-7'>
+      <div>
         <BookButton />
       </div>
       <Footer />

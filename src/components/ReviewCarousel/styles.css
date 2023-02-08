@@ -39,25 +39,17 @@
 }
 
 
-.left-arrow, .right-arrow {
-  position: absolute;
-  z-index: 1;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 48px;
-  height: 48px;
-  cursor: pointer; 
-  background-color: transparent; 
-
+.index-circle {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: var(--green);
 }
 
-.left-arrow {
-  left: -20px;
+.index-circle-active{
+  background-color: var(--gold);
 }
 
-.right-arrow {
- right: -20px;
-}
 
 @media only screen and (min-width: 640px) {
   .carousel-content > * {
