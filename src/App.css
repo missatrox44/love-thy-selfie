@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bevan&display=swap');
+
 :root {
   --black: #210C00;
   --white: #FFF9F4;
@@ -5,7 +8,10 @@
   --gold: #FFCE3A;
   --pink: #D705F2;
   --green: #0091AD;
+  --header: 'Bevan', cursive;
+  --sans-serif: 'Karla', sans-serif;
 }
+
 
 
 .app-container {
