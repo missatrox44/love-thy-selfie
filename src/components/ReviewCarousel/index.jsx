@@ -75,13 +75,27 @@ const ReviewCarousel = (props) => {
         <div className="carousel-content-wrapper">
 
 
-          <div className="carousel-content"
+          {!bigScreen &&
+            <div className="carousel-content"
 
             // controls how much the carousel moves
             style={{ transform: `translateX(-${currentIndex * 85}%)` }}
           >
             {children}
           </div>
+
+          ||
+
+          bigScreen && 
+            <div className="carousel-content"
+
+          // controls how much the carousel moves
+              style={{ transform: `translateX(-${currentIndex * 90.9}%)` }}
+            >
+              {children}
+
+            </div>
+          }
 
 
         </div>
@@ -95,7 +109,6 @@ const ReviewCarousel = (props) => {
         <div className="index-circle mx-1" value='4' onClick={indexClickHandler}></div>
         <div className="index-circle mx-1" value='5' onClick={indexClickHandler}></div>
         <div className="index-circle mx-1" value='6' onClick={indexClickHandler}></div>
-        <div className="index-circle mx-1" value='7' onClick={indexClickHandler}></div>
       </div>
     </div>
   )
