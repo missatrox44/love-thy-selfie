@@ -86,23 +86,16 @@ const ReviewCarousel = (props) => {
 
         </div>
     
-        {
-          //if it's a big screen 
-          bigScreen && (currentIndex < ((length / 3) - 1)) 
-
-          ||
-
-          //if it's not a big screen 
-          !bigScreen && (currentIndex < length - 1)
-        }
       </div>
       <div className="flex justify-center my-5">
-        <div className="index-circle mx-1" value='0' onClick={indexClickHandler}></div>
+        <div className="index-circle mx-1 index-circle-active" value='0' onClick={indexClickHandler}></div>
         <div className="index-circle mx-1" value='1' onClick={indexClickHandler}></div>
         <div className="index-circle mx-1" value='2' onClick={indexClickHandler}></div>
         <div className="index-circle mx-1" value='3' onClick={indexClickHandler}></div>
         <div className="index-circle mx-1" value='4' onClick={indexClickHandler}></div>
         <div className="index-circle mx-1" value='5' onClick={indexClickHandler}></div>
+        <div className="index-circle mx-1" value='6' onClick={indexClickHandler}></div>
+        <div className="index-circle mx-1" value='7' onClick={indexClickHandler}></div>
       </div>
     </div>
   )

@@ -44,6 +44,8 @@
   height: 15px;
   border-radius: 50%;
   background-color: var(--green);
+  display: none;
+  cursor: pointer;
 }
 
 .index-circle-active{
@@ -65,9 +67,14 @@
 } */
 
 
-@media only screen and (min-width: 1800px) {
+@media only screen and (min-width: 1024px) {
   .carousel-content > * {
     width: calc(33% - 14.5px);
   }
+
+  .index-circle {
+    display: block;
+  }
+
 }
   
