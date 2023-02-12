@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import longlogo from '../../assets/logos/light-gray-long.svg';
+import longlogo from '../../assets/logos/long-light-logo.svg';
 import './styles.css'
 
 
@@ -10,7 +10,7 @@ export default function Header() {
     <nav className='bg-slate-700 px-2 sm:px-4 py-2.5'>
       <div className='container flex flex-wrap items-center justify-between mx-auto'>
         <a href='/' className='flex items-center'>
-          <img src={longlogo} className='h-11 md:h-10 lg:h-14' alt='Text Logo' />
+          <img src={longlogo} className='h-8 md:h-10 lg:h-14' alt='Text Logo' />
         </a>
         {/* HAMBURGER NAV BAR ON SMALL SCREEN */}
         <section className='flex md:hidden lg:hidden'>

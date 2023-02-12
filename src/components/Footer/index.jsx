@@ -1,6 +1,6 @@
 import React from 'react';
 // import './style.css';
-import logo3 from '../../assets/logos/gray-logo-text.svg'
+import logo3 from '../../assets/logos/short-light-logo.svg'
 
 
 function Footer() {
@@ -68,7 +68,7 @@ function Footer() {
 
           </div>
 
-          <div className=' md:hidden lg:block '>
+          <div className=' md:hidden lg:block'>
             <img className='' alt='logo' src={logo3} />
           </div>
 
@@ -79,7 +79,7 @@ function Footer() {
         <img className='h-48' alt='logo' src={logo3} />
       </div>
       <div className='text-center p-6 bg-gray-200'>
-        <span>© 2022 Copyright </span>
+        <span>© 2023 Copyright </span>
         <a className='text-gray-600 font-semibold' href='#'>Love Thy Selfie Photo Booth</a>
         <br />
         <span className='text-xs'>Site created by <a target='_blank' href='https://missatrox44.github.io/portfolio/'>S.B.</a> & <a target='_blank' href='https://andcooke.github.io/react-portfolio/'>A.C.</a></span>
