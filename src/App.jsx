@@ -16,6 +16,7 @@ function App() {
 
   return (
     <Router>
+      {/*  possibly add max width to app-container lg:max-w-[80%] */}
       <div className='app-container'>
         <Routes>
           <Route 

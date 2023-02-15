@@ -5,7 +5,7 @@ export default function PhotoGallery() {
 
 
   return (
-    <div className = "flex justify-center py-10">
+    <div className = "flex justify-center py-10" id="photoGallery">
       <Photos />
     </div>
   )

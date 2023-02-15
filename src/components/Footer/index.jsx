@@ -1,6 +1,8 @@
 import React from 'react';
 // import './style.css';
-import logo3 from '../../assets/logos/gray-logo-text.svg'
+import logo3 from '../../assets/logos/short-light-logo.svg';
+import { HashLink } from 'react-router-hash-link';
+import { Link } from 'react-router-dom';
 
 
 function Footer() {
@@ -15,16 +17,19 @@ function Footer() {
               Quick Links
             </h6>
             <p className='mb-4'>
-              <a href='/contact' className='text-gray-600'>Book Now</a>
+            <HashLink to='#photoGallery' className='text-gray-600'>Events</HashLink>
             </p>
             <p className='mb-4'>
-              <a href='#!' className='text-gray-600'>Features</a>
+            <HashLink to='#serviceArea' className='text-gray-600'>Service Area</HashLink>
             </p>
             <p className='mb-4'>
-              <a href='#!' className='text-gray-600'>Reviews</a>
+            <HashLink to='#about' className='text-gray-600'>About</HashLink>
             </p>
-            <p className='mb-5'>
-              <a href='#!' className='text-gray-600'>Gallery</a>
+            <p className='mb-4'>
+            <HashLink to='#reviews' className='text-gray-600'>Reviews</HashLink>
+            </p>
+            <p className='mb-4'>
+              <Link to='/contact' className='text-gray-600'>Contact</Link>
             </p>
           </div>
 
@@ -68,7 +73,7 @@ function Footer() {
 
           </div>
 
-          <div className=' md:hidden lg:block '>
+          <div className=' md:hidden lg:block'>
             <img className='' alt='logo' src={logo3} />
           </div>
 
@@ -79,7 +84,7 @@ function Footer() {
         <img className='h-48' alt='logo' src={logo3} />
       </div>
       <div className='text-center p-6 bg-gray-200'>
-        <span>© 2022 Copyright </span>
+        <span>© 2023 Copyright </span>
         <a className='text-gray-600 font-semibold' href='#'>Love Thy Selfie Photo Booth</a>
         <br />
         <span className='text-xs'>Site created by <a target='_blank' href='https://missatrox44.github.io/portfolio/'>S.B.</a> & <a target='_blank' href='https://andcooke.github.io/react-portfolio/'>A.C.</a></span>

@@ -1,6 +1,8 @@
 import { useState } from 'react';
-import longlogo from '../../assets/logos/light-gray-long.svg';
+import longlogo from '../../assets/logos/long-light-logo.svg';
 import './styles.css'
+import { HashLink } from 'react-router-hash-link';
+import { Link } from 'react-router-dom';
 
 
 export default function Header() {
@@ -10,7 +12,7 @@ export default function Header() {
     <nav className='bg-slate-700 px-2 sm:px-4 py-2.5'>
       <div className='container flex flex-wrap items-center justify-between mx-auto'>
         <a href='/' className='flex items-center'>
-          <img src={longlogo} className='h-11 md:h-10 lg:h-14' alt='Text Logo' />
+          <img src={longlogo} className='h-8 md:h-10 lg:h-14' alt='Text Logo' />
         </a>
         {/* HAMBURGER NAV BAR ON SMALL SCREEN */}
         <section className='flex md:hidden lg:hidden'>
@@ -46,19 +48,19 @@ export default function Header() {
 
             <ul className='flex flex-col items-center justify-between min-h-[200px]'>
               <li className='border-b border-gray-400 my-4 uppercase'>
-                <a href='/'>Home</a>
+                <Link to='/'>Home</Link>
               </li>
               <li className='border-b border-gray-400 my-4 uppercase'>
-                <a href='/#'>Features</a>
+                <HashLink to='#about'>About</HashLink>
               </li>
               <li className='border-b border-gray-400 my-4 uppercase'>
-                <a href='/#'>Reviews</a>
+                <HashLink to='#reviews' className='text-gray-600'>Reviews</HashLink>
               </li>
+              {/* <li className='border-b border-gray-400 my-4 uppercase'>
+              <HashLink to='#photoGallery'>Gallery</HashLink>
+              </li> */}
               <li className='border-b border-gray-400 my-4 uppercase'>
-                <a href='/#'>Gallery</a>
-              </li>
-              <li className='border-b border-gray-400 my-4 uppercase'>
-                <a href='/contact'>Contact</a>
+                <Link to='/contact' className='text-gray-600'>Contact</Link>
               </li>
             </ul>
           </div>
@@ -68,19 +70,19 @@ export default function Header() {
         <div className='hidden w-full md:block md:w-auto' id='navbar-default'>
           <ul className='flex flex-col p-4 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0 md:bg-slate-700'>
             <li>
-              <a href='/' className='block py-2 pl-3 pr-4 text-gray-100 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 '>Home</a>
+            <Link to='/' className='block py-2 pl-3 pr-4 text-gray-100 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 '>Home</Link>
             </li>
             <li>
-              <a href='#' className='block py-2 pl-3 pr-4 text-gray-100 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 '>Features</a>
+            <HashLink to='#about' className='block py-2 pl-3 pr-4 text-gray-100 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 '>About</HashLink>
             </li>
             <li>
-              <a href='#' className='block py-2 pl-3 pr-4 text-gray-100 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 '>Reviews</a>
+              <HashLink to='#reviews' className='block py-2 pl-3 pr-4 text-gray-100 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 '>Reviews</HashLink>
             </li>
+            {/* <li>
+            <HashLink to='#photoGallery' className='block py-2 pl-3 pr-4 text-gray-100 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 '>Gallery</HashLink>
+            </li> */}
             <li>
-              <a href='#' className='block py-2 pl-3 pr-4 text-gray-100 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 '>Gallery</a>
-            </li>
-            <li>
-              <a href='/contact' className='block py-2 pl-3 pr-4 text-gray-100 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 '>Contact</a>
+              <Link to='/contact' className='block py-2 pl-3 pr-4 text-gray-100 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 '>Contact</Link>
             </li>
           </ul>
         </div>

@@ -10,7 +10,7 @@ export default function Features() {
   const bigScreen = useMediaQuery('(min-width:1024px)');
 
   return (
-    <div className='justify-content-center text-gray-800 py-10 custom-serviceMap bg-gray-300'>
+    <div id='serviceArea' className='justify-content-center text-gray-800 py-10 custom-serviceMap bg-gray-300'>
       {bigScreen && 
         <div className="flex items-center justify-around">
             <img alt='First in West Texas to use a selfie machine medal' className='mb-5 max-w-[30%]' src={medal} />
