@@ -10,12 +10,12 @@ export default function Reviews() {
 
 
   return (
-    <div id='reviews' className ="bg-gray-200">
-        <p className='text-center text-gray-700 text-2xl py-6 px-2 font-semibold'>
+    <div id='reviews' className ="">
+        <p className='text-[#FFF9F4] text-center text-2xl py-6 px-2 font-semibold bevan'>
           Reviews
         </p>
           <div className='flex place-content-center'>
-            <p className='mt-3 text-sm'>Overall Rating:</p>
+            <p className='mt-3 text-sm karla-700 text-[#FFF9F4]'>Overall Rating:</p>
             <div className="flex text-yellow-500 mb-4 place-content-start h-10">
               <Star />
               <Star />
@@ -24,7 +24,7 @@ export default function Reviews() {
               <Star />
             </div>
 
-            <p className='mt-3 text-sm'>5.0 / 5.0</p>
+            <p className='mt-3 text-sm karla-700 text-[#FFF9F4]'>5.0 / 5.0</p>
             </div>
       <ReviewCarousel style={{ marginLeft:'auto', marginRight:'auto', marginTop: 64 }}>
 
