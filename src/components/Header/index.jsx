@@ -9,7 +9,7 @@ export default function Header() {
   const [isBurgerOpen, setIsBurgerOpen] = useState(false);
 
   return (
-    <nav className='bg-slate-700 px-2 sm:px-4 py-2.5'>
+    <nav className='bg-[#7643E5] px-2 sm:px-4 py-2.5'>
       <div className='container flex flex-wrap items-center justify-between mx-auto'>
         <a href='/' className='flex items-center'>
           <img src={longlogo} className='h-8 md:h-10 lg:h-14' alt='Text Logo' />
@@ -20,7 +20,7 @@ export default function Header() {
           <button
             data-collapse-toggle='navbar-default'
             type='button'
-            className='inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 '
+            className='inline-flex items-center p-2 ml-3 text-sm text-[#FFF9F4] rounded-lg md:hidden hover:bg-[#FFCE3A] hover:text-[#7643E5] focus:outline-none focus:ring-2 focus:ring-gray-200 inter'
             aria-controls='navbar-default'
             aria-expanded='false'
             onClick={() => setIsBurgerOpen((prev) => !prev)}>
@@ -68,21 +68,21 @@ export default function Header() {
 
         {/* NAV BAR ON MD & LG SCREENS */}
         <div className='hidden w-full md:block md:w-auto' id='navbar-default'>
-          <ul className='flex flex-col p-4 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0 md:bg-slate-700'>
+          <ul className='flex flex-col p-4 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0 md:bg-[#7643E5]'>
             <li>
-            <Link to='/' className='block py-2 pl-3 pr-4 text-gray-100 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 '>Home</Link>
+            <Link to='/' className='block py-2 pl-3 pr-4 text-gray-100 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-[#FFCE3A] md:p-0 dark:text-[#FFF9F4] '>Home</Link>
             </li>
             <li>
-            <HashLink to='#about' className='block py-2 pl-3 pr-4 text-gray-100 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 '>About</HashLink>
+            <HashLink to='#about' className='block py-2 pl-3 pr-4 text-gray-100 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-[#FFCE3A] md:p-0 dark:text-[#FFF9F4] '>About</HashLink>
             </li>
             <li>
-              <HashLink to='#reviews' className='block py-2 pl-3 pr-4 text-gray-100 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 '>Reviews</HashLink>
+              <HashLink to='#reviews' className='block py-2 pl-3 pr-4 text-gray-100 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-[#FFCE3A] md:p-0 dark:text-[#FFF9F4] '>Reviews</HashLink>
             </li>
             {/* <li>
-            <HashLink to='#photoGallery' className='block py-2 pl-3 pr-4 text-gray-100 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 '>Gallery</HashLink>
+            <HashLink to='#photoGallery' className='block py-2 pl-3 pr-4 text-gray-100 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-[#FFCE3A] md:p-0 dark:text-[#FFF9F4] '>Gallery</HashLink>
             </li> */}
             <li>
-              <Link to='/contact' className='block py-2 pl-3 pr-4 text-gray-100 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 '>Contact</Link>
+              <Link to='/contact' className='block py-2 pl-3 pr-4 text-gray-100 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-[#FFCE3A] md:p-0 dark:text-[#FFF9F4] '>Contact</Link>
             </li>
           </ul>
         </div>

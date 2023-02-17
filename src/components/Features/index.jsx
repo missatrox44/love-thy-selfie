@@ -10,7 +10,7 @@ import PhotoGallery from '../PhotoGallery';
 
 export default function Features() {
   return (
-    <div className='text-center bg-gray-50 text-gray-800'>
+    <div className='text-center text-[#FFF9F4]'>
       
       <LandingScreen />
       <ServiceArea />

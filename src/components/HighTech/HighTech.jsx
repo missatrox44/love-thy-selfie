@@ -6,10 +6,10 @@ export default function HighTech() {
 
   return (
     <div className=''>
-      <h2 className='text-center text-gray-700 text-2xl py-6 px-2 font-semibold'>High Tech Equipment</h2>
+      <h2 className='text-center text-2xl py-6 px-2 font-semibold bevan'>High Tech Equipment</h2>
       <div className='flex'>
         <img src={assistants} />
-        <ul className='list-disc text-start'>
+        <ul className='list-disc text-start karla-700'>
           <li>32 in. touch screen monitor</li>
           <li>Green Screen</li>
           <li>Text to phone capabilities</li>

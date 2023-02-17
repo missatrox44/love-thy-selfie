@@ -5,13 +5,13 @@ import './styles.css';
 function ReviewCard({ date, review, picture, name }) {
   return (
     // <div className='border-2 mr-1 min-w-full md:min-w-[50%] lg:min-w-[33%] flex custom-card'>
-    <div className='border-2 px-1 max-w-[85%] md:min-w-[50%] lg:min-w-[33%] flex custom-card'>
+    <div className=' px-1 max-w-[85%] md:min-w-[50%] lg:min-w-[33%] flex custom-card'>
       <blockquote
         className='flex h-full flex-col justify-between bg-white p-5 rounded-2xl'
       >
         <div className = "flex h-full items-center">
           <div className='mt-4 flex'>
-            <p className='leading-relaxed text-gray-500'>
+            <p className='leading-relaxed text-gray-500 karla-400'>
               <span className='text-4xl text-pink-600'>&ldquo;</span>
               {review}
             </p>
@@ -21,7 +21,7 @@ function ReviewCard({ date, review, picture, name }) {
         <div className='mt-4 border-t-2 flex justify-between'>
 
           <div>
-            <div className='font-extrabold mt-8 mb-2 text-sm text-gray-500 place-content-start'>{name}</div>
+            <div className='font-extrabold mt-8 mb-2 text-sm text-gray-500 place-content-start karla-800'>{name}</div>
 
             <div className='flex text-yellow-500 text-sm place-content-start custom-star'>
               <Star/>
