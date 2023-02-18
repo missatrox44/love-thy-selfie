@@ -48,10 +48,10 @@ export default function Header() {
 
             <ul className='flex flex-col items-center justify-between min-h-[200px]'>
               <li className='border-b border-gray-400 my-4 uppercase'>
-                <Link to='/'>Home</Link>
+                <Link to='/' className='text-gray-600'>Home</Link>
               </li>
               <li className='border-b border-gray-400 my-4 uppercase'>
-                <HashLink to='#about'>About</HashLink>
+                <HashLink to='#about' className='text-gray-600'>About</HashLink>
               </li>
               <li className='border-b border-gray-400 my-4 uppercase'>
                 <HashLink to='#reviews' className='text-gray-600'>Reviews</HashLink>
