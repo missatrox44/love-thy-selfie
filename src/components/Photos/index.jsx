@@ -32,7 +32,7 @@ export default function Photos() {
 
   
   return (
-    <div className="max-w-full lg:max-w-[95%]">
+    <div className="max-w-full lg:max-w-[95%] slideshow">
       {/* <h3>{event}</h3> */}
       {/* <p className="text-center text-2xl font-semibold py-5">{event}</p> */}
       <img src={image}/>
