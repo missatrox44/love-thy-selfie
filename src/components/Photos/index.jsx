@@ -4,12 +4,13 @@ import { photos } from "../../assets/photoGallery";
 import { useState } from "react";
 import { useEffect } from "react";
 
+import './styles.css';
 
 export default function Photos() {
 
 
-  const [image, setImage] = useState(photos[0].source);
-  const [newIndex, setNewIndex] = useState(0);
+  const [image, setImage] = useState(photos[Math.floor(Math.random() * 20)].source);
+  const [newIndex, setNewIndex] = useState(Math.floor(Math.random() * 20));
   const [event, setEvent] = useState("Weddings")
 
   const randomNumber = () => {

@@ -19,7 +19,7 @@ export default function Features() {
       <Props/>
       {/* <Events/> */}
       <div className='lg:mx-5'>
-      <h2 className='text-center text-gray-700 text-2xl font-semibold mt-5'>Events</h2>
+      {/* <h2 className='text-center text-gray-700 text-2xl font-semibold mt-5'>Events</h2> */}
       <PhotoGallery />
       </div>
       
