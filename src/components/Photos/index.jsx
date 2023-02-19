@@ -11,7 +11,7 @@ export default function Photos() {
 
   const [image, setImage] = useState(photos[Math.floor(Math.random() * 20)].source);
   const [newIndex, setNewIndex] = useState(Math.floor(Math.random() * 20));
-  const [event, setEvent] = useState("Weddings")
+  // const [event, setEvent] = useState("Weddings")
 
   const randomNumber = () => {
     let length = photos.length;
@@ -34,7 +34,7 @@ export default function Photos() {
   
   return (
 
-    <div className="max-w-full lg:max-w-[95%] p-10 slideshow">
+    <div className="max-w-full lg:max-w-[95%] m-10 slideshow">
       {/* <h3>{event}</h3> */}
       {/* <p className="text-center text-2xl font-semibold py-5">{event}</p> */}
       <img src={image}/>
