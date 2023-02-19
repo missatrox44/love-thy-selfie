@@ -11,9 +11,13 @@ export default function Header() {
   return (
     <nav className='bg-[#7643E5] px-2 sm:px-4 py-2.5'>
       <div className='container flex flex-wrap items-center justify-between mx-auto'>
+        <div>
         <a href='/' className='flex items-center'>
           <img src={longlogo} className='h-8 md:h-10 lg:h-14' alt='Text Logo' />
         </a>
+        <p className='karla-400 text-left text-sm md:text-lg '>est. 2014</p>
+        </div>
+       
         {/* HAMBURGER NAV BAR ON SMALL SCREEN */}
         <section className='flex md:hidden lg:hidden'>
           {/* hamburger icon */}
