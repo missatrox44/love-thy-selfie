@@ -8,34 +8,33 @@ import { Link } from 'react-router-dom';
 function Footer() {
   return (
 
-    <footer className='text-center lg:text-left text-[#FFF9F4] karla-700'>
-      <div className='mx-6 pt-5 text-center md:text-left'>
-        <div className='grid grid-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
-
+    <footer className='text-center lg:text-left text-light karla-700 bg-primary'>
+      <div className='mx-6 pt-5 text-center md:text-left '>
+        <div className='grid grid-1 md:grid-cols-2 lg:grid-cols-3 gap-8 items-center pb-10'>
           <div className=''>
-            <h6 className='uppercase font-semibold mb-4 flex justify-center md:justify-start'>
+            <h6 className='uppercase font-semibold mb-4 flex justify-center md:justify-start  text-2xl'>
               Quick Links
             </h6>
             <p className='mb-4'>
-            <HashLink to='/#photoGallery' className='text-[#FFF9F4]'>Events</HashLink>
+            <HashLink to='/#photoGallery' className='text-light'>Events</HashLink>
             </p>
             <p className='mb-4'>
-            <HashLink to='/#serviceArea' className='text-[#FFF9F4]'>Service Area</HashLink>
+            <HashLink to='/#serviceArea' className='text-light'>Service Area</HashLink>
             </p>
             <p className='mb-4'>
-            <HashLink to='/#about' className='text-[#FFF9F4]'>About</HashLink>
+            <HashLink to='/#about' className='text-light'>About</HashLink>
             </p>
             <p className='mb-4'>
-            <HashLink to='/#reviews' className='text-[#FFF9F4]'>Reviews</HashLink>
+            <HashLink to='/#reviews' className='text-light'>Reviews</HashLink>
             </p>
             <p className='mb-4'>
-              <Link to='/contact' className='text-[#FFF9F4]'>Contact</Link>
+              <Link to='/contact' className='text-light'>Contact</Link>
             </p>
           </div>
 
 
-          <div className=''>
-            <h6 className='uppercase font-semibold mb-4 flex justify-center md:justify-start'>
+          <div>
+            <h6 className='uppercase font-semibold mb-4 flex justify-center md:justify-start text-2xl'>
               Contact
             </h6>
             <p className='flex items-center justify-center md:justify-start mb-4'>
@@ -73,7 +72,7 @@ function Footer() {
 
           </div>
 
-          <div className=' md:hidden lg:block'>
+          <div className=' md:hidden lg:block lg:mt-28'>
             <img className='' alt='logo' src={logo3} />
           </div>
 
@@ -85,7 +84,7 @@ function Footer() {
       </div>
       <div className='text-center p-6'>
         <span>© 2023 Copyright </span>
-        <a className='text-[#FFF9F4] font-semibold' href='#'>Love Thy Selfie Photo Booth</a>
+        <a className='text-light font-semibold' href='#'>Love Thy Selfie Photo Booth</a>
         <br />
         <span className='text-xs'>Site created by <a target='_blank' href='https://missatrox44.github.io/portfolio/'>S.B.</a> & <a target='_blank' href='https://andcooke.github.io/react-portfolio/'>A.C.</a></span>
       </div>

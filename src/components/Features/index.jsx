@@ -10,13 +10,17 @@ import PhotoGallery from '../PhotoGallery';
 
 export default function Features() {
   return (
-    <div className='text-center text-[#FFF9F4]'>
+    <div className='text-center text-light'>
       
       <LandingScreen />
       <ServiceArea />
-      <PhotoGallery />
-      <Customize />
-      <HighTech />    
+      <div className="w-full bg-gradient-to-t from-accent2 via-primary to-accent1 custom-shadow">
+        <PhotoGallery />
+        <Customize />
+        <HighTech />
+      </div>
+      <div className="h-[35px] bg-secondary custom-shadow"></div>    
+      <div className="h-[35px] bg-accent1 custom-shadow"></div> 
 
     </div>
   )
