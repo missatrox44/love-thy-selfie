@@ -17,16 +17,16 @@ function Footer() {
               Quick Links
             </h6>
             <p className='mb-4'>
-            <HashLink to='#photoGallery' className='text-[#FFF9F4]'>Events</HashLink>
+            <HashLink to='/#photoGallery' className='text-[#FFF9F4]'>Events</HashLink>
             </p>
             <p className='mb-4'>
-            <HashLink to='#serviceArea' className='text-[#FFF9F4]'>Service Area</HashLink>
+            <HashLink to='/#serviceArea' className='text-[#FFF9F4]'>Service Area</HashLink>
             </p>
             <p className='mb-4'>
-            <HashLink to='#about' className='text-[#FFF9F4]'>About</HashLink>
+            <HashLink to='/#about' className='text-[#FFF9F4]'>About</HashLink>
             </p>
             <p className='mb-4'>
-            <HashLink to='#reviews' className='text-[#FFF9F4]'>Reviews</HashLink>
+            <HashLink to='/#reviews' className='text-[#FFF9F4]'>Reviews</HashLink>
             </p>
             <p className='mb-4'>
               <Link to='/contact' className='text-[#FFF9F4]'>Contact</Link>

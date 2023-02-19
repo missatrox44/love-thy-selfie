@@ -51,10 +51,10 @@ export default function Header() {
                 <Link to='/' className='text-gray-600'>Home</Link>
               </li>
               <li className='border-b border-gray-400 my-4 uppercase'>
-                <HashLink to='#about' className='text-gray-600'>About</HashLink>
+                <HashLink to='/#about' className='text-gray-600'>About</HashLink>
               </li>
               <li className='border-b border-gray-400 my-4 uppercase'>
-                <HashLink to='#reviews' className='text-gray-600'>Reviews</HashLink>
+                <HashLink to='/#reviews' className='text-gray-600'>Reviews</HashLink>
               </li>
               {/* <li className='border-b border-gray-400 my-4 uppercase'>
               <HashLink to='#photoGallery'>Gallery</HashLink>
@@ -73,10 +73,10 @@ export default function Header() {
             <Link to='/' className='block py-2 pl-3 pr-4 text-gray-100 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-[#FFCE3A] md:p-0 dark:text-[#FFF9F4] '>Home</Link>
             </li>
             <li>
-            <HashLink to='#about' className='block py-2 pl-3 pr-4 text-gray-100 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-[#FFCE3A] md:p-0 dark:text-[#FFF9F4] '>About</HashLink>
+            <HashLink to='/#about' className='block py-2 pl-3 pr-4 text-gray-100 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-[#FFCE3A] md:p-0 dark:text-[#FFF9F4] '>About</HashLink>
             </li>
             <li>
-              <HashLink to='#reviews' className='block py-2 pl-3 pr-4 text-gray-100 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-[#FFCE3A] md:p-0 dark:text-[#FFF9F4] '>Reviews</HashLink>
+              <HashLink to='/#reviews' className='block py-2 pl-3 pr-4 text-gray-100 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-[#FFCE3A] md:p-0 dark:text-[#FFF9F4] '>Reviews</HashLink>
             </li>
             {/* <li>
             <HashLink to='#photoGallery' className='block py-2 pl-3 pr-4 text-gray-100 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-[#FFCE3A] md:p-0 dark:text-[#FFF9F4] '>Gallery</HashLink>
