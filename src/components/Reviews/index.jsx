@@ -10,7 +10,7 @@ export default function Reviews() {
 
 
   return (
-    <div id='reviews' className ="">
+    <div id='reviews' className ="reviews-section">
         <p className='text-[#FFF9F4] text-center text-4xl py-6 px-2 font-semibold bevan'>
           Reviews
         </p>
@@ -23,8 +23,8 @@ export default function Reviews() {
               <Star />
               <Star />
             </div>
-
             <p className='mt-3 text-sm md:text-2xl karla-700 text-[#FFF9F4]'>5.0 / 5.0</p>
+
             </div>
       <ReviewCarousel style={{ marginLeft:'auto', marginRight:'auto', marginTop: 64 }}>
 

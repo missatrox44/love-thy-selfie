@@ -17,6 +17,7 @@ export default function LandingScreen() {
       <Header />
 
       {bigScreen && <div className="flex justify-center">
+
         <img src={LargeLanding} className="w-[100vw]"/>
         <div className="absolute bg-gradient-to-t from-[#7643E5] h-[40%] bottom-[40%] w-full"></div>
       </div>}
@@ -30,6 +31,7 @@ export default function LandingScreen() {
       <div className="h-[40%] w-full absolute bottom-0">
         <h3 className='text-white text-3xl mb-8 px-5 pb-8 pt-5 karla-700'>
           Do your "selfie" a favor and book us!</h3>
+
         <BookButton className="absolute"/>
       </div>
 

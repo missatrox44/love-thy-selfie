@@ -1,0 +1,9 @@
+#custom-button{
+  color: var(--black);
+  background-color: var(--gold);
+}
+
+#custom-button:hover {
+  color: var(--white);
+  box-shadow: 0 0 3rem var(--gold);
+}

@@ -1,3 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bevan&display=swap');
+
+:root {
+  --black: #210C00;
+  --white: #FFF9F4;
+  --purple: #7643E5;
+  --gold: #FFCE3A;
+  --pink: #D705F2;
+  --green: #0091AD;
+  --serif: 'Bevan', cursive;
+  --sans-serif: 'Karla', sans-serif;
+}
+
+
+body {
+  scrollbar-width: thin;          /* "auto" or "thin" */
+   /* scroll thumb and track */ 
+  overflow: overlay;
+}
+
+body::-webkit-scrollbar {
+  width: 10px;               /* width of the entire scrollbar */
+}
+
+body::-webkit-scrollbar-track {
+  background: transparent;        /*color of the tracking area */
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: var(--white);    /* color of the scroll thumb */
+  border-radius: 20px;       /* roundness of the scroll thumb */
+  border: 3px solid transparent;  /* creates padding around scroll thumb */
+}
+
 .app-container {
   margin: 0 auto;
   overflow-x: hidden;
@@ -50,3 +86,51 @@
 .read-the-docs {
   color: #888;
 }  */
+
+.reviews {
+  background: var(--purple);
+}
+
+.under-reviews-triangle {
+  width: 0;
+  height: 0;
+  border-top: 20vw solid var(--purple);
+  border-left: 100vw solid transparent;
+}
+
+.slanted-green-stripe {
+  width: 105vw;
+  height: 40px;
+  transform: skewY(11.3deg);
+  background: var(--green);
+  margin-top: -12%;
+  margin-left: -2.5%;
+  box-shadow: 0px 5px 5px var(--black) inset;
+}
+
+.slanted-pink-stripe {
+  width: 105vw;
+  height: 40px;
+  transform: skewY(11.3deg);
+  margin-left: -2.5%;
+  background: var(--pink);
+  box-shadow: 0px 5px 5px var(--black) inset;
+}
+
+.slanted-purple-stripe {
+  width: 105vw;
+  height: 40px;
+  transform: skewY(11.3deg);
+  margin-left: -2.5%;
+  background: var(--purple);
+  box-shadow: 0px 5px 5px var(--black) inset;
+}
+
+.slanted-white-stripe {
+  width: 105vw;
+  height: 40px;
+  margin-left: -2.5%;
+  transform: skewY(11.3deg);
+  background: var(--white);
+  box-shadow: 0px 5px 5px var(--black) inset, 0px 5px 10px var(--black);
+}
