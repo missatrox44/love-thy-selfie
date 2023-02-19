@@ -13,8 +13,10 @@ export default function Features() {
     <div className='text-center text-light'>
       
       <LandingScreen />
-      <ServiceArea />
-      <div className="w-full bg-gradient-to-t from-accent2 via-primary to-accent1 custom-shadow">
+      <div className="bg-primary">
+        <ServiceArea />
+      </div>
+      <div className="w-full bg-gradient-to-t from-accent2 via-primary to-accent1">
         <PhotoGallery />
         <Customize />
         <HighTech />
