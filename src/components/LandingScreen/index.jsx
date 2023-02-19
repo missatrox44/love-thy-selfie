@@ -27,7 +27,7 @@ export default function LandingScreen() {
 
 
       <div className="bg-gray-800 h-[40%] w-full absolute bottom-0">
-        <h3 className='text-white text-3xl font-semibold mb-8 px-5 pb-8 pt-5'>Do your 'selfie' a favor and book us!</h3>
+        <h3 className='text-white text-3xl font-semibold mb-8 px-5 pb-8 pt-5'>Do your “selfie” a favor and book us!</h3>
         <BookButton className="absolute"/>
       </div>
 

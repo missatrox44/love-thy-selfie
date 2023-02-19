@@ -10,7 +10,14 @@ export default function Home() {
   return (
     <div className='text-center'>
       <Features />
-      <Reviews />
+      <div className="reviews">
+        <Reviews />
+      </div>
+      <div className="under-reviews-triangle"></div>
+      <div className="slanted-green-stripe"></div>
+      <div className="slanted-pink-stripe"></div>
+      <div className="slanted-purple-stripe"></div>
+      <div className="slanted-white-stripe"></div>
       {/* <PhotoGallery /> */}
       <div>
         <BookButton />
