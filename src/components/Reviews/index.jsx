@@ -10,22 +10,21 @@ export default function Reviews() {
 
 
   return (
-    <div className="reviews-section">
-        <p className='text-center pt-6 px-2 review-title'>
-          {/* Check out what some of our amazing customers are saying! */}
+    <div id='reviews' className ="reviews-section">
+        <p className='text-[#FFF9F4] text-center text-4xl py-6 px-2 font-semibold bevan'>
           Reviews
         </p>
-          <div className='flex place-content-center overall-rating'>
-            <p className='mt-3 '>Overall Rating:</p>
-            <div className="flex text-yellow-500 mb-1 place-content-start h-10 star">
+          <div className='flex place-content-center'>
+            <p className='mt-3 text-sm md:text-xl karla-700 text-[#FFF9F4]'>Overall Rating:</p>
+            <div className="flex text-yellow-500 mb-4 place-content-start h-10">
               <Star />
               <Star />
               <Star />
               <Star />
               <Star />
             </div>
+            <p className='mt-3 text-sm md:text-2xl karla-700 text-[#FFF9F4]'>5.0 / 5.0</p>
 
-            <p className='mt-3'>5.0 / 5.0</p>
             </div>
       <ReviewCarousel style={{ marginLeft:'auto', marginRight:'auto', marginTop: 64 }}>
 

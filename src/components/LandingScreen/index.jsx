@@ -5,6 +5,7 @@ import LargeLanding from "../../assets/LargeLanding.png"
 import PhoneLanding from '../../assets/PhoneLanding.png'
 import { useMediaQuery } from '@mui/material';
 
+import './styles.css'
 
 
 export default function LandingScreen() {
@@ -16,18 +17,21 @@ export default function LandingScreen() {
       <Header />
 
       {bigScreen && <div className="flex justify-center">
-        <img src={LargeLanding} className="h-[92vh]"/>
-        <div className="absolute bg-gradient-to-t from-gray-800 h-[40%] bottom-[40%] w-full"></div>
+
+        <img src={LargeLanding} className="w-[100vw]"/>
+        <div className="absolute bg-gradient-to-t from-[#7643E5] h-[40%] bottom-[40%] w-full"></div>
       </div>}
       
       {!bigScreen && <div className="flex justify-center">
-        <img src={PhoneLanding} className="h-[90vh]"/>
-        <div className="absolute bg-gradient-to-t from-gray-800 h-[40%] bottom-[40%] w-full"></div>
+        <img src={PhoneLanding} className="w-[100vw]"/>
+        <div className="absolute bg-gradient-to-t from-[#7643E5] h-[40%] bottom-[40%] w-full"></div>
       </div>}
 
 
-      <div className="bg-gray-800 h-[40%] w-full absolute bottom-0">
-        <h3 className='text-white text-3xl font-semibold mb-8 px-5 pb-8 pt-5'>Do your “selfie” a favor and book us!</h3>
+      <div className="h-[40%] w-full absolute bottom-0">
+        <h3 className='text-white text-3xl mb-8 px-5 pb-8 pt-5 karla-700'>
+          Do your "selfie" a favor and book us!</h3>
+
         <BookButton className="absolute"/>
       </div>
 

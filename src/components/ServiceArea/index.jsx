@@ -10,13 +10,13 @@ export default function Features() {
   const bigScreen = useMediaQuery('(min-width:1024px)');
 
   return (
-    <div className='justify-content-center text-gray-800 py-10 custom-serviceMap bg-gray-300'>
+    <div id='serviceArea' className='justify-content-center py-10 custom-serviceMap'>
       {bigScreen && 
         <div className="flex items-center justify-around">
             <img alt='First in West Texas to use a selfie machine medal' className='mb-5 max-w-[30%]' src={medal} />
               <div className="max-w-[30%]">
-                <h3 className="text-6xl font-semibold underline underline-offset-auto">Service Area</h3>
-                <p className="mb-5 text-3xl pt-5">Midland/Odessa and surrounding areas</p>
+                <h3 className="bevan text-6xl font-semibold">Service Area</h3>
+                <p className="mb-5 text-3xl pt-5 karla-700">Midland/Odessa and surrounding areas</p>
               </div>
             <img alt='service map' className='mb-5 max-w-[30%]' src={serviceMap} />
         </div>
@@ -29,8 +29,8 @@ export default function Features() {
           <img alt='service map' className='mb-5 max-w-[45%]' src={serviceMap} />
         </div>
         <div className="service-text">
-          <h3 className="underline underline-offset-auto font-bold text-2xl tracking-wide">Service Area</h3>
-          <p className="mb-5 text-xl">Midland/Odessa and surrounding areas</p>
+          <h3 className="font-bold text-2xl tracking-wide bevan">Service Area</h3>
+          <p className="mb-5 text-xl karla-700">Midland/Odessa and surrounding areas</p>
         </div>
       </div>}
     </div>

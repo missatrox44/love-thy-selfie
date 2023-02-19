@@ -3,6 +3,37 @@
 @tailwind components;
 @tailwind utilities;
 
+.karla-400 {
+  font-family: 'Karla', sans-serif;
+  font-weight: 400;
+}
+
+.karla-500 {
+  font-family: 'Karla', sans-serif;
+  font-weight: 500;
+}
+
+.karla-700 {
+  font-family: 'Karla', sans-serif;
+  font-weight: 700;
+}
+
+.karla-800 {
+  font-family: 'Karla', sans-serif;
+  font-weight: 800;
+}
+
+.bevan {
+  font-family: 'Bevan', cursive;
+  font-weight: 400;
+}
+
+.inter {
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+}
+
+
 /* :root {
   font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
   font-size: 16px;
