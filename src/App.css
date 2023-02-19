@@ -96,25 +96,31 @@ body::-webkit-scrollbar-thumb {
 }
 
 .slanted-green-stripe {
-  width: 100vw;
+  width: 105vw;
   height: 40px;
   transform: skewY(11.3deg);
   background: var(--green);
   margin-top: -12%;
+  margin-left: -2.5%;
+  box-shadow: 0px 5px 5px var(--black) inset;
 }
 
 .slanted-pink-stripe {
-  width: 100vw;
+  width: 105vw;
   height: 40px;
   transform: skewY(11.3deg);
+  margin-left: -2.5%;
   background: var(--pink);
+  box-shadow: 0px 5px 5px var(--black) inset;
 }
 
 .slanted-purple-stripe {
-  width: 100vw;
+  width: 105vw;
   height: 40px;
   transform: skewY(11.3deg);
+  margin-left: -2.5%;
   background: var(--purple);
+  box-shadow: 0px 5px 5px var(--black) inset;
 }
 
 .slanted-white-stripe {
