@@ -129,5 +129,5 @@ body::-webkit-scrollbar-thumb {
   margin-left: -2.5%;
   transform: skewY(11.3deg);
   background: var(--white);
-  box-shadow: 0px 5px 5px var(--black) inset;
+  box-shadow: 0px 5px 5px var(--black) inset, 0px 5px 10px var(--black);
 }
