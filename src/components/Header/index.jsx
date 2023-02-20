@@ -13,9 +13,9 @@ export default function Header() {
       <div className='container flex flex-wrap items-center justify-between mx-auto'>
         <div>
         <a href='/' className='flex items-center'>
-          <img src={longlogo} className='h-8 md:h-10 lg:h-14' alt='Text Logo' />
+          <img src={longlogo} className='h-6 md:h-10 lg:h-14' alt='Text Logo' />
         </a>
-        <p className='karla-400 text-left text-sm md:text-lg '>est. 2014</p>
+        <p className='karla-400 text-left text-xs md:text-lg text-[#FFF9F4]'>est. 2014</p>
         </div>
        
         {/* HAMBURGER NAV BAR ON SMALL SCREEN */}
