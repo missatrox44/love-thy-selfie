@@ -46,3 +46,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   height: 15px;
   border-width: thin;
 }
+
+.hidden {
+  display: none;
+}
