@@ -10,8 +10,8 @@ export default function Reviews() {
 
 
   return (
-    <div id='reviews' className ="reviews-section">
-        <p className='text-light text-center text-4xl py-6 px-2 font-semibold bevan'>
+    <div id='reviews' className ="reviews-section py-6">
+        <p className='text-light text-center text-4xl lg:text-6xl py-6 px-2 font-semibold bevan'>
           Reviews
         </p>
           <div className='flex place-content-center'>

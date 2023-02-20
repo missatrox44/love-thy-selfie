@@ -3,8 +3,66 @@
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+  
 }
 
 .custom-serviceMap img{
   width: 50%;
 }
+
+.service-area-triangle-pink {
+  width: 0;
+  height: 0;
+  border-left: 50vw solid transparent;
+  border-right: 50vw solid transparent;
+  border-top: 50px solid var(--pink);
+  z-index: 5;
+  position: absolute;
+  top: 99px;
+  -webkit-filter: drop-shadow(0px 5px 3px var(--black));
+  filter: drop-shadow(0px 5px 3px rgba(0,0,0,.5));
+}
+
+.green-box {
+  width: 100%;
+  height: 30px;
+  background: var(--green);
+  top: 91px;
+  z-index: -5;
+  position: absolute;
+}
+
+.service-area-triangle-green {
+  width: 0;
+  border-left: 50vw solid transparent;
+  border-right: 50vw solid transparent;
+  border-top: 50px solid var(--green);
+  z-index: -9995;
+  position: absolute;
+  top: 120px;
+  -webkit-filter: drop-shadow(0px 5px 3px var(--black));
+  filter: drop-shadow(0px 5px 3px rgba(0,0,0,.5));
+}
+
+.custom-drop-shadow {
+  box-shadow: 0px 5px 5px var(--black);
+}
+
+.map-background {
+  background: var(--purple);
+  padding-top:50px;
+  position: absolute;
+  width: 100%;
+  top: 0;
+  z-index: -9999;
+  height: 100%;
+}
+
+.under-map-background {
+  width: 105vw;
+  height: 50px;
+  transform: skewY(-8.5deg);
+  background: var(--purple);
+  position: absolute;
+}
+

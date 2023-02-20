@@ -6,15 +6,15 @@ export default function HighTech() {
 
 
   return (
-    <div className="pb-20">
-      <h2 className='text-center text-4xl py-6 px-2 font-semibold bevan'>High Tech Equipment</h2>
+    <div className="py-20">
+      <h2 className='text-center text-4xl lg:text-6xl py-6 px-2 font-semibold bevan'>High Tech Equipment</h2>
       <div className='flex justify-evenly items-center '>
         <div className='lg:w-[40%] text-start text-dark italic font-semibold'>
           <img src={assistants} />
           <p className='lg:pl-16 lg:pt-3 lg:text-xl'>Two assistants to ensure your event runs smoothly</p>
         </div>
         <div>
-          <ul className='text-start karla-700 md:text-xl lg:text-2xl w-full tracking-wide'>
+          <ul className='text-start karla-700 md:text-xl lg:text-4xl w-full tracking-wide'>
             <li className="lg:my-10">&hearts; 32 in. touch screen monitor</li>
             <li className="lg:my-10">&hearts; Green Screen</li>
             <li className="lg:my-10">&hearts; Text to phone capabilities</li>
