@@ -2,6 +2,8 @@ import React, { useRef, useState } from "react";
 import { useMediaQuery } from "@mui/material";
 import "./style.css";
 import emailjs from "@emailjs/browser";
+import photobooth from '../../assets/photobooth.jpg';
+import thankYou from '../../assets/thankyou.jpg';
 
 export default function ContactForm() {
   const bigScreen = useMediaQuery("(min-width: 1024px)");
@@ -68,26 +70,32 @@ export default function ContactForm() {
       message: "",
     });
     setIsHideToast(false);
-    setTimeout(hideToast, 4000);
+    // setTimeout(hideToast, 4000);
   }
 
   return (
     <div>
       <div className="text-center text-[#FFF9F4] mb-5 mx-5">
-        <h2 className="bevan text-2xl">Contact us!</h2>
-        <p className="karla-400 text-sm">
-          Please fill out the contact form below. Include the city of your event
-          and date. If you're not sure of the date, please choose an estimated
-          date.
+        <h2 className={`bevan text-2xl ${isHideToast ? "" : "hidden"}`}>Contact us!</h2>
+        <p className={`karla-400 text-sm ${isHideToast ? "" : "hidden"}`}>
+          Please fill out the contact form below. Include the city and estimated date of your event.
         </p>
       </div>
-      <div className={isHideToast ? "hidden" : ""}>
-        Got your message. We'll contact you within 24-48 hrs.
+
+      {/* START TOAST */}
+      <div className={`text-center text-[#FFF9F4] mb-5 mx-5 ${isHideToast ? "hidden" : ""}`}>
+        <h2 className='bevan text-2xl'>Success!</h2>
+        <p>We received your message and will get back to you in 24-48 hrs.</p>
+       <div className='flex justify-center'>
+       <img className='rounded mt-10' src={thankYou}/>
+       </div> 
       </div>
+      {/* END TOAST */}
+
       <form
         ref={form}
         onSubmit={sendEmail}
-        className="contact-form"
+        className={`contact-form ${isHideToast ? "" : "hidden"}`}
         style={{ margin: handleStyling() }}
       >
         <input
