@@ -36,7 +36,7 @@ export default function Features() {
         </div>
         <div className="service-area-triangle-green"></div>
         <div className="relative">
-          <div className="flex justify-around pt-20">
+          <div className="flex justify-around pt-24">
             <img alt='First in West Texas to use a selfie machine medal' className='max-w-[45%] lg:min-w-[33%]' src={medal} />
             <img alt='service map' className='max-w-[45%]' src={serviceMap} />
           </div>

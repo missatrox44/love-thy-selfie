@@ -35,7 +35,7 @@
 
 .green-box {
   width: 100%;
-  height: 30px;
+  height: 40px;
   background: var(--green);
   top: 90px;
   z-index: -11;
@@ -50,7 +50,7 @@
   border-top: 57px solid var(--green);
   z-index: -11;
   position: absolute;
-  top: 120px;
+  top: 130px;
   -webkit-filter: drop-shadow(0px 5px 3px var(--black));
   filter: drop-shadow(0px 5px 3px rgba(0,0,0,.5));
 }
@@ -83,42 +83,6 @@
   -webkit-filter: drop-shadow(0px 5px 3px var(--black));
   filter: drop-shadow(0px 5px 3px rgba(0,0,0,.5));
 }
-
-/* .green-chevron {
-  position: relative;
-  text-align: center;
-  padding: 12px;
-  margin-bottom: 6px;
-  height: 35px;
-  width: 100vw;
-  margin-top: 4vw;
-  -webkit-filter: drop-shadow(0px 5px 3px var(--black));
-  filter: drop-shadow(0px 5px 3px rgba(0,0,0,.5));
-}
-.green-chevron:before {
-  content: '';
-  position: absolute;
-  top: 50;
-  left: 0;
-  height: 100%;
-  width: 50%;
-  background: var(--green);
-  transform: skew(0deg, 17deg);
-  z-index: -100;
-}
-.green-chevron:after {
-  content: '';
-  position: absolute;
-  top: 30;
-  left: 50%;
-  height: 100%;
-  width: 50%;
-  background: var(--green);
-  transform: skew(0deg, -17deg);
-  z-index: -100;
-} */
-
-
 
 .under-map-background {
   width: 105vw;

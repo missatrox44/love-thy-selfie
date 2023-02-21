@@ -1,12 +1,3 @@
-.reviews-container {
-  width: 100%;
-  margin: 0 auto;
-}
-
-.reviews-section {
-  color: var(--white);
-}
-
 .review-title {
   font-family: var(--serif);
   letter-spacing: 1px;
