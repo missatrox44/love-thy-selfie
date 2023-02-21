@@ -15,37 +15,44 @@
   height: 0;
   border-left: 50vw solid transparent;
   border-right: 50vw solid transparent;
-  border-top: 50px solid var(--pink);
+  border-top: 57px solid var(--pink);
   z-index: 5;
   position: absolute;
-  top: 99px;
+  top: 100px;
   -webkit-filter: drop-shadow(0px 5px 3px var(--black));
   filter: drop-shadow(0px 5px 3px rgba(0,0,0,.5));
+  z-index: -3;
+}
+
+.service-area-shadow {
+  width: inherit;
+  height: inherit;
+  box-shadow: 0px -10px 10px 5px var(--black);
+  background: transparent;
+  position: relative;
+  z-index: -10;
 }
 
 .green-box {
   width: 100%;
   height: 30px;
   background: var(--green);
-  top: 91px;
-  z-index: -5;
+  top: 90px;
+  z-index: -11;
   position: absolute;
+  box-shadow: 0px 5px 5px rgba(0,0,0,.5);
 }
 
 .service-area-triangle-green {
   width: 0;
   border-left: 50vw solid transparent;
   border-right: 50vw solid transparent;
-  border-top: 50px solid var(--green);
-  z-index: -9995;
+  border-top: 57px solid var(--green);
+  z-index: -11;
   position: absolute;
   top: 120px;
   -webkit-filter: drop-shadow(0px 5px 3px var(--black));
   filter: drop-shadow(0px 5px 3px rgba(0,0,0,.5));
-}
-
-.custom-drop-shadow {
-  box-shadow: 0px 5px 5px var(--black);
 }
 
 .map-background {
@@ -54,9 +61,64 @@
   position: absolute;
   width: 100%;
   top: 0;
-  z-index: -9999;
+  z-index: -20;
   height: 100%;
+  box-shadow: 0px 5px 5px rgba(0,0,0,.5);
 }
+
+.under-map-triangle {
+  width: 0;
+  height: 0;
+  border-top: 60px solid var(--purple);
+  border-right: 100vw solid transparent;
+  position: absolute;
+  z-index: 9999;
+}
+
+.custom-drop-shadow {
+  box-shadow: 0px 5px 5px var(--black);
+}
+
+.custom-angle-shadow {
+  -webkit-filter: drop-shadow(0px 5px 3px var(--black));
+  filter: drop-shadow(0px 5px 3px rgba(0,0,0,.5));
+}
+
+/* .green-chevron {
+  position: relative;
+  text-align: center;
+  padding: 12px;
+  margin-bottom: 6px;
+  height: 35px;
+  width: 100vw;
+  margin-top: 4vw;
+  -webkit-filter: drop-shadow(0px 5px 3px var(--black));
+  filter: drop-shadow(0px 5px 3px rgba(0,0,0,.5));
+}
+.green-chevron:before {
+  content: '';
+  position: absolute;
+  top: 50;
+  left: 0;
+  height: 100%;
+  width: 50%;
+  background: var(--green);
+  transform: skew(0deg, 17deg);
+  z-index: -100;
+}
+.green-chevron:after {
+  content: '';
+  position: absolute;
+  top: 30;
+  left: 50%;
+  height: 100%;
+  width: 50%;
+  background: var(--green);
+  transform: skew(0deg, -17deg);
+  z-index: -100;
+} */
+
+
 
 .under-map-background {
   width: 105vw;

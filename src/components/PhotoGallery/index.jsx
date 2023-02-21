@@ -7,7 +7,7 @@ export default function PhotoGallery() {
 
 
   return (
-    <div className = "flex justify-center py-10 glow" id="photoGallery">
+    <div className = "flex justify-center pt-10 glow" id="photoGallery">
       <Photos />
     </div>
   )

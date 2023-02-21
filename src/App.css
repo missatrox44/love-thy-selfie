@@ -94,6 +94,7 @@ body::-webkit-scrollbar-thumb {
 .under-reviews-triangle {
   width: 0;
   height: 0;
+  margin-top: -1px;
   border-top: 15vw solid var(--purple);
   border-left: 100vw solid transparent;
 }
@@ -129,4 +130,9 @@ body::-webkit-scrollbar-thumb {
 #black-stripe {
   z-index: -9998;
   position: absolute;
+}
+
+.move-to-back {
+  z-index: -30;
+  position: relative;
 }

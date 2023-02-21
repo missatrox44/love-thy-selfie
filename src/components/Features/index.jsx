@@ -12,7 +12,7 @@ export default function Features() {
       
       <LandingScreen />
       <ServiceArea />
-      <div className="w-full bg-gradient-to-t from-accent2 via-primary to-accent1">
+      <div className="w-full bg-gradient-to-t from-accent2 via-primary to-accent1 move-to-back">
         <PhotoGallery />
         <Customize />
         <HighTech />
