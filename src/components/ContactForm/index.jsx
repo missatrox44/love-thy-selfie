@@ -78,14 +78,14 @@ export default function ContactForm() {
       <div className="text-center text-[#FFF9F4] mb-5 mx-5">
         <h2 className={`bevan text-2xl ${isHideToast ? "" : "hidden"}`}>Contact us!</h2>
         <p className={`karla-400 text-sm ${isHideToast ? "" : "hidden"}`}>
-          Please fill out the contact form below. Include the city and estimated date of your event.
+          Please fill out the contact form below. Include the city and date of your event.
         </p>
       </div>
 
       {/* START TOAST */}
       <div className={`text-center text-[#FFF9F4] mb-5 mx-5 ${isHideToast ? "hidden" : ""}`}>
         <h2 className='bevan text-2xl'>Success!</h2>
-        <p>We received your message and will get back to you in 24-48 hrs.</p>
+        <p>We received your message and will get back to you within 24 hrs.</p>
        <div className='flex justify-center'>
        <img className='rounded mt-10' src={thankYou}/>
        </div> 
