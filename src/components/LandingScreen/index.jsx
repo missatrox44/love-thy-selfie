@@ -22,7 +22,7 @@ export default function LandingScreen() {
         <div className="absolute bg-gradient-to-t from-[#7643E5] h-[40%] bottom-[40%] w-full"></div>
       </div>}
       
-      {!bigScreen && <div className="flex justify-center">
+      {!bigScreen && <div className="flex justify-center under-everything">
         <img src={PhoneLanding} className="w-[100vw]"/>
         <div className="absolute bg-gradient-to-t from-[#7643E5] h-[40%] bottom-[40%] w-full"></div>
       </div>}
