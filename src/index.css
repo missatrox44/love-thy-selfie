@@ -33,6 +33,11 @@
   font-weight: 700;
 }
 
+body {
+  overflow-x: hidden;
+  /* background: var(--purple); */
+}
+
 
 /* :root {
   font-family: Inter, Avenir, Helvetica, Arial, sans-serif;

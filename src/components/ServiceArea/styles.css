@@ -3,8 +3,102 @@
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+  
 }
 
 .custom-serviceMap img{
   width: 50%;
 }
+
+.service-area-triangle-pink {
+  width: 0;
+  height: 0;
+  border-left: 50vw solid transparent;
+  border-right: 50vw solid transparent;
+  border-top: 57px solid var(--pink);
+  z-index: 5;
+  position: absolute;
+  top: 100px;
+  -webkit-filter: drop-shadow(0px 5px 3px var(--black));
+  filter: drop-shadow(0px 5px 3px rgba(0,0,0,.5));
+  z-index: -3;
+}
+
+.service-area-shadow {
+  width: calc(inherit + 25px);
+  height: inherit;
+  box-shadow: 0px -15px 10px 5px var(--black);
+  background: transparent;
+  position: relative;
+  z-index: -10;
+}
+
+.green-box {
+  width: 100%;
+  height: 40px;
+  background: var(--green);
+  top: 90px;
+  z-index: -11;
+  position: absolute;
+  box-shadow: 0px 5px 5px rgba(0,0,0,.5);
+}
+
+.service-area-triangle-green {
+  width: 0;
+  border-left: 50vw solid transparent;
+  border-right: 50vw solid transparent;
+  border-top: 57px solid var(--green);
+  z-index: -11;
+  position: absolute;
+  top: 130px;
+  -webkit-filter: drop-shadow(0px 5px 3px var(--black));
+  filter: drop-shadow(0px 5px 3px rgba(0,0,0,.5));
+}
+
+.map-background {
+  background: var(--purple);
+  padding-top:50px;
+  position: absolute;
+  width: 100%;
+  top: 0;
+  z-index: -20;
+  height: 100%;
+  box-shadow: 0px 5px 5px rgba(0,0,0,.5);
+}
+
+.under-map-triangle {
+  width: 0;
+  height: 0;
+  border-top: 60px solid var(--purple);
+  border-right: 100vw solid transparent;
+  position: absolute;
+  z-index: 9999;
+}
+
+.under-service-stripe {
+  width: 0;
+  height: 0;
+  border-top: 60px solid var(--pink);
+  border-right: 100vw solid transparent;
+  position: absolute;
+  z-index: 9998;
+}
+
+
+.custom-drop-shadow {
+  box-shadow: 0px 5px 5px var(--black);
+}
+
+.custom-angle-shadow {
+  -webkit-filter: drop-shadow(0px 5px 3px var(--black));
+  filter: drop-shadow(0px 5px 3px rgba(0,0,0,.5));
+}
+
+.under-map-background {
+  width: 105vw;
+  height: 50px;
+  transform: skewY(-8.5deg);
+  background: var(--purple);
+  position: absolute;
+}
+
