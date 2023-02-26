@@ -25,12 +25,11 @@ export default function Features() {
       {!bigScreen && 
       <div className="relative">
         <div className="service-text bg-accent2 min-h-[100px] pt-[20px]">
-            <h3 className="font-bold text-4xl tracking-wide bevan">Service Area</h3>
-            <p className="mb-5 text-lg karla-700">Midland/Odessa and surrounding areas</p>
+            <h3 className="font-bold text-4xl tracking-wide bevan pt-[5px]">Service Area</h3>
+            <p className="mb-5 text-sm sm:text-lg karla-700">Midland/Odessa and surrounding areas</p>
           <div className="service-area-shadow"></div>
         </div>
         <div className="service-area-triangle-pink"></div>
-        {/* <div className="green-chevron"></div> */}
         <div className="green-box">
           <div className="service-area-shadow"></div>
         </div>

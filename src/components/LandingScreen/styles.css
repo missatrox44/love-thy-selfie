@@ -1,4 +1,4 @@
-.under-everything {
-  position: absolute;
-  z-index: -9999;
+.lift {
+  /* position: absolute; */
+  z-index: 1;
 }
