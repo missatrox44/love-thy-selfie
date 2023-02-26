@@ -78,7 +78,7 @@ export default function ContactForm() {
         <h2 className={`bevan text-2xl ${isHideToast ? "" : "hidden"}`}>
           Contact us!
         </h2>
-        <p className={`karla-400 text-sm ${isHideToast ? "" : "hidden"}`}>
+        <p className={`karla-400 text-lg ${isHideToast ? "" : "hidden"}`}>
           Please fill out the contact form below. Include the city and date of
           your event.
         </p>
@@ -108,7 +108,7 @@ export default function ContactForm() {
           <input
             type="text"
             name="name"
-            className="block py-2.5 px-0 w-full text-sm bg-transparent border-0 border-b-2 border-[#0091AD]appearance-none text-white focus:outline-none focus:ring-0 focus:border-[#0091AD] peer"
+            className="block py-2.5 px-0 w-full text-lg bg-transparent border-0 border-b-2 border-[#0091AD]appearance-none text-white focus:outline-none focus:ring-0 focus:border-[#0091AD] peer"
             placeholder=" "
             required
             value={name}
@@ -116,36 +116,35 @@ export default function ContactForm() {
           />
           <label
             for="name"
-            className="peer-focus:font-medium absolute text-sm text-[#FFCE3A] duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-[#0091AD]  peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+            className="peer-focus:font-medium absolute text-lg text-[#FFCE3A] duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-[#0091AD]  peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
           >
             Name
           </label>
         </div>
-        <div className="relative z-0 w-full mb-6 group">
-          <input
-            type="email"
-            name="email"
-            className="block py-2.5 px-0 w-full text-sm bg-transparent border-0 border-b-2 border-[#0091AD]appearance-none text-white focus:outline-none focus:ring-0 focus:border-[#0091AD] peer"
-            placeholder=" "
-            required
-            value={email}
-            onChange={handleChange}
-          />
-          <label
-            for="email"
-            className="peer-focus:font-medium absolute text-sm text-[#FFCE3A] duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-[#0091AD]  peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
-          >
-            Email
-          </label>
-        </div>
-
         <div className="grid md:grid-cols-2 md:gap-6">
           <div className="relative z-0 w-full mb-6 group">
             <input
+              type="email"
+              name="email"
+              className="block py-2.5 px-0 w-full text-lg bg-transparent border-0 border-b-2 border-[#0091AD]appearance-none text-white focus:outline-none focus:ring-0 focus:border-[#0091AD] peer"
+              placeholder=" "
+              required
+              value={email}
+              onChange={handleChange}
+            />
+            <label
+              for="email"
+              className="peer-focus:font-medium absolute text-lg text-[#FFCE3A] duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-[#0091AD]  peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+            >
+              Email
+            </label>
+          </div>
+          <div className="relative z-0 w-full mb-6 group">
+            <input
               type="tel"
-              pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+              // pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
               name="phone"
-              className="block py-2.5 px-0 w-full text-sm bg-transparent border-0 border-b-2 border-[#0091AD]appearance-none text-white focus:outline-none focus:ring-0 focus:border-[#0091AD] peer"
+              className="block py-2.5 px-0 w-full text-lg bg-transparent border-0 border-b-2 border-[#0091AD]appearance-none text-white focus:outline-none focus:ring-0 focus:border-[#0091AD] peer"
               placeholder=" "
               required
               value={phone}
@@ -153,16 +152,18 @@ export default function ContactForm() {
             />
             <label
               for="phone"
-              className="peer-focus:font-medium absolute text-sm text-[#FFCE3A] duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-[#0091AD]  peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+              className="peer-focus:font-medium absolute text-lg text-[#FFCE3A] duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-[#0091AD]  peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
             >
-              Phone (123-867-5309)
+              Phone
             </label>
           </div>
+        </div>
+        <div className="grid md:grid-cols-2 md:gap-6">
           <div className="relative z-0 w-full mb-6 group">
             <input
               type="text"
               name="city"
-              className="block py-2.5 px-0 w-full text-sm bg-transparent border-0 border-b-2 border-[#0091AD]appearance-none text-white focus:outline-none focus:ring-0 focus:border-[#0091AD] peer"
+              className="block py-2.5 px-0 w-full text-lg bg-transparent border-0 border-b-2 border-[#0091AD]appearance-none text-white focus:outline-none focus:ring-0 focus:border-[#0091AD] peer"
               placeholder=" "
               required
               value={city}
@@ -170,35 +171,36 @@ export default function ContactForm() {
             />
             <label
               for="city"
-              className="peer-focus:font-medium absolute text-sm text-[#FFCE3A] duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-[#0091AD]  peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+              className="peer-focus:font-medium absolute text-lg text-[#FFCE3A] duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-[#0091AD]  peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
             >
               City
             </label>
           </div>
+          <div className="relative z-0 w-full mb-6 group">
+            <input
+              type="date"
+              name="date"
+              className="block py-2.5 px-0 w-full text-lg bg-transparent border-0 border-b-2 border-[#0091AD]appearance-none text-white focus:outline-none focus:ring-0 focus:border-[#0091AD] peer"
+              placeholder=" "
+              required
+              value={date}
+              onChange={handleChange}
+              id="date-input"
+            />
+            <label
+              for="date"
+              className="peer-focus:font-medium absolute text-lg text-[#FFCE3A] duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-[#0091AD]  peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+            >
+              Date of Event
+            </label>
+          </div>
         </div>
-        <div className="relative z-0 w-full mb-6 group0">
-          <input
-            type="date"
-            name="date"
-            className="block py-2.5 px-0 w-full text-sm bg-transparent border-0 border-b-2 border-[#0091AD]appearance-none text-white focus:outline-none focus:ring-0 focus:border-[#0091AD] peer"
-            placeholder=" "
-            required
-            value={date}
-            onChange={handleChange}
-            id="date-input"
-          />
-          <label
-            for="date"
-            className="peer-focus:font-medium absolute text-sm text-[#FFCE3A] duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-[#0091AD]  peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
-          >
-            Date of Event
-          </label>
-        </div>
+
         <div className="relative z-0 w-full mb-6 group0">
           <textarea
             type="text"
             name="message"
-            className="block py-2.5 px-0 w-full text-sm bg-transparent border-0 border-b-2 border-[#0091AD]appearance-none text-white focus:outline-none focus:ring-0 focus:border-[#0091AD] peer"
+            className="block py-2.5 px-0 w-full text-lg bg-transparent border-0 border-b-2 border-[#0091AD]appearance-none text-white focus:outline-none focus:ring-0 focus:border-[#0091AD] peer"
             placeholder=" "
             value={message}
             onChange={handleChange}
@@ -206,7 +208,7 @@ export default function ContactForm() {
           />
           <label
             for="name"
-            className="peer-focus:font-medium absolute text-sm text-[#FFCE3A] duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-[#0091AD]  peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+            className="peer-focus:font-medium absolute text-lg text-[#FFCE3A] duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-[#0091AD]  peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
           >
             Message (optional)
           </label>
