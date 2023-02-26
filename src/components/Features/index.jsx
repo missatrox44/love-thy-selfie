@@ -10,7 +10,7 @@ export default function Features() {
   return (
     <div className='text-center text-light'>
       
-      {/* <LandingScreen /> */}
+      <LandingScreen />
       <ServiceArea />
       <div className="w-full bg-gradient-to-t from-accent2 via-primary to-accent1 move-to-back">
         <PhotoGallery />
