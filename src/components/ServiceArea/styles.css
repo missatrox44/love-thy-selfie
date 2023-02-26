@@ -75,6 +75,16 @@
   z-index: 9999;
 }
 
+.under-service-stripe {
+  width: 0;
+  height: 0;
+  border-top: 60px solid var(--pink);
+  border-right: 100vw solid transparent;
+  position: absolute;
+  z-index: 9998;
+}
+
+
 .custom-drop-shadow {
   box-shadow: 0px 5px 5px var(--black);
 }
