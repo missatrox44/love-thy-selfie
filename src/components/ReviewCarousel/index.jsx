@@ -14,8 +14,6 @@ const ReviewCarousel = (props) => {
   const [touchEnd, setTouchEnd] = useState(null);
 
   const [dragStart, setDragStart] = useState(null);
-  // const [dragEnd, setDragEnd] = useState(null);
-  const [isClicked, setIsClicked] = useState(false);
 
   const minDistance = 25; 
 
@@ -68,24 +66,13 @@ const ReviewCarousel = (props) => {
 
   const onMouseDown = (e) => {
     setDragStart(null);
-    // setDragEnd(null);
-    // console.log("click start", e.clientX);
-    setIsClicked(true);
     setDragStart(e.clientX)
   }
 
   const onMouseMove = (e) => {
     let distance = 0;
     let temp = e.clientX;
-    if (isClicked) {
-      // setDragEnd(e.clientX);
-      // console.log(e.clientX);
-    } else {
-      // setDragEnd(null);
-    }
     distance = dragStart - temp;
-    // console.log("distance", distance);
-    // console.log("drag end", temp);
     const dragLeft = distance > minDistance;
     const dragRight = distance < -minDistance;
     if (dragLeft || dragRight) {
@@ -95,13 +82,9 @@ const ReviewCarousel = (props) => {
         prev()
     }
     return;
-    // console.log(e.clientX);
   }
 
   const onMouseUp = (e) => {
-    // setDragEnd(null);
-    // setDragStart(null);
-    setIsClicked(false); 
     onMouseMove(e);
   }
 
