@@ -12,7 +12,12 @@ const ReviewCarousel = (props) => {
 
   const [touchStart, setTouchStart] = useState(null);
   const [touchEnd, setTouchEnd] = useState(null);
-  const minSwipeDistance = 25; 
+
+  const [dragStart, setDragStart] = useState(null);
+  // const [dragEnd, setDragEnd] = useState(null);
+  const [isClicked, setIsClicked] = useState(false);
+
+  const minDistance = 25; 
 
   const [currentIndex, setCurrentIndex] = useState(0)
   const [length, setLength] = useState(children.length)
@@ -20,12 +25,18 @@ const ReviewCarousel = (props) => {
 
   // Set the length to match current children from props
   useEffect(() => {
-    setLength(children.length)
+    setLength(children.length);
   }, [children])
 
   const next = () => {
-    if (currentIndex < (length - 1)) {
+    if (bigScreen && currentIndex < ((length - 1)/3.5)){
       setCurrentIndex(prevState => prevState + 1)
+      console.log("curr index", currentIndex)
+      console.log("length", ((length - 1)/3));
+    } else if (!bigScreen && currentIndex < (length - 1)) {
+      setCurrentIndex(prevState => prevState + 1)
+      console.log("curr index", currentIndex)
+      console.log("length", length);
     }
   }
 
@@ -45,8 +56,8 @@ const ReviewCarousel = (props) => {
   const onTouchEnd = () => {
     if (!touchStart || !touchEnd) return;
     const distance = touchStart - touchEnd;
-    const isLeftSwipe = distance > minSwipeDistance;
-    const isRightSwipe = distance < -minSwipeDistance;
+    const isLeftSwipe = distance > minDistance;
+    const isRightSwipe = distance < -minDistance;
     if (isLeftSwipe || isRightSwipe) {
       isLeftSwipe ? 
         next()
@@ -54,6 +65,46 @@ const ReviewCarousel = (props) => {
         prev()
     }
   }
+
+  const onMouseDown = (e) => {
+    setDragStart(null);
+    // setDragEnd(null);
+    // console.log("click start", e.clientX);
+    setIsClicked(true);
+    setDragStart(e.clientX)
+  }
+
+  const onMouseMove = (e) => {
+    let distance = 0;
+    let temp = e.clientX;
+    if (isClicked) {
+      // setDragEnd(e.clientX);
+      // console.log(e.clientX);
+    } else {
+      // setDragEnd(null);
+    }
+    distance = dragStart - temp;
+    // console.log("distance", distance);
+    // console.log("drag end", temp);
+    const dragLeft = distance > minDistance;
+    const dragRight = distance < -minDistance;
+    if (dragLeft || dragRight) {
+      dragLeft ? 
+        next()
+      : 
+        prev()
+    }
+    return;
+    // console.log(e.clientX);
+  }
+
+  const onMouseUp = (e) => {
+    // setDragEnd(null);
+    // setDragStart(null);
+    setIsClicked(false); 
+    onMouseMove(e);
+  }
+
 
   const indexClickHandler = (e) => {
     //get all index circles
@@ -69,8 +120,9 @@ const ReviewCarousel = (props) => {
 
   return (
     <div className="carousel-container">
-      
-      <div className="carousel-wrapper pt-5 pl-3" onTouchStart={onTouchStart} onTouchMove={onTouchMove} onTouchEnd={onTouchEnd}>
+      <div className="carousel-wrapper pt-5 pl-3" onTouchStart={onTouchStart} onTouchMove={onTouchMove} onTouchEnd={onTouchEnd} onMouseDown={onMouseDown} onMouseUp={onMouseUp} 
+      // onMouseMove={onMouseMove}
+      >
 
         <div className="carousel-content-wrapper">
 
