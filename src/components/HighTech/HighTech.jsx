@@ -1,6 +1,6 @@
 import React from 'react';
 import assistants from '../../assets/assistants.png'
-import './styles.css';
+// import './styles.css';
 
 export default function HighTech() {
 

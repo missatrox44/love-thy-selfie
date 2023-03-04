@@ -73,9 +73,9 @@ export default function ContactForm() {
   }
 
   return (
-    <div className='bg-[var(--pink)] pb-5'>
+    <div className='bg-gradient-to-t from-accent2 to-primary move-to-back pb-5'>
       
-        <div className="text-center text-[#FFF9F4] mb-5 mx-5 bg-[var(--pink)]">
+        <div className="text-center text-[#FFF9F4] mb-5 mx-5 ">
           <h2 className={`bevan text-5xl pt-8 ${isHideToast ? "" : "hidden"}`}>
             Contact us!
           </h2>
