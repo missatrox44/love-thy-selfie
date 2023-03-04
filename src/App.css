@@ -140,3 +140,10 @@ body::-webkit-scrollbar-thumb {
   z-index: -30;
   position: relative;
 }
+
+.contact-slanted-stripe {
+  width: 105vw;
+  height: 100px;
+  margin-left: -2.5%;
+  transform: skewY(8.5deg);
+}
