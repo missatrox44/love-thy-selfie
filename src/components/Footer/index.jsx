@@ -10,7 +10,7 @@ function Footer() {
 
     <footer className='text-center lg:text-left text-light karla-700 bg-primary'>
       <div className='mx-6 pt-5 text-center md:text-left '>
-        <div className='grid grid-1 md:grid-cols-2 lg:grid-cols-3 gap-8 items-center pb-10'>
+        <div className='grid grid-1 md:grid-cols-2 lg:grid-cols-3 gap-8  pb-10'>
           <div className=''>
             <h6 className='uppercase font-semibold mb-4 flex justify-center md:justify-start  text-2xl'>
               Quick Links
