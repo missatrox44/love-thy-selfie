@@ -103,10 +103,10 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 
 
 
-.triangle {
+/* .triangle {
   width: 100%;
   height: 0;
   margin-left: 90%;
   border-top: 100px solid red;
   border-left: 100px solid transparent;
-}
+} */
