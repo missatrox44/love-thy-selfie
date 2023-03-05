@@ -112,7 +112,7 @@ export default function ContactForm() {
             We received your message and will get back to you within 24 hrs.
           </p>
           <div className="flex justify-center">
-            <img className="rounded mt-10" src={thankYou} />
+            <img className="rounded mt-10 w-[90%] md:w-[60%] lg:w-[40%]" src={thankYou} />
           </div>
         </div>
         {/* END TOAST */}
