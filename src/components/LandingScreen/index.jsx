@@ -1,7 +1,7 @@
 import React from 'react';
 import BookButton from '../BookButton';
 import Header from "../../components/Header";
-import LargeLanding from "../../assets/LargeLanding.png"
+import LargeLanding from "../../assets/collage.png"
 import PhoneLanding from '../../assets/PhoneLanding.png'
 import { useMediaQuery } from '@mui/material';
 

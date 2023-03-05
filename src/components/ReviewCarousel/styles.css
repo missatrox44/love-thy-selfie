@@ -9,6 +9,13 @@
   padding-right: 0;
   width: 100%;
   position: relative;
+  cursor: grab;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.carousel-wrapper:active {
+  cursor: grabbing;
 }
 
 .carousel-content-wrapper {
