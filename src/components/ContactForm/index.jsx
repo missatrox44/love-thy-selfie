@@ -74,6 +74,20 @@ export default function ContactForm() {
     // setTimeout(hideToast, 4000);
   }
 
+  //for future autofill of city input
+  const cities = [
+    {id:'city1', City: 'Odessa'},
+    {id:'city2', City: 'Midland'},
+    {id:'city3', City: 'Pecos'},
+    {id:'city4', City: 'Big Spring'},
+    {id:'city5', City: 'Kermit'},
+    {id:'city6', City: 'Glendale'},
+    {id:'city7', City: 'Andrews'},
+    {id:'city8', City: 'Stanton'}
+  ]
+
+  const autoCity = {value: 'City'};
+
   return (
     <div>
       <div className="bg-gradient-to-t from-accent2 to-primary">
@@ -236,6 +250,7 @@ export default function ContactForm() {
           </div>
         </div>
       </div>
+      <div className="triangle"></div>
       {/* <div className='transparent-slant'></div>
       <div className=" bg-accent2 contact-slanted-stripe"></div> */}
     </div>
