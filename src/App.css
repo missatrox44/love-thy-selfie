@@ -147,3 +147,11 @@ body::-webkit-scrollbar-thumb {
   margin-left: -2.5%;
   transform: skewY(8.5deg);
 }
+
+
+.transparent-slant {
+  width: 105vw;
+  height: 100px;
+  margin-left: -2.5%;
+  transform: skewY(8.5deg);
+}
