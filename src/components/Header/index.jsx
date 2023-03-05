@@ -13,7 +13,7 @@ export default function Header() {
       <div className='container flex flex-wrap items-center justify-between mx-auto'>
         <div>
         <a href='/' className='flex items-center'>
-          <img src={longlogo} className='h-6 md:h-10 lg:h-14' alt='Text Logo' />
+          <img src={longlogo} className='h-6 md:h-9 lg:h-14' alt='Text Logo' />
         </a>
         <p className='karla-400 text-left text-xs md:text-lg text-[#FFF9F4]'>est. 2014</p>
         </div>
@@ -29,7 +29,7 @@ export default function Header() {
             aria-expanded='false'
             onClick={() => setIsBurgerOpen((prev) => !prev)}>
             <span className='sr-only'>Open main menu</span>
-            <svg className='w-6 h-6' aria-hidden='true' fill='currentColor' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'><path fill-rule='evenodd' d='M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z' clip-rule='evenodd'></path></svg>
+            <svg className='w-6 h-6' aria-hidden='true' fill='currentColor' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'><path fillRule='evenodd' d='M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z' clipRule='evenodd'></path></svg>
           </button>
 
           <div className={isBurgerOpen ? 'showMenuNav' : 'hideMenuNav'}>

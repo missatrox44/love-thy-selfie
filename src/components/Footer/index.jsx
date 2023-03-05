@@ -8,35 +8,34 @@ import { Link } from 'react-router-dom';
 function Footer() {
   return (
 
-    <footer className='text-center lg:text-left text-[#FFF9F4] karla-700'>
-      <div className='mx-6 pt-5 text-center md:text-left'>
-        <div className='grid grid-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
-
+    <footer className='text-center lg:text-left text-light karla-700 bg-primary'>
+      <div className='mx-6 pt-14 text-center md:text-left'>
+        <div className='grid grid-1 md:grid-cols-2 lg:grid-cols-3 gap-8  pb-10'>
           <div className=''>
-            <h6 className='uppercase font-semibold mb-4 flex justify-center md:justify-start'>
+            <h6 className='uppercase font-semibold mb-4 flex justify-center md:justify-start  text-2xl'>
               Quick Links
             </h6>
             <p className='mb-4'>
-            <HashLink to='/#photoGallery' className='text-[#FFF9F4]'>Events</HashLink>
+            <HashLink to='/#photoGallery' className='text-light'>Events</HashLink>
             </p>
             <p className='mb-4'>
-            <HashLink to='/#serviceArea' className='text-[#FFF9F4]'>Service Area</HashLink>
+            <HashLink to='/#serviceArea' className='text-light'>Service Area</HashLink>
             </p>
             <p className='mb-4'>
-            <HashLink to='/#about' className='text-[#FFF9F4]'>About</HashLink>
+            <HashLink to='/#about' className='text-light'>About</HashLink>
             </p>
             <p className='mb-4'>
-            <HashLink to='/#reviews' className='text-[#FFF9F4]'>Reviews</HashLink>
+            <HashLink to='/#reviews' className='text-light'>Reviews</HashLink>
             </p>
             <p className='mb-4'>
-              <Link to='/contact' className='text-[#FFF9F4]'>Contact</Link>
+              <Link to='/contact' className='text-light'>Book Now</Link>
             </p>
           </div>
 
 
-          <div className=''>
-            <h6 className='uppercase font-semibold mb-4 flex justify-center md:justify-start'>
-              Contact
+          <div>
+            <h6 className='uppercase font-semibold mb-4 flex justify-center md:justify-start text-2xl'>
+              <Link to="/contact">Contact</Link>
             </h6>
             <p className='flex items-center justify-center md:justify-start mb-4'>
               <a target='_blank' href='https://www.facebook.com/people/Love-Thy-Selfie-Photo-Booth/100063804810096/'><svg aria-hidden='true' focusable='false' data-prefix='fas' data-icon='home'
@@ -68,12 +67,12 @@ function Footer() {
                   d='M493.4 24.6l-104-24c-11.3-2.6-22.9 3.3-27.5 13.9l-48 112c-4.2 9.8-1.4 21.3 6.9 28l60.6 49.6c-36 76.7-98.9 140.5-177.2 177.2l-49.6-60.6c-6.8-8.3-18.2-11.1-28-6.9l-112 48C3.9 366.5-2 378.1.6 389.4l24 104C27.1 504.2 36.7 512 48 512c256.1 0 464-207.5 464-464 0-11.2-7.7-20.9-18.6-23.4z'>
                 </path>
               </svg>
-              (325) 514-5998
+              <a href="tel:+13255145998">(325) 514-5998</a>
             </p>
 
           </div>
 
-          <div className=' md:hidden lg:block'>
+          <div className=' md:hidden lg:block lg:mt-28'>
             <img className='' alt='logo' src={logo3} />
           </div>
 
@@ -85,7 +84,7 @@ function Footer() {
       </div>
       <div className='text-center p-6'>
         <span>© 2023 Copyright </span>
-        <a className='text-[#FFF9F4] font-semibold' href='#'>Love Thy Selfie Photo Booth</a>
+        <a className='text-light font-semibold' href='#'>Love Thy Selfie Photo Booth</a>
         <br />
         <span className='text-xs'>Site created by <a target='_blank' href='https://missatrox44.github.io/portfolio/'>S.B.</a> & <a target='_blank' href='https://andcooke.github.io/react-portfolio/'>A.C.</a></span>
       </div>

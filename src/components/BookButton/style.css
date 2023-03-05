@@ -1,9 +1,20 @@
-#custom-button{
-  color: var(--black);
-  background-color: var(--gold);
-}
-
 #custom-button:hover {
   color: var(--white);
   box-shadow: 0 0 3rem var(--gold);
+  transform: scale(120%);
+}
+
+#custom-buttom {
+  position: absolute;
+}
+
+#custom-button:focus {
+ transform: scale(90%);
+}
+
+
+.footer-book-button {
+  position: relative;
+  margin-top: -150px;
+  padding-bottom: 200px;
 }
