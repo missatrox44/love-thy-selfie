@@ -9,6 +9,7 @@ import Footer from './components/Footer'
 import Reviews from './components/Reviews';
 
 import ReviewCard from './components/ReviewCard'
+import ScrollToTop from './components/ScrollToTop';
 
 
 
@@ -17,6 +18,7 @@ function App() {
   return (
     <Router>
       {/*  possibly add max width to app-container lg:max-w-[80%] */}
+      <ScrollToTop />
       <div className='app-container'>
         <Routes>
           <Route 
