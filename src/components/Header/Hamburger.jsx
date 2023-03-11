@@ -16,7 +16,7 @@ const HamburgerMenu = () => {
         onClick={handleMenuClick}
       >
         <svg
-          className="h-6 w-6 fill-current"
+          className="h-8 w-8 fill-current"
           viewBox="0 0 24 24"
           xmlns="http://www.w3.org/2000/svg"
         >
@@ -41,35 +41,40 @@ const HamburgerMenu = () => {
       <div
         className={`${
           isOpen ? "block" : "hidden"
-        } absolute right-0 mt-2 py-2 w-48 bg-white rounded-lg shadow-xl z-20`}
+        } absolute right-2 mt-2 py-2 w-48 bg-white rounded-lg shadow-2xl z-20`}
       >
         <Link
           to="/"
-          className="block px-4 py-2 text-gray-800 hover:bg-indigo-500 hover:text-white"
+          onClick={handleMenuClick}
+          className="block px-4 py-2 text-gray-800 hover:bg-[#7643E5] hover:text-white"
         >
           Home
         </Link>
         <HashLink
           to="/#about"
-          className="block px-4 py-2 text-gray-800 hover:bg-indigo-500 hover:text-white"
+          onClick={handleMenuClick}
+          className="block px-4 py-2 text-gray-800 hover:bg-[#7643E5] hover:text-white"
         >
           About
         </HashLink>
         <HashLink
           to="/#reviews"
-          className="block px-4 py-2 text-gray-800 hover:bg-indigo-500 hover:text-white"
+          onClick={handleMenuClick}
+          className="block px-4 py-2 text-gray-800 hover:bg-[#7643E5] hover:text-white"
         >
           Reviews
         </HashLink>
         <HashLink
           to="/#photoGallery"
-          className="block px-4 py-2 text-gray-800 hover:bg-indigo-500 hover:text-white"
+          onClick={handleMenuClick}
+          className="block px-4 py-2 text-gray-800 hover:bg-[#7643E5] hover:text-white"
         >
           Gallery
         </HashLink>
         <Link
           to="/contact"
-          className="block px-4 py-2 text-gray-800 hover:bg-indigo-500 hover:text-white"
+          onClick={handleMenuClick}
+          className="block px-4 py-2 text-gray-800 hover:bg-[#7643E5] hover:text-white"
         >
           Contact
         </Link>
