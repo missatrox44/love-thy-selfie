@@ -14,6 +14,6 @@ module.exports = {
       }
     },
   },
-  plugins: [],
+  plugins: [require('tailwind-hamburgers')],
 }
 
