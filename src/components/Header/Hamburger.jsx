@@ -10,7 +10,7 @@ const HamburgerMenu = () => {
   };
 
   return (
-    <div className="z-50 fixed top-0 right-0 p-4 md:hidden lg:hidden">
+    <div className="z-[99999] fixed top-0 right-0 p-4 md:hidden lg:hidden">
       <button
         className="text-[#FFCE3A] hover:text-accent2 focus:outline-none focus:text-[#FFCE3A]"
         onClick={handleMenuClick}
