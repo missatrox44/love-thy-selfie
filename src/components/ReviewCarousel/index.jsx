@@ -88,7 +88,6 @@ const ReviewCarousel = (props) => {
     onMouseMove(e);
   }
 
-
   const styleCardIndexCircle = () => {
     const indices = document.querySelectorAll(".index-circle");
     indices.forEach((circle) => {
@@ -108,7 +107,12 @@ const ReviewCarousel = (props) => {
 
   return (
     <div className="carousel-container">
-      <div className="carousel-wrapper pt-5 pl-3" onTouchStart={onTouchStart} onTouchMove={onTouchMove} onTouchEnd={onTouchEnd} onMouseDown={onMouseDown} onMouseUp={onMouseUp} 
+      <div className="carousel-wrapper pt-5 pl-3" 
+      onTouchStart={onTouchStart} 
+      onTouchMove={onTouchMove} 
+      onTouchEnd={onTouchEnd} 
+      onMouseDown={onMouseDown} 
+      onMouseUp={onMouseUp} 
       // onMouseMove={onMouseMove}
       >
 
