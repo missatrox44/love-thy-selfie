@@ -26,15 +26,15 @@ const ReviewCarousel = (props) => {
     setLength(children.length);
   }, [children])
 
+  useEffect(() => {
+    styleCardIndexCircle();
+  },[currentIndex])
+
   const next = () => {
     if (bigScreen && currentIndex < ((length - 1)/3.5)){
       setCurrentIndex(prevState => prevState + 1)
-      console.log("curr index", currentIndex)
-      console.log("length", ((length - 1)/3));
     } else if (!bigScreen && currentIndex < (length - 1)) {
       setCurrentIndex(prevState => prevState + 1)
-      console.log("curr index", currentIndex)
-      console.log("length", length);
     }
   }
 
@@ -89,16 +89,21 @@ const ReviewCarousel = (props) => {
   }
 
 
+  const styleCardIndexCircle = () => {
+    const indices = document.querySelectorAll(".index-circle");
+    indices.forEach((circle) => {
+      const currValue = circle.getAttribute("value")
+      if (currentIndex === parseInt(currValue)) {
+        circle.setAttribute('class', 'index-circle mx-1 index-circle-active')
+      } else {
+        circle.setAttribute('class', "index-circle mx-1")
+      }
+    })
+  }
+
   const indexClickHandler = (e) => {
-    //get all index circles
-    let indexCircles = document.getElementsByClassName('index-circle');
-    for (let i = 0; i < indexCircles.length; i++) {
-      indexCircles[i].setAttribute('class', "index-circle mx-1")
-    };
-    e.target.setAttribute('class', 'index-circle mx-1 index-circle-active')
     let reviewIndex = parseInt(e.target.getAttribute('value'));
     setCurrentIndex(reviewIndex);
-    // console.log(reviewIndex)
   }
 
   return (
