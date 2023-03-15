@@ -22,7 +22,7 @@ export default function Photos() {
   const randomImagePicker = () => {
     setTimeout(() => {
       setNewIndex(randomNumber());
-      setEvent(photos[newIndex].event);
+      // setEvent(photos[newIndex].event);
       setImage(photos[newIndex].source);
     }, 3000)
   }
