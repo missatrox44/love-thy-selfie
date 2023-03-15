@@ -11,7 +11,7 @@ export default function Photos() {
 
   const [image, setImage] = useState(photos[Math.floor(Math.random() * 20)].source);
   const [newIndex, setNewIndex] = useState(Math.floor(Math.random() * 20));
-  const [event, setEvent] = useState("Weddings")
+  // const [event, setEvent] = useState("Weddings")
 
   const randomNumber = () => {
     let length = photos.length;
@@ -22,7 +22,7 @@ export default function Photos() {
   const randomImagePicker = () => {
     setTimeout(() => {
       setNewIndex(randomNumber());
-      setEvent(photos[newIndex].event);
+      // setEvent(photos[newIndex].event);
       setImage(photos[newIndex].source);
     }, 3000)
   }
