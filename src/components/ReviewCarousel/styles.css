@@ -8,10 +8,12 @@
   display: flex;
   padding-right: 0;
   width: 100%;
-  position: relative;
+  position: static;
+  overflow: hidden;
   cursor: grab;
   user-select: none;
   -webkit-user-select: none;
+  scroll-behavior: auto;
 }
 
 .carousel-wrapper:active {
@@ -30,6 +32,7 @@
   transition: all 300ms linear;
   -ms-overflow-style: none;  /* hide scrollbar in IE and Edge */
   scrollbar-width: none;  /* hide scrollbar in Firefox */
+
 }
 
 /* hide scrollbar in webkit browser */
