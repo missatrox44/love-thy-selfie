@@ -1,6 +1,5 @@
 import React from 'react';
 import LandingScreen from '../LandingScreen';
-import BookButton from '../BookButton';
 import ServiceArea from '../ServiceArea';
 import Customize from '../Customize';
 import HighTech from '../HighTech/HighTech';
