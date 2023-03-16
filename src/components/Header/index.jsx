@@ -1,4 +1,3 @@
-import { useState } from "react";
 import longlogo from "../../assets/logos/long-light-logo.svg";
 import "./styles.css";
 import { HashLink } from "react-router-hash-link";
@@ -6,7 +5,6 @@ import { Link } from "react-router-dom";
 import Hamburger from "./Hamburger";
 
 export default function Header() {
-  // const [isBurgerOpen, setIsBurgerOpen] = useState(false);
 
   return (
     <nav className="bg-[#7643E5] px-2 sm:px-4 py-2.5">

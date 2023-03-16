@@ -1,5 +1,4 @@
 import React from 'react';
-// import './style.css';
 import logo3 from '../../assets/logos/short-light-logo.svg';
 import { HashLink } from 'react-router-hash-link';
 import { Link } from 'react-router-dom';
