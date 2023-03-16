@@ -37,7 +37,7 @@ export default function Photos() {
     <div className="max-w-[90%] m-10 slideshow">
       {/* <h3>{event}</h3> */}
       {/* <p className="text-center text-2xl font-semibold py-5">{event}</p> */}
-      <img src={image}/>
+      <img src={image} style={{ width: '100%', height: 'auto' }}/>
     </div>
   )
 }
