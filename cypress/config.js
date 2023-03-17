@@ -1,4 +1,4 @@
-//
+//change line 3 to "local" if/when running app on local host and changes have been made to codebase
 
 const env = "staging" 
 
