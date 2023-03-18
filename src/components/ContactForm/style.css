@@ -7,16 +7,13 @@ input {
   -webkit-appearance: none !important;
   border-radius: 0 !important;
 }
-
 input:-webkit-autofill,
 input:-webkit-autofill:hover,
 input:-webkit-autofill:focus,
 input:-webkit-autofill:active {
-    -webkit-appearance: none !important;
-    transition: background-color 5000s ease-in-out 0s;
-    -webkit-text-fill-color: #fff !important;
-    border-radius: 0 !important;
-}
+   -webkit-transition-delay: 9999s;
+   transition-delay: 9999s;
+} 
 
 .input-field {
   left: 0;
@@ -38,7 +35,6 @@ input:-webkit-autofill:active {
   outline: none;
   background-color: lightgoldenrodyellow !important;
 }
-
 
 #message-input {
   height: 100px;
@@ -83,8 +79,4 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   position: relative;
   z-index: -5;
   background-color: var(--black);
-}
-
-input {
-  -webkit-appearance: none;
 }
