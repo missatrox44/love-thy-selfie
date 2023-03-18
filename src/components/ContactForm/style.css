@@ -13,6 +13,8 @@ input:-webkit-autofill:focus,
 input:-webkit-autofill:active {
    -webkit-transition-delay: 9999s;
    transition-delay: 9999s;
+   -webkit-appearance: none !important;
+   border-radius: 0 !important;
 } 
 
 .input-field {
