@@ -13,18 +13,21 @@ const ReviewCarousel = (props) => {
 
   const [dragStart, setDragStart] = useState(null);
 
+  const [swipePercentage, setSwipePercentage] = useState(null);
+
   const minDistance = 25;
 
   const [currentIndex, setCurrentIndex] = useState(0);
   const [length, setLength] = useState(children.length);
 
-  // Set the length to match current children from props
+
   useEffect(() => {
     setLength(children.length);
   }, [children]);
 
+
   useEffect(() => {
-    styleCardIndexCircle();
+    styleActiveReviewCardIndicator();
   }, [currentIndex]);
 
   const next = () => {
@@ -44,13 +47,18 @@ const ReviewCarousel = (props) => {
   const onTouchStart = (e) => {
     setTouchEnd(null); // otherwise the swipe is fired even with usual touch events
     setTouchStart(e.targetTouches[0].clientX);
+    setSwipePercentage(e.view.screen.availWidth);
   };
 
-  const onTouchMove = (e) => setTouchEnd(e.targetTouches[0].clientX);
+  const onTouchMove = (e) => {
+    setTouchEnd(e.targetTouches[0].clientX);
+  }
 
   const onTouchEnd = () => {
     if (!touchStart || !touchEnd) return;
     const distance = touchStart - touchEnd;
+    // console.log(swipePercentage);
+    // console.log(85 - ((Math.abs(distance) / swipePercentage) * 100));
     const isLeftSwipe = distance > minDistance;
     const isRightSwipe = distance < -minDistance;
     if (isLeftSwipe || isRightSwipe) {
@@ -79,7 +87,7 @@ const ReviewCarousel = (props) => {
     onMouseMove(e);
   };
 
-  const styleCardIndexCircle = () => {
+  const styleActiveReviewCardIndicator = () => {
     const indices = document.querySelectorAll(".index-circle");
     indices.forEach((circle) => {
       const currValue = circle.getAttribute("value");
@@ -100,18 +108,16 @@ const ReviewCarousel = (props) => {
     <div className="carousel-container">
       <div
         className="carousel-wrapper pt-5 pl-3"
-        onTouchStart={onTouchStart}
-        onTouchMove={onTouchMove}
-        onTouchEnd={onTouchEnd}
+        // onTouchStart={onTouchStart}
+        // onTouchMove={onTouchMove}
+        // onTouchEnd={onTouchEnd}
         onMouseDown={onMouseDown}
         onMouseUp={onMouseUp}
-        // onMouseMove={onMouseMove}
       >
         <div className="carousel-content-wrapper">
           {(!bigScreen && (
             <div
               className="carousel-content"
-              // controls how much the carousel moves
               style={{ transform: `translateX(-${currentIndex * 85}%)` }}
             >
               {children}
@@ -120,7 +126,6 @@ const ReviewCarousel = (props) => {
             (bigScreen && (
               <div
                 className="carousel-content"
-                // controls how much the carousel moves
                 style={{ transform: `translateX(-${currentIndex * 90.9}%)` }}
               >
                 {children}
