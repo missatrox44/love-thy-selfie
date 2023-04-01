@@ -41,8 +41,8 @@ export default function ContactForm() {
   //   setIsHideToast(true);
   // }
 
-  const serviceId = process.env.VITE_SERVICE;
-  const templateId = process.env.VITE_TEMPLATE;
+  const serviceId = "service_kbxx6uj";
+  const templateId = "template_yqrayj7";
   const apiKey = "trIcb6hP_q2qaGEBC";
 
   function sendEmail(e) {
