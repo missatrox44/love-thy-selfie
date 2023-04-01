@@ -1,20 +1,25 @@
 import React from 'react';
-import BookButton from '../BookButton';
-import medal from '../../assets/medal.png';
+import LandingScreen from '../LandingScreen';
+import ServiceArea from '../ServiceArea';
+import Customize from '../Customize';
+import HighTech from '../HighTech/HighTech';
+import PhotoGallery from '../PhotoGallery';
 
 export default function Features() {
   return (
-    <div className='text-center bg-gray-50 text-gray-800 py-20 px-6'>
-      <div className='place-content-center flex'>
-        <img alt='medal' className='h-48 w-48 mb-5' src={medal} />
+    <div className='text-center text-light'>
+      
+      <LandingScreen />
+      <ServiceArea />
+      <div className="w-full bg-gradient-to-t from-accent2 via-primary to-accent1 move-to-back">
+        <PhotoGallery />
+        <Customize />
+        <HighTech />
       </div>
+      <div className="h-[35px] bg-secondary custom-shadow"></div>    
+      <div className="h-[35px] bg-accent1 custom-shadow"></div> 
 
-      <h3 className='text-3xl font-bold mb-8'>Do your 'selfie' a favor and book us!</h3>
-
-      <BookButton />
     </div>
-
-
   )
 }
 

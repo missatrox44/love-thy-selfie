@@ -1,40 +1,47 @@
-import React from "react";
+import React from 'react';
 import ReviewCard from '../ReviewCard';
 import ReviewCarousel from '../ReviewCarousel';
-import { reviews } from "../../assets/reviews";
-import BsStarFill from '../../assets/Star';
+import Star from '../../assets/Star';
+import { reviews } from '../../assets/reviews';
 
 import './styles.css';
 
 export default function Reviews() {
-
-
   return (
-    <div class ="reviews-container">
-      <p className='text-center text-gray-800 text-3xl lg:text-5xl leading-tight pt-10'>Reviews:</p>
-        <div className='text-center text-gray-700 font-light m-4'>
-          Here are what some of our amazing customers are
-            saying!
+    <div id='reviews' className='py-6'>
+      <p className='text-light text-center text-4xl lg:text-6xl py-5 px-2 font-semibold bevan'>
+        Reviews
+      </p>
+      <div className='flex place-content-center'>
+        <p className='mt-3 text-sm md:text-xl karla-700 text-light'>
+          Overall Rating:
+        </p>
+        <div className='flex text-yellow-500 mb-4 place-content-start h-10'>
+          <Star />
+          <Star />
+          <Star />
+          <Star />
+          <Star />
         </div>
-          <div className='flex place-content-center'>
-            <p className='font-bold mr-3'>Overall Rating:</p>
-              <BsStarFill />
-              <BsStarFill />
-              <BsStarFill />
-              <BsStarFill />
-              <BsStarFill />
-            <p className='text-xs ml-3'>5.0/5.0</p>
-            <p className="ml-3">117 Reviews</p>
-          </div>
-      <ReviewCarousel style={{ marginLeft:'auto', marginRight:'auto', marginTop: 64 }}>
-
+        <p className='mt-3 text-sm md:text-2xl karla-700 text-light'>
+          5.0 / 5.0
+        </p>
+      </div>
+      <ReviewCarousel
+        style={{ marginLeft: 'auto', marginRight: 'auto', marginTop: 64 }}
+      >
         {reviews.map((review, i) => {
           return (
-            <ReviewCard key={i} name={review.name} review={review.review} date={review.date} picture={review.picture}/>
-          )
+            <ReviewCard
+              key={i}
+              name={review.name}
+              review={review.review}
+              date={review.date}
+              picture={review.picture}
+            />
+          );
         })}
       </ReviewCarousel>
     </div>
-  )
+  );
 }
-

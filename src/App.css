@@ -1,7 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bevan&display=swap');
+
+:root {
+  --black: rgb(33, 12, 0);
+  --white: rgb(255, 249, 244);
+  --purple: rgb(118, 67, 229);
+  --gold: rgb(255, 206, 58);
+  --pink: rgb(215, 5, 242);
+  --green: rgb(0, 145, 173);
+  --serif: 'Bevan', cursive;
+  --sans-serif: 'Karla', sans-serif;
+}
+
+html {
+  /* overflow-x: hidden; */
+}
+
+
+body {
+  scrollbar-width: thin;          /* "auto" or "thin" */
+   /* scroll thumb and track */ 
+  overflow: overlay;
+}
+
+body::-webkit-scrollbar {
+  width: 10px;               /* width of the entire scrollbar */
+}
+
+
+body::-webkit-scrollbar-track {
+  background: transparent;        /*color of the tracking area */
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: var(--green);    /* color of the scroll thumb */
+  border-radius: 20px;       /* roundness of the scroll thumb */
+  border: 3px solid transparent;  /* creates padding around scroll thumb */
+}
 
 .app-container {
   margin: 0 auto;
+  overflow-x: hidden;
+  /* background-color: var(--purple); */
 }
+
 
 /* #root {
   max-width: 1280px;
@@ -44,3 +87,73 @@
 .read-the-docs {
   color: #888;
 }  */
+
+.footer {
+  background: var(--purple);
+}
+
+.reviews {
+  background: var(--purple);
+}
+
+.under-reviews-triangle {
+  width: 0;
+  height: 0;
+  margin-top: -1px;
+  border-top: 15vw solid var(--purple);
+  border-left: 100vw solid transparent;
+}
+
+.slanted-stripe {
+  width: 105vw;
+  height: 40px;
+  margin-left: -2.5%;
+  transform: skewY(8.5deg);
+  box-shadow: 0px 5px 5px rgba(33, 12, 0, 0.75) inset;
+}
+
+.slanted-white-stripe {
+  width: 105vw;
+  height: 40px;
+  margin-left: -2.4%;
+  transform: skewY(8.5deg);
+  background: var(--white);
+  box-shadow: 0px 5px 5px rgba(33, 12, 0) inset, 0px 5px 10px var(--black);
+}
+
+.custom-shadow {
+  box-shadow: 0px 5px 5px rgba(33, 12, 0, .75) inset;
+}
+
+.under-shadow {
+  box-shadow: 0px 5px 10px var(--black);
+}
+
+.custom-footer {
+  /* margin-top: -175px; */
+  bottom: 0;
+}
+
+#black-stripe {
+  z-index: -9998;
+  position: absolute;
+}
+
+.move-to-back {
+  z-index: -30;
+  position: relative;
+}
+
+.contact-slanted-stripe {
+  width: 105vw;
+  height: 100px;
+  margin-left: -2.5%;
+  transform: skewY(8.5deg);
+}
+
+.transparent-slant {
+  width: 105vw;
+  height: 100px;
+  margin-left: -2.5%;
+  transform: skewY(8.5deg);
+}

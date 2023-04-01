@@ -1,4 +1,5 @@
 
+
 .reviews-container {
   box-shadow: 0 12px 31px 0 rgb(82 97 116 / 10%);
   background-color: #fff;
@@ -25,10 +26,6 @@
 
 }
 
-.author-star-box {
-
-}
-
 .name {
   font-size: 1.25rem;
   margin: 0;
@@ -38,4 +35,24 @@
   display: flex;
   justify-content: center;
   flex-direction: column;
+}
+
+.custom-card {
+  margin-right: 0vw;
+}
+
+.custom-star {
+  height: 1.5rem;
+}
+
+@media only screen and (min-width: 820px) {
+  .custom-card {
+    margin-right: 0vw;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .custom-card {
+    margin-right: .3vw;
+  }
 }

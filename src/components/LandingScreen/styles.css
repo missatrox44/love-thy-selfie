@@ -1,0 +1,10 @@
+.lift {
+  z-index: 1;
+}
+
+@media only screen and (min-width: 1024px) {
+  .under-shadow{
+    box-shadow: none;
+  }
+}
+  
