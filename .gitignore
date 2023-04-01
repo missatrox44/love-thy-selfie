@@ -121,3 +121,4 @@ dist-ssr
 *.sw?
 
 .env
+.env.production
