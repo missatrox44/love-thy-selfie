@@ -43,7 +43,7 @@ export default function ContactForm() {
 
   const serviceId = process.env.VITE_SERVICE;
   const templateId = process.env.VITE_TEMPLATE;
-  const apiKey = process.env.VITE_API;
+  const apiKey = "trIcb6hP_q2qaGEBC";
 
   function sendEmail(e) {
     e.preventDefault();
