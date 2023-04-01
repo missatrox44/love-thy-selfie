@@ -34,33 +34,30 @@ export default function ContactForm() {
 
   function handleChange(e) {
     setFormState({ ...formState, [e.target.name]: e.target.value });
-    console.log(formState);
+    // console.log(formState);
   }
 
-  function hideToast() {
-    setIsHideToast(true);
-  }
+  // function hideToast() {
+  //   setIsHideToast(true);
+  // }
+
+  const serviceId = import.meta.env.VITE_SERVICE;
+  const templateId = import.meta.env.VITE_TEMPLATE;
+  const apiKey = import.meta.env.VITE_API;
 
   function sendEmail(e) {
     e.preventDefault();
 
-    emailjs
-      .sendForm(
-        "service_kbxx6uj",
-        "template_yqrayj7",
-        form.current,
-        "trIcb6hP_q2qaGEBC"
-      )
-      .then(
-        (result) => {
-          console.log(result.text);
-        },
-        (error) => {
-          console.log(error.text);
-        }
-      );
+    emailjs.sendForm(serviceId, templateId, form.current, apiKey).then(
+      (result) => {
+        // console.log(result.text);
+      },
+      (error) => {
+        // console.log(error.text);
+      }
+    );
 
-    console.log("sent email theoretically!");
+    // console.log("sent email theoretically!");
 
     setFormState({
       name: "",
@@ -76,17 +73,17 @@ export default function ContactForm() {
 
   //for future autofill of city input
   const cities = [
-    {id:'city1', City: 'Odessa'},
-    {id:'city2', City: 'Midland'},
-    {id:'city3', City: 'Pecos'},
-    {id:'city4', City: 'Big Spring'},
-    {id:'city5', City: 'Kermit'},
-    {id:'city6', City: 'Glendale'},
-    {id:'city7', City: 'Andrews'},
-    {id:'city8', City: 'Stanton'}
-  ]
+    { id: "city1", City: "Odessa" },
+    { id: "city2", City: "Midland" },
+    { id: "city3", City: "Pecos" },
+    { id: "city4", City: "Big Spring" },
+    { id: "city5", City: "Kermit" },
+    { id: "city6", City: "Glendale" },
+    { id: "city7", City: "Andrews" },
+    { id: "city8", City: "Stanton" },
+  ];
 
-  const autoCity = {value: 'City'};
+  const autoCity = { value: "City" };
 
   return (
     <div>
@@ -95,7 +92,9 @@ export default function ContactForm() {
           <h2 className={`bevan text-5xl pt-8 ${isHideToast ? "" : "hidden"}`}>
             Contact us!
           </h2>
-          <p className={`karla-400 text-lg mx-5 ${isHideToast ? "" : "hidden"}`}>
+          <p
+            className={`karla-400 text-lg mx-5 ${isHideToast ? "" : "hidden"}`}
+          >
             Please fill out the contact form below. Include the city and date of
             your event.
           </p>
@@ -112,7 +111,10 @@ export default function ContactForm() {
             We received your message and will get back to you within 24 hrs.
           </p>
           <div className="flex justify-center">
-            <img className="rounded-3xl mt-10 w-[90%] md:w-[60%] lg:w-[40%]" src={thankYou} />
+            <img
+              className="rounded-3xl mt-10 w-[90%] md:w-[60%] lg:w-[40%]"
+              src={thankYou}
+            />
           </div>
         </div>
         {/* END TOAST */}
@@ -139,7 +141,7 @@ export default function ContactForm() {
                   onChange={handleChange}
                 />
                 <label
-                  for="name"
+                  htmlFor="name"
                   className="peer-focus:font-medium absolute text-lg text-[#FFCE3A] duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-[#FFCE3A] peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
                 >
                   Name
@@ -158,7 +160,7 @@ export default function ContactForm() {
                     onChange={handleChange}
                   />
                   <label
-                    for="email"
+                    htmlFor="email"
                     className="peer-focus:font-medium absolute text-lg text-[#FFCE3A] duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-[#FFCE3A] peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
                   >
                     Email
@@ -175,7 +177,7 @@ export default function ContactForm() {
                     onChange={handleChange}
                   />
                   <label
-                    for="phone"
+                    htmlFor="phone"
                     className="peer-focus:font-medium absolute text-lg text-[#FFCE3A] duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-[#FFCE3A] peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
                   >
                     Phone
@@ -194,7 +196,7 @@ export default function ContactForm() {
                     onChange={handleChange}
                   />
                   <label
-                    for="city"
+                    htmlFor="city"
                     className="peer-focus:font-medium absolute text-lg text-[#FFCE3A] duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-[#FFCE3A] peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
                   >
                     City
@@ -212,7 +214,7 @@ export default function ContactForm() {
                     id="date-input"
                   />
                   <label
-                    for="date"
+                    htmlFor="date"
                     className="peer-focus:font-medium absolute text-lg text-[#FFCE3A] duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-[#FFCE3A]  peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
                   >
                     Date of Event
@@ -230,12 +232,12 @@ export default function ContactForm() {
                   onChange={handleChange}
                   id="message-input"
                 />
-               <label
-                    for="message"
-                    className="peer-focus:font-medium absolute text-lg text-[#FFCE3A] duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-[#FFCE3A]  peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
-                  >
-                    Message (optional)
-                  </label>
+                <label
+                  htmlFor="message"
+                  className="peer-focus:font-medium absolute text-lg text-[#FFCE3A] duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-[#FFCE3A]  peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+                >
+                  Message (optional)
+                </label>
               </div>
               <div className="flex justify-center">
                 <button
