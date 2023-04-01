@@ -41,9 +41,9 @@ export default function ContactForm() {
   //   setIsHideToast(true);
   // }
 
-  const serviceId = import.meta.env.VITE_SERVICE;
-  const templateId = import.meta.env.VITE_TEMPLATE;
-  const apiKey = import.meta.env.VITE_API;
+  const serviceId = process.env.VITE_SERVICE;
+  const templateId = process.env.VITE_TEMPLATE;
+  const apiKey = process.env.VITE_API;
 
   function sendEmail(e) {
     e.preventDefault();
