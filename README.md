@@ -1,12 +1,11 @@
 # love-thy-selfie
 
-
 `npm install`
 
 `npm run dev`
 
-
 ## Run Cypress
+
 `npm install`
 
 `npm run cypress`
@@ -16,9 +15,9 @@
 - The tests should run on the staging url by default
 - If you make changes to the code and want to test in real time, make the following change to config.js:
 
-`const env = "local" `
+`const env = "local"`
 
 small edit
 new push
 
-
+<!-- hi! [for great favicons](https://favicon.io/)  -->

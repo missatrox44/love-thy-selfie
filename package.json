@@ -22,8 +22,6 @@
     "react-router-hash-link": "^2.4.3"
   },
   "devDependencies": {
-    "@types/react": "^18.0.24",
-    "@types/react-dom": "^18.0.8",
     "@vitejs/plugin-react": "^2.2.0",
     "autoprefixer": "^10.4.12",
     "cypress": "^12.8.1",
