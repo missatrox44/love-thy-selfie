@@ -8,6 +8,8 @@ textarea {
   -webkit-appearance: none !important;
   border-radius: 0 !important;
 }
+
+
 input:-webkit-autofill,
 input:-webkit-autofill:hover,
 input:-webkit-autofill:focus,
@@ -16,31 +18,17 @@ textarea:-webkit-autofill,
 textarea:-webkit-autofill:hover,
 textarea:-webkit-autofill:focus,
 textarea:-webkit-autofill:active {
-   -webkit-transition-delay: 9999s;
-   transition-delay: 9999s;
+   -webkit-transition-delay: infinite;
+   transition-delay: infinite;
    -webkit-appearance: none !important;
    border-radius: 0 !important;
 } 
 
-.input-field {
-  left: 0;
-  display: flex;
-  flex-wrap: wrap;
-  width: calc(100% - 50px) !important;
-  margin: 10px 20px;
-  padding: 15px 0 15px 10px;
-  border-radius: 20px;
+.calendar {
+  position: absolute;
+  top: -5px;
   border: none;
-  color: black;
-  background-color: lightgray !important;
-  transition: background-color .6s ease !important;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 1rem;
-}
-
-.input-field:focus {
-  outline: none;
-  background-color: lightgoldenrodyellow !important;
+  font-family: var(--sans-serif);
 }
 
 #message-input {
@@ -56,14 +44,14 @@ textarea:-webkit-autofill:active {
   cursor: pointer;
 }
 
-
+/* 
 input[type="date"]::-webkit-calendar-picker-indicator {
   opacity: 1;
   display: block;
   width: 25px;
   height: 15px;
   border-width: thin;
-}
+} */
 
 .hidden {
   display: none;

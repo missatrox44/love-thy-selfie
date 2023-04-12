@@ -17,6 +17,7 @@
     "jb-date-input": "^3.4.2",
     "moment-range": "^4.0.2",
     "react": "^18.2.0",
+    "react-calendar": "^4.2.1",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.6.1",
     "react-router-hash-link": "^2.4.3"

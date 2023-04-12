@@ -1,14 +1,16 @@
 import React, { useRef, useState } from "react";
 import { useMediaQuery } from "@mui/material";
+import Calendar from "react-calendar";
+import 'react-calendar/dist/Calendar.css';
 import "./style.css";
 import emailjs from "@emailjs/browser";
 import thankYou from "../../assets/thankyou.jpg";
 
 import "./style.css";
+import zIndex from "@mui/material/styles/zIndex";
 
 export default function ContactForm() {
   const bigScreen = useMediaQuery("(min-width: 1024px)");
-
   const [formState, setFormState] = useState({
     name: "",
     email: "",
@@ -19,6 +21,7 @@ export default function ContactForm() {
   });
 
   const [isHideToast, setIsHideToast] = useState(true);
+  const [isCalendarVisible, setIsCalendarVisible] = useState(false);
 
   function handleStyling() {
     if (!bigScreen) {
@@ -88,6 +91,12 @@ export default function ContactForm() {
 
   const autoCity = {value: 'City'};
 
+  const today = new Date();
+  const day = today.getDate();
+  const month = today.getMonth() + 1;
+  const maxYear = today.getFullYear() + 1;
+  const maxDate = new Date(`${month} ${day}, ${maxYear}`)
+
   return (
     <div>
       <div className="bg-gradient-to-t from-accent2 to-primary">
@@ -118,14 +127,20 @@ export default function ContactForm() {
         {/* END TOAST */}
         <div className="mx-4 md:mx-12 py-6">
           <div
-            className={`rounded-3xl bg-[var(--green)] px-6 pt-8 ${
-              isHideToast ? "" : "hidden"
-            }`}
+            className={
+              `rounded-3xl bg-[var(--green)] px-6 pt-8 
+              ${isHideToast ? "" : "hidden"}
+            `}
           >
             <form
               ref={form}
               onSubmit={sendEmail}
               className={`${isHideToast ? "" : "hidden"}`}
+              onClick={() => {
+                if (isCalendarVisible) {
+                  setIsCalendarVisible(false)
+                }
+              }}
               // style={{ margin: handleStyling() }}
             >
               <div className="relative z-0 w-full mb-6 group0">
@@ -139,7 +154,7 @@ export default function ContactForm() {
                   onChange={handleChange}
                 />
                 <label
-                  for="name"
+                  htmlFor="name"
                   className="peer-focus:font-medium absolute text-lg text-[#FFCE3A] duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-[#FFCE3A] peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
                 >
                   Name
@@ -158,7 +173,7 @@ export default function ContactForm() {
                     onChange={handleChange}
                   />
                   <label
-                    for="email"
+                    htmlFor="email"
                     className="peer-focus:font-medium absolute text-lg text-[#FFCE3A] duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-[#FFCE3A] peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
                   >
                     Email
@@ -175,7 +190,7 @@ export default function ContactForm() {
                     onChange={handleChange}
                   />
                   <label
-                    for="phone"
+                    htmlFor="phone"
                     className="peer-focus:font-medium absolute text-lg text-[#FFCE3A] duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-[#FFCE3A] peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
                   >
                     Phone
@@ -194,33 +209,45 @@ export default function ContactForm() {
                     onChange={handleChange}
                   />
                   <label
-                    for="city"
+                    htmlFor="city"
                     className="peer-focus:font-medium absolute text-lg text-[#FFCE3A] duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-[#FFCE3A] peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
                   >
                     City
                   </label>
                 </div>
                 <div className="relative z-0 w-full mb-6 group">
+                <Calendar 
+                  className={`${isCalendarVisible ? "" : "hidden"} calendar`}
+                  maxDate={maxDate}
+                  minDate={new Date()}
+                  calendarType="US"
+                  onClickDay={(value, event) => {
+                    setIsCalendarVisible(!isCalendarVisible);
+                    console.log(value)
+                  }}
+                />
                   <input
-                    type="date"
+                    type="text"
                     name="date"
+                    autoComplete="off"
                     className="block py-2.5  w-full text-lg bg-transparent border-0 border-b-2 border-[#FFCE3A] text-white focus:outline-none focus:ring-0 focus:border-[#FFCE3A] peer"
                     placeholder=" "
                     required
                     value={date}
                     onChange={handleChange}
+                    onClick={() => setIsCalendarVisible(!isCalendarVisible)}
                     id="date-input"
                   />
                   <label
-                    for="date"
-                    className="peer-focus:font-medium absolute text-lg text-[#FFCE3A] duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-[#FFCE3A]  peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+                    htmlFor="date"
+                    className="peer-focus:font-medium absolute text-lg text-[#FFCE3A] duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-[#FFCE3A] peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
                   >
                     Date of Event
                   </label>
                 </div>
               </div>
 
-              <div className="relative z-0 w-full mb-6 group0">
+              <div className="relative z-0 w-full mb-6 group">
                 <textarea
                   type="text"
                   name="message"
@@ -231,11 +258,11 @@ export default function ContactForm() {
                   id="message-input"
                 />
                <label
-                    for="message"
-                    className="peer-focus:font-medium absolute text-lg text-[#FFCE3A] duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-[#FFCE3A]  peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
-                  >
-                    Message (optional)
-                  </label>
+                  htmlFor="message"
+                  className="peer-focus:font-medium absolute text-lg text-[#FFCE3A] duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-[#FFCE3A]  peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+                >
+                  Message (optional)
+                </label>
               </div>
               <div className="flex justify-center">
                 <button
