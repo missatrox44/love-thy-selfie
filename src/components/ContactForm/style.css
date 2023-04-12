@@ -29,7 +29,6 @@ textarea:-webkit-autofill:active {
   top: 50px;
   border: none;
   font-family: var(--sans-serif);
-  font-size: 1.8vw;
 }
 
 #message-input {
