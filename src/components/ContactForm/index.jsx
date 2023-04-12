@@ -97,6 +97,14 @@ export default function ContactForm() {
   const maxYear = today.getFullYear() + 1;
   const maxDate = new Date(`${month} ${day}, ${maxYear}`)
 
+
+  const formatDate = (date) => {
+    const day = date.getDate();
+    const month = date.getMonth() + 1;
+    const year = date.getFullYear();
+    setFormState({ ...formState, date: `${month}/${day}/${year}` });
+  }
+
   return (
     <div>
       <div className="bg-gradient-to-t from-accent2 to-primary">
@@ -136,8 +144,9 @@ export default function ContactForm() {
               ref={form}
               onSubmit={sendEmail}
               className={`${isHideToast ? "" : "hidden"}`}
-              onClick={() => {
-                if (isCalendarVisible) {
+              onClick={(event) => {
+                const type = event.target.type
+                if (isCalendarVisible && type !== 'button') {
                   setIsCalendarVisible(false)
                 }
               }}
@@ -216,16 +225,7 @@ export default function ContactForm() {
                   </label>
                 </div>
                 <div className="relative z-0 w-full mb-6 group">
-                <Calendar 
-                  className={`${isCalendarVisible ? "" : "hidden"} calendar`}
-                  maxDate={maxDate}
-                  minDate={new Date()}
-                  calendarType="US"
-                  onClickDay={(value, event) => {
-                    setIsCalendarVisible(!isCalendarVisible);
-                    console.log(value)
-                  }}
-                />
+                {/* "2023-04-18" */}
                   <input
                     type="text"
                     name="date"
@@ -235,7 +235,9 @@ export default function ContactForm() {
                     required
                     value={date}
                     onChange={handleChange}
-                    onClick={() => setIsCalendarVisible(!isCalendarVisible)}
+                    onClick={() => {
+                      setIsCalendarVisible(true);
+                    }}
                     id="date-input"
                   />
                   <label
@@ -244,6 +246,19 @@ export default function ContactForm() {
                   >
                     Date of Event
                   </label>
+                  <Calendar 
+                    className={`${isCalendarVisible ? "" : "hidden"} calendar`}
+                    maxDate={maxDate}
+                    minDate={new Date()}
+                    calendarType="US"
+                    // onChange={}
+                    onClickDay={(value, event) => {
+                      console.log(event);
+                      setIsCalendarVisible(false);
+                      formatDate(value);
+                      console.log(formState);
+                    }}
+                  />
                 </div>
               </div>
 
