@@ -24,11 +24,25 @@ textarea:-webkit-autofill:active {
    border-radius: 0 !important;
 } 
 
-.calendar {
+.react-calendar {
+  z-index: 1;
   position: absolute;
-  top: 50px;
   border: none;
   font-family: var(--sans-serif);
+}
+
+.react-calendar button {
+  color: black;
+}
+
+.react-calendar button:disabled {
+  color: var(--black);
+}
+
+
+button:not([disabled]):hover {
+  background: var(--purple) !important;
+  color: var(--white);
 }
 
 #message-input {
@@ -44,17 +58,23 @@ textarea:-webkit-autofill:active {
   cursor: pointer;
 }
 
-/* 
-input[type="date"]::-webkit-calendar-picker-indicator {
-  opacity: 1;
-  display: block;
-  width: 25px;
-  height: 15px;
-  border-width: thin;
-} */
-
 .hidden {
   display: none;
+}
+
+.default {
+  position: relative;
+  z-index: 0;
+}
+
+.higher {
+  position: relative;
+  z-index: 1;
+}
+
+.under {
+  position: relative;
+  z-index: -1;
 }
 
 .triangle {
