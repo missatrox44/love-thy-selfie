@@ -107,9 +107,7 @@ export default function ContactForm() {
 
   return (
 
-    // ONE
     <div className="default">
-      {/* TWO */}
       <div className="bg-gradient-to-t from-accent2 to-primary default">
         <div className="text-center text-[#FFF9F4]">
           <h2 className={`bevan text-5xl pt-8 ${isHideToast ? "" : "hidden"}`}>
@@ -136,8 +134,7 @@ export default function ContactForm() {
           </div>
         </div>
         {/* END TOAST */}
-
-        {/* THREE */}
+  
         <div className="mx-4 md:mx-12 py-6 default">
           <div
             className={
@@ -145,8 +142,6 @@ export default function ContactForm() {
               ${isHideToast ? "" : "hidden"}
             `}
           >
-
-            {/* FOUR */}
             <form
               ref={form}
               onSubmit={sendEmail}
@@ -218,7 +213,6 @@ export default function ContactForm() {
                 </div>
               </div>
 
-            
               <div className="grid md:grid-cols-2 md:gap-6 higher">
                 <div className="relative z-0 w-full mb-6 group">
                   <input
@@ -243,7 +237,7 @@ export default function ContactForm() {
                   <input
                     type="text"
                     name="date"
-                    autoComplete="off"
+                    autoComplete="new-password"
                     className="block py-2.5  w-full text-lg bg-transparent border-0 border-b-2 border-[#FFCE3A] text-white focus:outline-none focus:ring-0 focus:border-[#FFCE3A] peer"
                     placeholder=" "
                     required

@@ -18,8 +18,8 @@ textarea:-webkit-autofill,
 textarea:-webkit-autofill:hover,
 textarea:-webkit-autofill:focus,
 textarea:-webkit-autofill:active {
-   -webkit-transition-delay: infinite;
-   transition-delay: infinite;
+   -webkit-transition-delay: 9999s;
+   transition-delay: 9999s;
    -webkit-appearance: none !important;
    border-radius: 0 !important;
 } 
