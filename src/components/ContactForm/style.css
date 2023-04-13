@@ -29,20 +29,40 @@ textarea:-webkit-autofill:active {
   position: absolute;
   border: none;
   font-family: var(--sans-serif);
+  border-radius: 1rem;
 }
 
 .react-calendar button {
-  color: black;
-}
-
-.react-calendar button:disabled {
   color: var(--black);
 }
 
+.react-calendar__month-view__days__day--neighboringMonth {
+  background: var(--white) !important;
+  color: var(--gold) !important;
+}
 
-button:not([disabled]):hover {
+.react-calendar__tile--active {
+  background: var(--gold) !important;
+  border-radius: 1rem;
+}
+
+button:focus{
+  background: none !important;
+}
+
+.react-calendar button:disabled {
+  color: var(--black) !important; 
+  background: lightgray !important;
+}
+
+.react-calendar__tile:not([disabled]):hover {
   background: var(--purple) !important;
   color: var(--white);
+  border-radius: 1rem;
+}
+
+.react-calendar__navigation > *:hover {
+  background: none !important;
 }
 
 #message-input {

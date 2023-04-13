@@ -94,7 +94,7 @@ export default function ContactForm() {
   const today = new Date();
   const day = today.getDate();
   const month = today.getMonth() + 1;
-  const maxYear = today.getFullYear() + 1;
+  const maxYear = today.getFullYear() + 3;
   const maxDate = new Date(`${month} ${day}, ${maxYear}`)
 
 
