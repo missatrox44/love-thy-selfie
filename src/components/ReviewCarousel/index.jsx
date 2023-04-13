@@ -13,19 +13,31 @@ const ReviewCarousel = (props) => {
 
   const [dragStart, setDragStart] = useState(null);
 
-  const minDistance = 25;
+  const [swipePercentage, setSwipePercentage] = useState(null);
+  const [widthTotal, setWidthTotal] = useState(null);
+  const [isTouchFinished, setIsTouchFinished] = useState(false);
+
+  const minDistance = 0;
 
   const [currentIndex, setCurrentIndex] = useState(0);
   const [length, setLength] = useState(children.length);
 
-  // Set the length to match current children from props
+
   useEffect(() => {
     setLength(children.length);
   }, [children]);
 
+
   useEffect(() => {
-    styleCardIndexCircle();
+    styleActiveReviewCardIndicator();
   }, [currentIndex]);
+
+  useEffect(() => {
+    const distance = touchStart - touchEnd;
+    setSwipePercentage(86 - Math.abs((distance/widthTotal)*100));
+    // console.log("swipe %", swipePercentage);
+    console.log(widthTotal);
+  }, [isTouchFinished])
 
   const next = () => {
     if (bigScreen && currentIndex < (length - 1) / 3.5) {
@@ -44,13 +56,19 @@ const ReviewCarousel = (props) => {
   const onTouchStart = (e) => {
     setTouchEnd(null); // otherwise the swipe is fired even with usual touch events
     setTouchStart(e.targetTouches[0].clientX);
+    setWidthTotal(e.view.screen.availWidth);
   };
 
-  const onTouchMove = (e) => setTouchEnd(e.targetTouches[0].clientX);
+  const onTouchMove = (e) => {
+    setTouchEnd(e.targetTouches[0].clientX);
+  }
 
   const onTouchEnd = () => {
     if (!touchStart || !touchEnd) return;
     const distance = touchStart - touchEnd;
+    // console.log("swipe %", 85 - Math.abs((distance/widthTotal)*100))
+    // setSwipePercentage(85 - Math.abs((distance/widthTotal)*100));
+    setIsTouchFinished(!isTouchFinished);
     const isLeftSwipe = distance > minDistance;
     const isRightSwipe = distance < -minDistance;
     if (isLeftSwipe || isRightSwipe) {
@@ -79,7 +97,7 @@ const ReviewCarousel = (props) => {
     onMouseMove(e);
   };
 
-  const styleCardIndexCircle = () => {
+  const styleActiveReviewCardIndicator = () => {
     const indices = document.querySelectorAll(".index-circle");
     indices.forEach((circle) => {
       const currValue = circle.getAttribute("value");
@@ -105,14 +123,12 @@ const ReviewCarousel = (props) => {
         onTouchEnd={onTouchEnd}
         onMouseDown={onMouseDown}
         onMouseUp={onMouseUp}
-        // onMouseMove={onMouseMove}
       >
         <div className="carousel-content-wrapper">
           {(!bigScreen && (
             <div
               className="carousel-content"
-              // controls how much the carousel moves
-              style={{ transform: `translateX(-${currentIndex * 85}%)` }}
+              style={{ transform: `translateX(-${currentIndex * swipePercentage}%)` }}
             >
               {children}
             </div>
@@ -120,7 +136,6 @@ const ReviewCarousel = (props) => {
             (bigScreen && (
               <div
                 className="carousel-content"
-                // controls how much the carousel moves
                 style={{ transform: `translateX(-${currentIndex * 90.9}%)` }}
               >
                 {children}
