@@ -8,6 +8,7 @@ import thankYou from "../../assets/thankyou.jpg";
 
 import "./style.css";
 import zIndex from "@mui/material/styles/zIndex";
+import { useEffect } from "react";
 
 export default function ContactForm() {
   const bigScreen = useMediaQuery("(min-width: 1024px)");
@@ -22,6 +23,7 @@ export default function ContactForm() {
 
   const [isHideToast, setIsHideToast] = useState(true);
   const [isCalendarVisible, setIsCalendarVisible] = useState(false);
+
 
   function handleStyling() {
     if (!bigScreen) {
@@ -102,9 +104,26 @@ export default function ContactForm() {
     setFormState({ ...formState, date: `${month}/${day}/${year}` });
   }
 
+  const calendarHandler = (e) => {
+    if (e && e.target.name === "date") {
+      if (e.code === "Escape" || e.code === "Tab") {
+        setIsCalendarVisible(false);
+        return;
+      }
+    }  
+    let type = e.target.type
+    if (isCalendarVisible && (type !== 'button' || type === undefined)) {
+      setIsCalendarVisible(false)
+    }
+  }
+
+
   return (
 
-    <div className="default">
+    <div className="default"
+      onKeyDown={calendarHandler}
+      onClick={calendarHandler}
+    >
       <div className="bg-gradient-to-t from-accent2 to-primary default">
         <div className="text-center text-[#FFF9F4]">
           <h2 className={`bevan text-5xl pt-8 ${isHideToast ? "" : "hidden"}`}>
@@ -148,16 +167,6 @@ export default function ContactForm() {
               ref={form}
               onSubmit={sendEmail}
               className={`${isHideToast ? "" : "hidden"} default`}
-              onClick={(event) => {
-                //not a great solution VVV
-                let type = event.target.type
-                if (type === undefined) {
-                  type = 'button';
-                }
-                if (isCalendarVisible && type !== 'button') {
-                  setIsCalendarVisible(false)
-                }
-              }}
               // style={{ margin: handleStyling() }}
             >
               <div className="relative z-0 w-full mb-6 group0">
@@ -225,6 +234,11 @@ export default function ContactForm() {
                     required
                     value={city}
                     onChange={handleChange}
+                    onKeyDown={(e) =>{
+                      if (e.code === "Tab"){
+                        setIsCalendarVisible(true);
+                      }
+                    }}
                   />
                   <label
                     htmlFor="city"
@@ -235,7 +249,6 @@ export default function ContactForm() {
                 </div>
 
                 <div className="relative z-0 w-full mb-6 group">
-                {/* "2023-04-18" */}
                   <input
                     type="text"
                     name="date"
@@ -261,11 +274,10 @@ export default function ContactForm() {
                       className={`${isCalendarVisible ? "" : "hidden"}`}
                       maxDate={maxDate}
                       minDate={new Date()}
-                      calendarType="US"
-                      onClickDay={(value, event) => {
-                        setIsCalendarVisible(false);
+                      calendarType="US"              
+                      onClickDay={(value) => {
                         formatDate(value);
-                        console.log(formState);
+                        setIsCalendarVisible(false);
                       }}
                     />
                   </div>
