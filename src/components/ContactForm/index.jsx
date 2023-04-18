@@ -38,13 +38,21 @@ export default function ContactForm() {
   const { name, email, phone, city, date, message } = formState;
 
   function handleChange(e) {
+    formatTypedDate(e);
     setFormState({ ...formState, [e.target.name]: e.target.value });
     // console.log(formState);
+  }
+
+  function formatTypedDate(e) {
+    if (e.target.name === "date") {
+
+    }
   }
 
   // function hideToast() {
   //   setIsHideToast(true);
   // }
+
 
   const serviceId = import.meta.env.VITE_SERVICE;
   const templateId = import.meta.env.VITE_TEMPLATE;
