@@ -1,0 +1,21 @@
+.active-indicator {
+  background: gold;
+  width: 15px;
+  height: 15px;
+  display: inline-block;
+  border-radius: 25px;
+  margin: 0 8px;
+}
+
+.indicator {
+  background: black;
+  width: 10px;
+  height: 10px;
+  display: inline-block;
+  border-radius: 25px;
+  margin: 0 8px;
+}
+
+.test-carousel {
+  margin: 5px 0 30px 0;
+}
