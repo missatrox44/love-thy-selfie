@@ -7,7 +7,7 @@ function ReviewCard({ review, name }) {
     // <div className='border-2 mr-1 min-w-full md:min-w-[50%] lg:min-w-[33%] flex custom-card'>
 
     // <div className='px-1 max-w-[85%] md:max-w-[50%] lg:max-w-[30%] flex custom-card'>
-    <div className='px-1 flex custom-card h-[430px]'>
+    <div className='px-1 flex custom-card h-[100%] md:h-[85%] md:max-w-[30%]'>
 
       <blockquote className='flex h-full flex-col justify-between bg-white p-5 rounded-2xl'>
         <div className='flex h-full items-center'>
@@ -57,6 +57,7 @@ function ReviewCard({ review, name }) {
         </div>
       </blockquote>
     </div>
+    // </div>
   );
 }
 

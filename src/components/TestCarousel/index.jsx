@@ -2,10 +2,10 @@ import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import { useMediaQuery } from "@mui/material";
 
-import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from 'react-responsive-carousel';
-import './styles.css';
+import "react-responsive-carousel/lib/styles/carousel.min.css";
 
+import './styles.css';
 
 
 export default function TestCarousel (props) {
@@ -32,7 +32,7 @@ export default function TestCarousel (props) {
         <Carousel 
           className="test-carousel"
           centerMode
-          centerSlidePercentage={85}
+          centerSlidePercentage={bigScreen ? 45 : 85}
           swipeable
           emulateTouch 
           useKeyboardArrows 
