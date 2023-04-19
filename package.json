@@ -3,6 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "exports": "./index.js",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
@@ -21,7 +22,8 @@
     "react-dom": "^18.2.0",
     "react-responsive-carousel": "^3.2.23",
     "react-router-dom": "^6.6.1",
-    "react-router-hash-link": "^2.4.3"
+    "react-router-hash-link": "^2.4.3",
+    "swiper": "^9.2.3"
   },
   "devDependencies": {
     "@vitejs/plugin-react": "^2.2.0",

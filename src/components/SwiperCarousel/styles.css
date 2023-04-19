@@ -1,0 +1,9 @@
+.swiper-pagination-bullet {
+  height: 50px;
+  width: 50px;
+  color: green;
+}
+
+.swiper-slide {
+  min-height: 500px !important;
+}
