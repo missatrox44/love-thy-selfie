@@ -1,9 +1,28 @@
-.swiper-pagination-bullet {
-  height: 50px;
-  width: 50px;
-  color: green;
+.swiper-wrapped {
+  cursor: grab;
 }
 
+
+.swiper-pagination-bullet {
+  height: 15px;
+  width: 15px;
+  opacity: 1;
+  background: var(--green);
+}
+
+.swiper-pagination-bullet-active {
+  background: var(--gold);
+}
+
+
 .swiper-slide {
-  min-height: 500px !important;
+  min-height: 400px !important;
+}
+
+.swiper-button-prev, .swiper-button-next {
+  color: var(--green);
+}
+
+.swiper-button-disabled {
+  opacity: 0 !important;
 }

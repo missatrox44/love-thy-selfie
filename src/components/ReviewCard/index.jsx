@@ -7,7 +7,7 @@ function ReviewCard({ review, name }) {
     // <div className='border-2 mr-1 min-w-full md:min-w-[50%] lg:min-w-[33%] flex custom-card'>
 
     // <div className='px-1 max-w-[85%] md:max-w-[50%] lg:max-w-[30%] flex custom-card'>
-    <div className='flex min-h-[330px]'>
+    <div className='flex min-h-[330px] sm:min-h-[350px]'>
 
       <blockquote className='flex min-h-full flex-col justify-between bg-white p-5 rounded-2xl'>
         <div className='flex h-full items-center'>
