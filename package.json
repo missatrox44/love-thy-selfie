@@ -6,6 +6,7 @@
   "exports": "./index.js",
   "scripts": {
     "dev": "vite",
+    "deploy": "npm run build && cd dist && surge",
     "build": "vite build",
     "preview": "vite preview",
     "cypress": "cypress open"
