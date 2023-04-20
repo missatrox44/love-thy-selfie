@@ -24,9 +24,10 @@ export default function SwiperCarousel(props) {
       spaceBetween={10}
       slidesPerView={bigScreen ? 3.3 : 1.15}
       threshold={2}
+ 
       onSwiper={(swiper) => (window.swiper = swiper)}
       navigation={bigScreen ? true : false}
-      pagination={bigScreen ? { clickable: true, dynamicBullets: true } : false}
+      pagination={bigScreen ? { clickable: true, dynamicBullets: true, dynamicMainBullets: 2 } : false}
       centeredSlides={bigScreen ? false : true}
       slidesPerGroupSkip={3}
       grabCursor={true}
