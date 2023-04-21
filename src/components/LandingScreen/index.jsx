@@ -20,15 +20,15 @@ export default function LandingScreen() {
           {
             bigScreen 
               ? 
-            <img src={LargeLanding} className="w-full"/> 
+            <img src={LargeLanding} alt="Love Thy Selfie Photo Booth example" className="w-full"/> 
               :
-            <img src={PhoneLanding} className="w-full"/>
+            <img src={PhoneLanding} alt="Love Thy Selfie Photo Booth examples" className="w-full"/>
           }
           </div>
           <div className="absolute bg-gradient-to-t from-primary h-[130vw] lg:h-[47.5vw] w-[100%] under-shadow lift">
-            <div className="h-[70%] absolute bottom-[-30%] w-full">
-              <h3 className='text-white text-3xl px-5 pb-8 karla-700'>
-                Do your "selfie" a favor and book us!
+            <div className="h-[85%] absolute bottom-[-30%] w-full">
+              <h3 className='text-white text-3xl lg:text-[100px] lg:leading-none px-5 pb-8 karla-700 drop-shadow-lg'>
+                  Do your "selfie" a favor <br/> and book us!
               </h3>
               <BookButton/>
             </div>
