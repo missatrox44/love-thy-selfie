@@ -27,11 +27,11 @@ export default function Reviews() {
           Overall Rating:
         </p>
         <div className={`flex text-yellow-500 h-10 ${starMargin} ${placeContent}`}>
-          <Star />
-          <Star />
-          <Star />
-          <Star />
-          <Star />
+          <Star style={'h-[100%] md:h-10'}/>
+          <Star style={'h-[100%] md:h-10'}/>
+          <Star style={'h-[100%] md:h-10'}/>
+          <Star style={'h-[100%] md:h-10'}/>
+          <Star style={'h-[100%] md:h-10'}/>
         </div>
         <p className={`${margin} text-sm md:text-2xl karla-700 text-light`}>
           5.0 / 5.0
