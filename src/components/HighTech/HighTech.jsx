@@ -1,5 +1,6 @@
 import React from 'react';
 import assistants from '../../assets/assistants.png'
+import assistants2 from '../../assets/assistants2.png'
 
 export default function HighTech() {
 
@@ -9,8 +10,8 @@ export default function HighTech() {
       <h2 className='text-center text-2xl lg:text-6xl py-6 px-2 font-semibold bevan'>High Tech Equipment</h2>
       <div className='mx-8 md:mx-0 md:flex justify-center md:justify-evenly items-center'>
         <div className=' lg:w-[40%] mb-4 md:mb-0 text-dark italic font-semibold'>
-          <img src={assistants} />
-          <p className='text-center lg:pt-3 text-sm md:text-xl'>Two assistants to ensure your event runs smoothly</p>
+          <img src={assistants2} />
+          {/* <p className='text-center lg:pt-3 text-sm md:text-xl'>Two assistants to ensure your event runs smoothly</p> */}
         </div>
         <div className='flex justify-center'>
           <ul className='karla-700 text-left text-lg md:text-xl lg:text-4xl'>

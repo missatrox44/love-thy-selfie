@@ -1,7 +1,9 @@
 import React from 'react';
-import logo3 from '../../assets/logos/short-light-logo.svg';
+
 import { HashLink } from 'react-router-hash-link';
 import { Link } from 'react-router-dom';
+
+import logo3 from '../../assets/logos/short-light-logo.svg';
 
 
 function Footer() {
@@ -10,7 +12,7 @@ function Footer() {
     <footer className='text-center lg:text-left text-light karla-700 bg-primary'>
       <div className='mx-6 pt-14 text-center md:text-left'>
         <div className='grid grid-1 md:grid-cols-2 lg:grid-cols-3 gap-8  pb-10'>
-          <div className=''>
+          <div>
             <h6 className='uppercase font-semibold mb-4 flex justify-center md:justify-start  text-2xl'>
               Quick Links
             </h6>
