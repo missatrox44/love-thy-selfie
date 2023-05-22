@@ -1,9 +1,7 @@
 import React from 'react';
 import ReviewCard from '../ReviewCard';
-import ReviewCarousel from '../ReviewCarousel';
 import SwiperCarousel from '../SwiperCarousel';
 import { SwiperSlide } from 'swiper/react';
-import TestCarousel from '../TestCarousel';
 import Star from '../../assets/Star';
 import { reviews } from '../../assets/reviews';
 import { useMediaQuery } from '@mui/material';
@@ -37,22 +35,6 @@ export default function Reviews() {
           5.0 / 5.0
         </p>
       </div>
-      {/* <TestCarousel
-      className="test-carousel-container"
-        // style={{ marginLeft: 'auto', marginRight: 'auto', marginTop: 64 }}
-      >
-        {reviews.map((review, i) => {
-          return (
-            <ReviewCard
-              key={i}
-              name={review.name}
-              review={review.review}
-              date={review.date}
-              picture={review.picture}
-            />
-          );
-        })}
-      </TestCarousel> */}
       <SwiperCarousel>
       {reviews.map((review, i) => {
           return (
