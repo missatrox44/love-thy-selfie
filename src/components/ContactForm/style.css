@@ -3,42 +3,67 @@
   font-size: 1rem;
 }
 
-input {
+input,
+textarea {
   -webkit-appearance: none !important;
   border-radius: 0 !important;
 }
 
+
 input:-webkit-autofill,
 input:-webkit-autofill:hover,
 input:-webkit-autofill:focus,
-input:-webkit-autofill:active {
-    -webkit-appearance: none !important;
-    transition: background-color 5000s ease-in-out 0s;
-    -webkit-text-fill-color: #fff !important;
-    border-radius: 0 !important;
-}
+input:-webkit-autofill:active,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+textarea:-webkit-autofill:active {
+   -webkit-transition-delay: 9999s;
+   transition-delay: 9999s;
+   -webkit-appearance: none !important;
+   border-radius: 0 !important;
+} 
 
-.input-field {
-  left: 0;
-  display: flex;
-  flex-wrap: wrap;
-  width: calc(100% - 50px) !important;
-  margin: 10px 20px;
-  padding: 15px 0 15px 10px;
-  border-radius: 20px;
+.react-calendar {
+  z-index: 1;
+  position: absolute;
   border: none;
-  color: black;
-  background-color: lightgray !important;
-  transition: background-color .6s ease !important;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 1rem;
+  font-family: var(--sans-serif);
+  border-radius: 1rem;
 }
 
-.input-field:focus {
-  outline: none;
-  background-color: lightgoldenrodyellow !important;
+.react-calendar button {
+  color: var(--black);
 }
 
+.react-calendar__month-view__days__day--neighboringMonth {
+  background: var(--white) !important;
+  color: var(--gold) !important;
+}
+
+.react-calendar__tile--active {
+  background: var(--gold) !important;
+  border-radius: 1rem;
+}
+
+button:focus{
+  background: none !important;
+}
+
+.react-calendar button:disabled {
+  color: var(--black) !important; 
+  background: lightgray !important;
+}
+
+.react-calendar__tile:not([disabled]):hover {
+  background: var(--purple) !important;
+  color: var(--white);
+  border-radius: 1rem;
+}
+
+.react-calendar__navigation > *:hover {
+  background: none !important;
+}
 
 #message-input {
   height: 100px;
@@ -53,17 +78,23 @@ input:-webkit-autofill:active {
   cursor: pointer;
 }
 
-
-input[type="date"]::-webkit-calendar-picker-indicator {
-  opacity: 1;
-  display: block;
-  width: 25px;
-  height: 15px;
-  border-width: thin;
-}
-
 .hidden {
   display: none;
+}
+
+.default {
+  position: relative;
+  z-index: 0;
+}
+
+.higher {
+  position: relative;
+  z-index: 1;
+}
+
+.under {
+  position: relative;
+  z-index: -1;
 }
 
 .triangle {
@@ -83,8 +114,4 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   position: relative;
   z-index: -5;
   background-color: var(--black);
-}
-
-input {
-  -webkit-appearance: none;
 }

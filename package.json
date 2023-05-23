@@ -3,8 +3,10 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "exports": "./index.js",
   "scripts": {
     "dev": "vite",
+    "deploy": "npm run build && cd dist && surge",
     "build": "vite build",
     "preview": "vite preview",
     "cypress": "cypress open"
@@ -17,13 +19,13 @@
     "jb-date-input": "^3.4.2",
     "moment-range": "^4.0.2",
     "react": "^18.2.0",
+    "react-calendar": "^4.2.1",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.6.1",
-    "react-router-hash-link": "^2.4.3"
+    "react-router-hash-link": "^2.4.3",
+    "swiper": "^9.2.3"
   },
   "devDependencies": {
-    "@types/react": "^18.0.24",
-    "@types/react-dom": "^18.0.8",
     "@vitejs/plugin-react": "^2.2.0",
     "autoprefixer": "^10.4.12",
     "cypress": "^12.8.1",

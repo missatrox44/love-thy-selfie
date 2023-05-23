@@ -95,7 +95,7 @@
 }
 
 .under-map-background {
-  width: 105vw;
+  width: 100vw;
   height: 50px;
   transform: skewY(-8.5deg);
   background: var(--purple);

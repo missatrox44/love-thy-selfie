@@ -1,14 +1,10 @@
 import './App.css';
 
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+
 import Home from './pages/Home';
 import Contact from './pages/Contact';
 
-import ContactForm from './components/ContactForm';
-import Footer from './components/Footer'
-import Reviews from './components/Reviews';
-
-import ReviewCard from './components/ReviewCard'
 import ScrollToTop from './components/ScrollToTop';
 
 

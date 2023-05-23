@@ -4,10 +4,8 @@ import './styles.css';
 
 function ReviewCard({ review, name }) {
   return (
-    // <div className='border-2 mr-1 min-w-full md:min-w-[50%] lg:min-w-[33%] flex custom-card'>
-
-    <div className='px-1 max-w-[85%] md:max-w-[50%] lg:max-w-[30%] flex custom-card'>
-      <blockquote className='flex h-full flex-col justify-between bg-white p-5 rounded-2xl'>
+    <div className='flex min-h-[390px] md:min-h-[330px]'>
+      <blockquote className='flex min-h-full flex-col justify-between bg-white p-5 rounded-2xl'>
         <div className='flex h-full items-center'>
           <div className='mt-4 flex pl-2'>
             <p className='leading-relaxed text-gray-500 text-left karla-400'>
@@ -19,7 +17,7 @@ function ReviewCard({ review, name }) {
 
         <div className='mt-4 border-t-2 flex justify-between'>
           <div>
-            <div className='font-extrabold mt-8 mb-2 text-sm text-gray-500 place-content-start karla-800'>
+            <div className='font-extrabold pl-1 mt-8 mb-2 text-sm text-left text-gray-500 karla-800'>
               {name}
             </div>
             <div className='flex text-yellow-500 text-sm place-content-start custom-star'>
@@ -55,6 +53,7 @@ function ReviewCard({ review, name }) {
         </div>
       </blockquote>
     </div>
+    // </div>
   );
 }
 
