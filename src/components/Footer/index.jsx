@@ -87,7 +87,7 @@ function Footer() {
         <span>© 2023 Copyright </span>
         <a className='text-light font-semibold' href='#'>Love Thy Selfie Photo Booth</a>
         <br />
-        <span className='text-xs'>Site created by <a target='_blank' href='https://missatrox44.github.io/portfolio/'>S.B.</a> & <a target='_blank' href='https://andcooke.github.io/react-portfolio/'>A.C.</a></span>
+        <span className='text-xs'>Site created by <a target='_blank' href='https://www.sarabaqla.dev/'>S.B.</a> & <a target='_blank' href='https://andcooke.github.io/react-portfolio/'>A.C.</a></span>
       </div>
 
     </footer>

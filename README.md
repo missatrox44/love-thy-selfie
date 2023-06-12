@@ -1,8 +1,10 @@
 # Love Thy Selfie
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-## Deployed Link
-Click [here](https://love-thy-selfie.vercel.app/).
+## Deployments
+[Production](https://www.lovethyselfiephotobooth.com/)
+
+[Staging](https://love-thy-selfie.vercel.app/)
 
 ## Description
 Love Thy Selfie is an intuitive, mobile-first React application designed to digitally transform a local photo booth business. Embodying the spirit of 'Love Thy Selfie', this platform offers users a comprehensive overview of the diverse services provided, including vivid picture examples, and authentic customer reviews. It also showcases the geographic service areas to help customers understand their reach. One of the key features is a seamlessly integrated contact form powered by Email.js, enabling customers to easily inquire about booking opportunities. With its user-friendly interface and responsive design, the Love Thy Selfie website effectively brings the unique essence of the photo booth experience online, and at the fingertips of potential customers.
