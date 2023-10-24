@@ -16,6 +16,7 @@
     "@emotion/react": "^11.10.5",
     "@emotion/styled": "^11.10.5",
     "@mui/material": "^5.10.17",
+    "@vercel/analytics": "^1.1.1",
     "jb-date-input": "^3.4.2",
     "moment-range": "^4.0.2",
     "react": "^18.2.0",
