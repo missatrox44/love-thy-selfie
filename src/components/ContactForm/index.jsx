@@ -282,7 +282,7 @@ export default function ContactForm() {
                       className={`${isCalendarVisible ? "" : "hidden"}`}
                       maxDate={maxDate}
                       minDate={new Date()}
-                      calendarType="US"              
+                      calendarType="gregory"              
                       onClickDay={(value) => {
                         formatDate(value);
                         setIsCalendarVisible(false);
