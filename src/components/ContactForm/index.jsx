@@ -48,7 +48,7 @@ export default function ContactForm() {
     emailjs.sendForm(serviceId, templateId, form.current, apiKey)
       .then(
         (result) => {
-          console.log(result.text); // Optionally log the success text for debugging
+          console.log(result.text); 
           setFormState({
             name: "",
             email: "",
@@ -57,12 +57,12 @@ export default function ContactForm() {
             date: "",
             message: "",
           });
-          setIsHideToast(false); // Set it false only on successful email send
-          toast.success("We received your message and will get back to you within 24 hrs!");
+          setIsHideToast(false); 
+          // toast.success("We received your message and will get back to you within 24 hrs!");
         },
         (error) => {
-          console.log(error.text); // Optionally log the error text for debugging
-          toast.error("Failed to send your message. Please try again!");
+          console.log(error.text); 
+          toast.error("Something went wrong, please call 325-514-5998 to book an event.");
         }
       );
   }
