@@ -5,13 +5,11 @@ import 'react-calendar/dist/Calendar.css';
 import "./style.css";
 import emailjs from "@emailjs/browser";
 import thankYou from "../../assets/thankyou.jpg";
-
 import "./style.css";
-import zIndex from "@mui/material/styles/zIndex";
-import { useEffect } from "react";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 export default function ContactForm() {
-  const bigScreen = useMediaQuery("(min-width: 1024px)");
   const [formState, setFormState] = useState({
     name: "",
     email: "",
@@ -23,15 +21,6 @@ export default function ContactForm() {
 
   const [isHideToast, setIsHideToast] = useState(true);
   const [isCalendarVisible, setIsCalendarVisible] = useState(false);
-
-
-  function handleStyling() {
-    if (!bigScreen) {
-      return "50px";
-    } else {
-      return "0px 300px";
-    }
-  }
 
   const form = useRef();
 
@@ -49,54 +38,35 @@ export default function ContactForm() {
     }
   }
 
-  // function hideToast() {
-  //   setIsHideToast(true);
-  // }
-
-
   const serviceId = import.meta.env.VITE_SERVICE;
   const templateId = import.meta.env.VITE_TEMPLATE;
   const apiKey = import.meta.env.VITE_API;
 
   function sendEmail(e) {
     e.preventDefault();
-
-    emailjs.sendForm(serviceId, templateId, form.current, apiKey).then(
-      (result) => {
-        // console.log(result.text);
-      },
-      (error) => {
-        // console.log(error.text);
-      }
-    );
-
-    // console.log("sent email theoretically!");
-
-    setFormState({
-      name: "",
-      email: "",
-      phone: "",
-      city: "",
-      date: "",
-      message: "",
-    });
-    setIsHideToast(false);
-    // setTimeout(hideToast, 4000);
+  
+    emailjs.sendForm(serviceId, templateId, form.current, apiKey)
+      .then(
+        (result) => {
+          console.log(result.text); 
+          setFormState({
+            name: "",
+            email: "",
+            phone: "",
+            city: "",
+            date: "",
+            message: "",
+          });
+          setIsHideToast(false); 
+          // toast.success("We received your message and will get back to you within 24 hrs!");
+        },
+        (error) => {
+          console.log(error.text); 
+          toast.error("Something went wrong, please call 325-514-5998 to book an event.");
+        }
+      );
   }
-
-  //for future autofill of city input
-  const cities = [
-    { id: "city1", City: "Odessa" },
-    { id: "city2", City: "Midland" },
-    { id: "city3", City: "Pecos" },
-    { id: "city4", City: "Big Spring" },
-    { id: "city5", City: "Kermit" },
-    { id: "city6", City: "Glendale" },
-    { id: "city7", City: "Andrews" },
-    { id: "city8", City: "Stanton" },
-  ];
-
-  const autoCity = { value: "City" };
+  
 
   const today = new Date();
   const day = today.getDate();
@@ -132,6 +102,7 @@ export default function ContactForm() {
       onKeyDown={calendarHandler}
       onClick={calendarHandler}
     >
+       <ToastContainer position="top-center" autoClose={5000} hideProgressBar={false} newestOnTop={true} closeOnClick rtl={false} pauseOnFocusLoss draggable pauseOnHover />
       <div className="bg-gradient-to-t from-accent2 to-primary default">
         <div className="text-center text-[#FFF9F4]">
           <h2 className={`bevan text-5xl pt-8 ${isHideToast ? "" : "hidden"}`}>
@@ -175,7 +146,6 @@ export default function ContactForm() {
               ref={form}
               onSubmit={sendEmail}
               className={`${isHideToast ? "" : "hidden"} default`}
-              // style={{ margin: handleStyling() }}
             >
               <div className="relative z-0 w-full mb-6 group0">
                 <input
@@ -282,7 +252,7 @@ export default function ContactForm() {
                       className={`${isCalendarVisible ? "" : "hidden"}`}
                       maxDate={maxDate}
                       minDate={new Date()}
-                      calendarType="US"              
+                      calendarType="gregory"              
                       onClickDay={(value) => {
                         formatDate(value);
                         setIsCalendarVisible(false);
@@ -316,7 +286,6 @@ export default function ContactForm() {
               <div className="flex justify-center">
                 <button
                   type="submit"
-                  // id='contact-send'
                   className="karla-800 inline-block px-6 py-3 bg-secondary text-black font-medium text-3xl leading-tight uppercase rounded shadow-md hover:bg-accent2 focus:shadow-xl focus:outline-none focus:ring-0 active:shadow-2xl transition duration-150 ease-in-out mb-8"
                 >
                   SEND

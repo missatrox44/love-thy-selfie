@@ -7,6 +7,8 @@ import logo3 from '../../assets/logos/short-light-logo.svg';
 
 
 function Footer() {
+ const CURRENT_YEAR = new Date().getFullYear().toString();
+
   return (
 
     <footer className='text-center lg:text-left text-light karla-700 bg-primary'>
@@ -84,7 +86,7 @@ function Footer() {
         <img className='h-48' alt='logo' src={logo3} />
       </div>
       <div className='text-center p-6'>
-        <span>© 2023 Copyright </span>
+        <span>© {CURRENT_YEAR} Copyright </span>
         <a className='text-light font-semibold' href='#'>Love Thy Selfie Photo Booth</a>
         <br />
         <span className='text-xs'>Site created by <a target='_blank' href='https://www.sarabaqla.dev/'>S.B.</a> & <a target='_blank' href='https://andcooke.github.io/react-portfolio/'>A.C.</a></span>
