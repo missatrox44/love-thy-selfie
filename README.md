@@ -10,10 +10,14 @@
 Love Thy Selfie is an intuitive, mobile-first React application designed to digitally transform a local photo booth business. Embodying the spirit of 'Love Thy Selfie', this platform offers users a comprehensive overview of the diverse services provided, including vivid picture examples, and authentic customer reviews. It also showcases the geographic service areas to help customers understand their reach. One of the key features is a seamlessly integrated contact form powered by Email.js, enabling customers to easily inquire about booking opportunities. With its user-friendly interface and responsive design, the Love Thy Selfie website effectively brings the unique essence of the photo booth experience online, and at the fingertips of potential customers.
 
 ## Table of Contents
-- [Features](#features)
-- [Resources](#resources)
-- [Contributing](#contributing)
-- [Questions](#questions)
+- [Love Thy Selfie](#love-thy-selfie)
+  - [Deployments](#deployments)
+  - [Description](#description)
+  - [Table of Contents](#table-of-contents)
+  - [Features](#features)
+  - [Resources:](#resources)
+  - [Contributing](#contributing)
+  - [Questions](#questions)
 
 ## Features
 The landing page of the website features a visually appealing hero collage, which is a combination of images that represent the essence of the business. The landing page also prominently displays a booking button, allowing users to easily access the booking functionality. Additionally, relevant information about the service area is provided, giving users a clear understanding of where the service is available.
@@ -64,4 +68,4 @@ Feel free to contact any contributing developer with suggestions for improvement
 [Email: Sara Baqla](mailto:missatrox44@gmail.com) <br>
 
 
-Copyright (c) 2023 Love Thy Selfie
+Copyright (c) 2025 Love Thy Selfie
